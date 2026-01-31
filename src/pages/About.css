@@ -1,0 +1,122 @@
+.about-page {
+  padding-top: 70px;
+}
+
+.about-hero {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  padding: var(--space-12) var(--space-4) var(--space-10);
+  text-align: center;
+}
+
+.about-content-section {
+  padding: var(--section-padding) var(--space-4);
+}
+
+.about-story {
+  max-width: 800px;
+  margin: 0 auto var(--space-8);
+}
+
+.about-story h2 {
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--space-3);
+  color: var(--color-text-primary);
+}
+
+.about-story p {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-3);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.about-card {
+  background: var(--color-bg-secondary);
+  padding: var(--space-4);
+  border-radius: var(--border-radius-lg);
+}
+
+.about-card h3 {
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-primary);
+}
+
+.about-card p {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.principles-section {
+  max-width: 800px;
+  margin: 0 auto var(--space-8);
+}
+
+.principles-section h2 {
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--space-3);
+  color: var(--color-text-primary);
+}
+
+.principles-list {
+  list-style: none;
+  padding: 0;
+}
+
+.principles-list li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-gray-200);
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  position: relative;
+  padding-left: var(--space-4);
+}
+
+.principles-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h3);
+}
+
+.tools-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tools-section h2 {
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--space-3);
+  color: var(--color-text-primary);
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tool-tag {
+  padding: var(--space-1) var(--space-2);
+  background: #e0e7ff;
+  color: #4f46e5;
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: var(--space-10) var(--space-3) var(--space-8);
+  }
+}

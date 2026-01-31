@@ -1,0 +1,21 @@
+/* App Styles */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+section {
+  padding: var(--section-padding) var(--space-4);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: var(--section-padding-mobile) var(--space-3);
+  }
+}
