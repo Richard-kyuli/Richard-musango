@@ -3,7 +3,7 @@
 }
 
 .resume-hero {
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, var(--color-gray-800) 0%, var(--color-gray-700) 100%);
   color: var(--color-white);
   padding: var(--space-12) var(--space-4) var(--space-10);
   text-align: center;
@@ -28,6 +28,7 @@
 
 .resume-content {
   padding: var(--section-padding) var(--space-4);
+  background: var(--color-gray-50);
 }
 
 .resume-content .container {
@@ -52,8 +53,9 @@
 
 .experience-item {
   padding: var(--space-4);
-  background: var(--color-bg-secondary);
+  background: var(--color-white);
   border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .experience-header {
@@ -120,8 +122,8 @@
 
 .skill-tag {
   padding: var(--space-1) var(--space-2);
-  background: #e0e7ff;
-  color: #4f46e5;
+  background: rgba(142, 148, 163, 0.15);
+  color: var(--color-gray-600);
   border-radius: var(--border-radius-full);
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-medium);
@@ -129,8 +131,9 @@
 
 .education-item {
   padding: var(--space-4);
-  background: var(--color-bg-secondary);
+  background: var(--color-white);
   border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .education-item h3 {

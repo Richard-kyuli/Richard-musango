@@ -3,71 +3,99 @@ import SEO from '../components/SEO'
 import './Home.css'
 
 function Home() {
-  const services = [
+  const workProcess = [
     {
-      icon: '🎨',
-      title: 'UI/UX Design',
-      description: 'Creating beautiful and intuitive user interfaces'
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+      ),
+      number: '1',
+      title: 'Research',
+      description: 'Understanding user needs, business goals, and market trends through interviews, surveys, and competitive analysis to inform design decisions.'
     },
     {
-      icon: '📱',
-      title: 'Mobile Design',
-      description: 'Responsive designs for mobile platforms'
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <line x1="18" y1="20" x2="18" y2="10"/>
+          <line x1="12" y1="20" x2="12" y2="4"/>
+          <line x1="6" y1="20" x2="6" y2="14"/>
+        </svg>
+      ),
+      number: '2',
+      title: 'Analyze',
+      description: 'Synthesizing research data to identify patterns, pain points, and opportunities. Creating user personas and journey maps to guide the design process.'
     },
     {
-      icon: '💻',
-      title: 'Web Design',
-      description: 'Modern web experiences that engage users'
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+          <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+          <path d="M2 2l7.586 7.586"/>
+          <circle cx="11" cy="11" r="2"/>
+        </svg>
+      ),
+      number: '3',
+      title: 'Design',
+      description: 'Creating wireframes, prototypes, and high-fidelity mockups. Iterating based on feedback and ensuring consistency with design systems and brand guidelines.'
     },
     {
-      icon: '🎯',
-      title: 'Branding',
-      description: 'Building memorable brand identities'
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+      ),
+      number: '4',
+      title: 'Launch',
+      description: 'Collaborating with developers for implementation, conducting usability testing, and monitoring user feedback to continuously improve the product experience.'
     }
   ]
 
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'Royal Times Admin Dashboard',
       category: 'Web Design',
       image: 'gradient-1',
-      link: '/case-studies/ecommerce-app'
+      link: '/case-studies/royal-times'
     },
     {
       id: 2,
-      title: 'Mobile Banking App',
-      category: 'Mobile Design',
-      image: 'gradient-2',
-      link: '/case-studies/banking-app'
+      title: 'Buy & Sell Online',
+      category: 'Mobile & Web',
+      image: 'buysell-thumbnail',
+      link: '/case-studies/buy-sell'
     },
     {
       id: 3,
-      title: 'SaaS Dashboard',
-      category: 'UI/UX Design',
+      title: 'Mwalimu Finder',
+      category: 'Mobile & Web',
       image: 'gradient-3',
-      link: '/case-studies/saas-dashboard'
+      link: '/case-studies/mwalimu-finder'
     },
     {
       id: 4,
-      title: 'Fitness Tracker',
-      category: 'Mobile Design',
-      image: 'gradient-4',
-      link: '/case-studies'
+      title: 'Nannies Web Application',
+      category: 'Web Design',
+      image: 'nanny-thumbnail',
+      link: '/case-studies/nannies'
     },
     {
       id: 5,
-      title: 'Real Estate Portal',
-      category: 'Web Design',
+      title: 'Karibu Kazi',
+      category: 'Mobile & Web',
       image: 'gradient-5',
-      link: '/case-studies'
+      link: '/case-studies/karibu-kazi'
     },
     {
       id: 6,
-      title: 'Food Delivery App',
-      category: 'Mobile Design',
+      title: 'Property Management Dashboard',
+      category: 'Web Design',
       image: 'gradient-6',
-      link: '/case-studies'
+      link: '/case-studies/property-management'
     }
   ]
 
@@ -82,40 +110,24 @@ function Home() {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container">
-          <div className="hero-grid">
-            <div className="hero-content">
-              <h1 className="hero-title">
-                Hello, I'm<br />
-                <span className="highlight">Richard Musango</span>
-              </h1>
-              <p className="hero-description">
-                I'm a Freelance UI/UX Designer and Developer based in London, England.
-                I strives to build immersive and beautiful web applications through
-                carefully crafted code and user-centric design.
-              </p>
-              <Link to="/contact" className="btn btn-primary">Say Hello!</Link>
-              
-              <div className="hero-stats">
-                <div className="stat-item">
-                  <h3>15 Y.</h3>
-                  <p>Experience</p>
-                </div>
-                <div className="stat-item">
-                  <h3>250+</h3>
-                  <p>Project Completed</p>
-                </div>
-                <div className="stat-item">
-                  <h3>58</h3>
-                  <p>Happy Client</p>
-                </div>
-              </div>
-            </div>
-            <div className="hero-image">
-              <div className="profile-image-wrapper">
-                <div className="profile-placeholder">
-                  <span>Your Photo</span>
-                </div>
-              </div>
+          <div className="hero-content-centered">
+            <h1 className="hero-title">
+              Hello, I'm<br />
+              <span className="highlight">Richard Musango</span>
+            </h1>
+            <p className="hero-description">
+              I'm a UI/UX Designer based in Nairobi, Kenya. I create intuitive and 
+              beautiful digital experiences that solve real problems and delight users 
+              through thoughtful, user-centric design.
+            </p>
+            <div className="hero-buttons">
+              <Link to="/contact" className="btn btn-primary">Contact Me</Link>
+              <a href="/resume.pdf" download className="btn btn-outline">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                Download CV
+              </a>
             </div>
           </div>
         </div>
@@ -124,81 +136,55 @@ function Home() {
       {/* About Section */}
       <section className="about-section">
         <div className="container">
-          <div className="about-grid">
-            <div className="about-image">
-              <div className="about-image-card">
-                <div className="about-placeholder">
-                  <span>About Photo</span>
-                </div>
-                <div className="social-links">
-                  <a href="#" className="social-icon" aria-label="Facebook">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                  </a>
-                  <a href="#" className="social-icon" aria-label="Dribbble">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 0C5.375 0 0 5.375 0 12s5.375 12 12 12 12-5.375 12-12S18.625 0 12 0zm8.5 6.5c1.438 1.75 2.312 3.969 2.438 6.406-2.156-.469-4.156-.5-5.969-.219-.219-.531-.438-1.031-.688-1.531 2.063-.875 3.75-2.188 4.219-4.656zm-8.5-5c2.344 0 4.5.781 6.25 2.094-.438 2.219-1.969 3.406-3.875 4.219-1.188-2.188-2.5-4.031-3.875-5.656.469-.406.969-.656 1.5-.656zm-3.5 1.031c1.344 1.594 2.625 3.406 3.781 5.531-2.531.781-5.406 1.188-8.531 1.188-.031-.219-.031-.438-.031-.656 0-2.531.969-4.844 2.594-6.656.719.188 1.469.406 2.188.594zm-5.5 8.969c0-.219 0-.438.031-.656 3.281 0 6.344-.438 9.031-1.281.219.438.438.906.656 1.375-3.031 1.219-5.406 3.406-6.719 6.219-1.781-1.656-3-4.031-3-6.656zm8.5 8.5c-2.344 0-4.5-.781-6.25-2.094.438-2.219 1.969-3.406 3.875-4.219 1.188 2.188 2.5 4.031 3.875 5.656-.469.406-.969.656-1.5.656zm3.5-1.031c-1.344-1.594-2.625-3.406-3.781-5.531 2.531-.781 5.406-1.188 8.531-1.188.031.219.031.438.031.656 0 2.531-.969 4.844-2.594 6.656-.719-.188-1.469-.406-2.188-.594z"/>
-                    </svg>
-                  </a>
-                  <a href="#" className="social-icon" aria-label="Instagram">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                  </a>
-                  <a href="#" className="social-icon social-icon-primary" aria-label="LinkedIn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                  </a>
-                  <a href="#" className="social-icon" aria-label="Behance">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="about-content">
-              <h2 className="section-title">I am Professional User<br />Experience Designer</h2>
-              <p className="about-text">
-                I design and develop services for customers specializing creating stylish, 
-                modern websites, web services and online stores. My passion is to design 
-                digital user experiences.
-              </p>
-              <p className="about-text">
-                I design and develop services for customers specializing creating stylish, 
-                modern websites, web services.
-              </p>
-              <div className="about-buttons">
-                <Link to="/case-studies" className="btn btn-primary">My Project</Link>
-                <a href="/resume.pdf" download className="btn btn-outline">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-                  </svg>
-                  Download CV
-                </a>
-              </div>
+          <div className="about-content-full">
+            <h2 className="section-title">I am Professional User<br />Experience Designer</h2>
+            <p className="about-text">
+              I specialize in creating stylish, modern digital experiences for web and mobile 
+              platforms. My passion is designing intuitive interfaces that make complex tasks 
+              simple and enjoyable for users.
+            </p>
+            <p className="about-text">
+              Through research, empathy, and creative problem-solving, I craft designs that 
+              not only look beautiful but also drive business results and user satisfaction.
+            </p>
+            <div className="about-buttons">
+              <Link to="/case-studies" className="btn btn-primary">My Project</Link>
+              <a href="/resume.pdf" download className="btn btn-outline">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                Download CV
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="services-section">
+      {/* Work Process Section */}
+      <section className="work-process-section">
         <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">UI/UX Process</h2>
-            <p className="section-subtitle">My design process ensures quality results</p>
-          </div>
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon">{service.icon}</div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-              </div>
-            ))}
+          <div className="work-process-layout">
+            <div className="work-process-intro">
+              <h2 className="section-title">Work Process</h2>
+              <p className="work-process-description">
+                My design process is centered around understanding users and solving real problems. 
+                I follow a structured approach that combines research, analysis, creative design, 
+                and continuous improvement to deliver exceptional user experiences.
+              </p>
+              <p className="work-process-description">
+                Each project is unique, but these core phases ensure that every solution is 
+                user-focused, data-driven, and aligned with business objectives.
+              </p>
+            </div>
+            <div className="work-process-grid">
+              {workProcess.map((step, index) => (
+                <div key={index} className="process-card">
+                  <div className="process-icon">{step.icon}</div>
+                  <h3>{step.number}. {step.title}</h3>
+                  <p>{step.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -238,24 +224,38 @@ function Home() {
           <div className="contact-preview-grid">
             <div className="contact-info">
               <div className="contact-item">
-                <div className="contact-icon">📧</div>
+                <div className="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
                 <div>
                   <h4>Email</h4>
-                  <p>richard@example.com</p>
+                  <p>richardkyuli243@gmail.com</p>
                 </div>
               </div>
               <div className="contact-item">
-                <div className="contact-icon">📱</div>
+                <div className="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
                 <div>
                   <h4>Phone</h4>
-                  <p>+1 (555) 123-4567</p>
+                  <p>+254 112 719 010</p>
                 </div>
               </div>
               <div className="contact-item">
-                <div className="contact-icon">📍</div>
+                <div className="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
                 <div>
                   <h4>Location</h4>
-                  <p>New York, USA</p>
+                  <p>Nairobi, Kenya</p>
                 </div>
               </div>
             </div>

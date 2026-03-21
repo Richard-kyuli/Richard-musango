@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
-import { caseStudies } from '../data/caseStudies'
+import { caseStudies } from '../data/caseStudiesNew'
 import './CaseStudies.css'
 
 function CaseStudies() {

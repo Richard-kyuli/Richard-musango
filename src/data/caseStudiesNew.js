@@ -106,15 +106,22 @@ export const caseStudies = [
     title: 'Buy & Sell Online',
     platform: 'Mobile & Web',
     role: 'UI/UX Designer',
-    timeline: '5 months',
+    timeline: '1 month',
     image: '/Buysell/buysellthumb.png',
     mobileScreens: [
-      { image: '/Buysell/Home.png', title: 'Home Screen' },
-      { image: '/Buysell/Category.png', title: 'Categories' },
-      { image: '/Buysell/Product Details.png', title: 'Product Details' },
-      { image: '/Buysell/POST PRO.png', title: 'Post Product' },
-      { image: '/Buysell/Chats.png', title: 'Messages' },
-      { image: '/Buysell/Profile.png', title: 'User Profile' }
+      { image: '/Buysell/splash1.png', title: 'Splash Screen 1' },
+      { image: '/Buysell/splash2.png', title: 'Splash Screen 2' },
+      { image: '/Buysell/Splash3.png', title: 'Splash Screen 3' },
+      { image: '/Buysell/Post1.png', title: 'Create Post - Step 1' },
+      { image: '/Buysell/Posts2.png', title: 'Create Post - Step 2' },
+      { image: '/Buysell/Posts3.png', title: 'Create Post - Step 3' },
+      { image: '/Buysell/Posts4.png', title: 'Create Post - Step 4' },
+      { image: '/Buysell/Posts5.png', title: 'Create Post - Step 5' },
+      { image: '/Buysell/Posts6.png', title: 'Create Post - Step 6' },
+      { image: '/Buysell/Posts7.png', title: 'Create Post - Step 7' },
+      { image: '/Buysell/Posts8.png', title: 'Create Post - Step 8' },
+      { image: '/Buysell/Feedbackoverlay1.png', title: 'Feedback Overlay 1' },
+      { image: '/Buysell/Feedbackoverlay2.png', title: 'Feedback Overlay 2' }
     ],
     userFlowScreens: [
       { image: '/Buysell/Splash.png', title: 'Splash Screen' },
@@ -130,12 +137,12 @@ export const caseStudies = [
       { image: '/Buysell/Profile.png', title: 'User Profile' },
       { image: '/Buysell/Edit Profile.png', title: 'Edit Profile' }
     ],
-    overview: 'Buy & Sell Online is a comprehensive marketplace platform designed to connect local buyers and sellers through an intuitive mobile application and robust admin dashboard. The platform addresses the growing need for a trusted, user-friendly marketplace where individuals can safely buy and sell items within their community. With features like verified profiles, secure messaging, and streamlined listing creation, the platform aims to make peer-to-peer commerce accessible and trustworthy for everyone.',
+    overview: 'Buy & Sell Online is a comprehensive marketplace platform designed to connect local buyers and sellers through an intuitive mobile application and robust admin dashboard. The platform addresses the growing need for a trusted, user-friendly marketplace where individuals can safely buy and sell items within their community. With features like verified profiles, secure messaging, and streamlined listing creation, the platform aims to make peer-to-peer commerce accessible and trustworthy for everyone.\n\n**Flexible Account Types:**\nThe platform offers two distinct account types to serve different seller needs: Individual Accounts for casual sellers looking to declutter or sell personal items occasionally, and Shop Accounts for small businesses and professional sellers who want to establish a branded presence with enhanced features. Individual accounts provide a simple, straightforward selling experience, while Shop accounts unlock additional capabilities including custom shop branding, bulk listing management, advanced analytics, promotional tools, and verified business badges that build customer trust.',
     problem: 'The local marketplace landscape was fragmented, with users struggling to find a platform that balanced ease of use with trust and safety. Existing solutions either had overly complex listing processes that discouraged sellers, or lacked proper verification systems that made buyers hesitant. Users reported spending excessive time navigating cluttered interfaces, dealing with unresponsive sellers, and worrying about transaction security. Additionally, there was no efficient way for platform administrators to moderate content and manage user disputes, leading to poor user experiences and platform abandonment.',
-    solution: 'We developed a mobile-first marketplace application that prioritizes simplicity and trust. The solution features a streamlined three-step listing process that allows sellers to post items in under two minutes, complete with photo uploads and automatic category suggestions. For buyers, we implemented smart search filters and a clean, card-based interface that makes product discovery intuitive and enjoyable. The integrated messaging system enables real-time communication between buyers and sellers, with built-in safety tips and transaction guidelines. On the backend, we created a comprehensive admin dashboard that provides moderators with powerful tools for content review, user management, and analytics, ensuring the platform maintains high quality standards while scaling efficiently.',
+    solution: 'We developed a mobile-first marketplace application that prioritizes simplicity and trust while accommodating different seller types. The solution features a streamlined three-step listing process that allows sellers to post items in under two minutes, complete with photo uploads and automatic category suggestions.\n\n**Dual Account System:**\nUsers can register as either Individual sellers or Shop owners during onboarding. Individual accounts offer a quick setup process perfect for casual sellers, while Shop accounts provide an extended registration flow where businesses can add their shop name, logo, business description, and verification documents. Shop profiles display as branded storefronts with custom headers, featured products, and business information, helping professional sellers build credibility and customer loyalty.\n\nFor buyers, we implemented smart search filters including the ability to filter by account type (Individual vs Shop), and a clean, card-based interface that makes product discovery intuitive and enjoyable. Shop listings are visually distinguished with verified badges and shop branding, helping buyers identify professional sellers at a glance. The integrated messaging system enables real-time communication between buyers and sellers, with built-in safety tips and transaction guidelines. On the backend, we created a comprehensive admin dashboard that provides moderators with powerful tools for content review, user management, shop verification, and analytics, ensuring the platform maintains high quality standards while scaling efficiently.',
     competitiveAnalysis: 'We conducted an extensive analysis of leading marketplace platforms including OfferUp, Letgo, Facebook Marketplace, and Craigslist. Key findings revealed that while these platforms had large user bases, they suffered from common pain points: OfferUp and Letgo had complex listing processes with too many required fields, Facebook Marketplace lacked proper categorization making discovery difficult, and Craigslist\'s outdated interface created trust issues. We identified opportunities to differentiate by combining the simplicity of modern mobile design with robust trust features like verified badges, rating systems, and secure in-app messaging. Our competitive advantage lies in the balance between ease of use and comprehensive safety features, addressing the gap where other platforms excel in one area but fall short in another.',
     personas: {
-      intro: 'Through extensive user research involving 25+ interviews and surveys with 200+ potential users, we identified two primary user groups with distinct needs and behaviors that shaped our design approach.',
+      intro: 'Through extensive user research involving 25+ interviews and surveys with 200+ potential users, we identified three primary user groups with distinct needs and behaviors that shaped our design approach.',
       items: [
         {
           name: 'James',
@@ -144,7 +151,8 @@ export const caseStudies = [
             'Find quality second-hand items at affordable prices',
             'Verify seller credibility before making purchases',
             'Communicate easily and negotiate prices',
-            'Complete transactions quickly and securely'
+            'Complete transactions quickly and securely',
+            'Identify professional sellers vs casual sellers'
           ],
           painPoints: [
             'Difficulty verifying if sellers are trustworthy',
@@ -156,25 +164,42 @@ export const caseStudies = [
         },
         {
           name: 'Grace',
-          role: 'Seller - Small Business Owner',
+          role: 'Individual Seller - Casual User',
           goals: [
             'List items quickly without complicated forms',
-            'Reach a large audience of potential buyers',
-            'Manage multiple listings efficiently',
-            'Build reputation through positive reviews',
-            'Track inquiries and sales performance'
+            'Sell personal items occasionally to declutter',
+            'Communicate easily with interested buyers',
+            'Complete transactions safely and conveniently'
           ],
           painPoints: [
             'Complex listing process takes too much time',
-            'Limited visibility for new listings',
+            'Uncertainty about pricing items correctly',
             'Difficult to manage conversations with multiple buyers',
-            'No insights into which listings perform well',
-            'Concerns about dealing with unreliable buyers'
+            'Concerns about dealing with unreliable buyers',
+            'No guidance on creating effective listings'
+          ]
+        },
+        {
+          name: 'David',
+          role: 'Shop Owner - Small Business',
+          goals: [
+            'Establish professional brand presence on the platform',
+            'Manage multiple product listings efficiently',
+            'Build customer trust through verified shop status',
+            'Track sales performance and customer engagement',
+            'Reach larger audience beyond physical store location'
+          ],
+          painPoints: [
+            'Limited branding options on existing platforms',
+            'Difficulty standing out among individual sellers',
+            'No tools for bulk listing management',
+            'Lack of business analytics and insights',
+            'Time-consuming to manage shop reputation and reviews'
           ]
         }
       ]
     },
-    opportunity: 'The research revealed a significant opportunity to create a marketplace that doesn\'t force users to choose between simplicity and safety. By designing an intuitive interface that guides users through secure transactions while maintaining a clean, modern aesthetic, we can capture market share from users frustrated with existing platforms. The opportunity extends beyond individual users to small businesses and entrepreneurs who need an accessible platform to reach local customers. With mobile commerce growing 25% year-over-year and 68% of users preferring mobile apps for local shopping, there\'s a clear demand for a well-designed, trustworthy marketplace solution.',
+    opportunity: 'The research revealed a significant opportunity to create a marketplace that doesn\'t force users to choose between simplicity and safety. By designing an intuitive interface that guides users through secure transactions while maintaining a clean, modern aesthetic, we can capture market share from users frustrated with existing platforms.\n\n**Market Size & Growth Potential:**\nThe East African e-commerce market is experiencing unprecedented growth, with online marketplace transactions increasing by 40% annually. Kenya\'s mobile commerce sector alone is valued at $2.1 billion and growing, driven by 91% smartphone penetration and increasing digital payment adoption. Our target demographic of 18-45 year olds represents 65% of the population, with 78% actively seeking online shopping alternatives. The dual account system (Individual and Shop) positions us to capture both the casual seller market (estimated 2.3 million potential users) and the small business segment (450,000+ registered SMEs in Kenya).\n\n**Competitive Advantage:**\nExisting platforms suffer from critical gaps that create our competitive moat. Complex user interfaces lead to 60% listing abandonment rates, poor mobile optimization results in frustrated users, limited trust mechanisms cause buyer hesitation, and inadequate customer support drives platform switching. Our solution addresses these pain points through mobile-first design, streamlined workflows that reduce listing time from 15 minutes to under 2 minutes, comprehensive verification systems for both individuals and shops, integrated communication tools with safety guidelines, and dedicated support for shop owners. The Shop Account feature specifically differentiates us by providing professional sellers with branding, analytics, and bulk management tools that competitors lack.\n\n**Revenue Opportunities:**\nMultiple monetization streams create a robust business model: transaction fees (2-5% per sale), premium Shop Account subscriptions ($15-30/month with tiered features), promoted listing packages ($5-50 per listing based on duration and placement), verified seller badges ($10/month for trust building), and value-added services including secure payment processing, delivery coordination, and professional photography services. Conservative projections estimate $500K ARR within 18 months based on 10,000 active users, 500 Shop accounts, and average transaction values of $50. At scale (50,000 users, 2,500 shops), revenue potential reaches $3.2M ARR.\n\n**Social Impact:**\nBeyond commercial success, the platform democratizes commerce by providing small businesses and individual entrepreneurs with professional-grade tools previously available only to large retailers. This levels the playing field and contributes to economic empowerment, particularly for women entrepreneurs who represent 60% of small-scale traders in Kenya. The Shop Account system enables informal businesses to establish digital presence, build customer trust through verification, and access broader markets beyond their physical locations. By reducing barriers to online commerce, we support job creation, income generation, and economic inclusion.\n\n**Scalability Potential:**\nThe modular platform architecture enables rapid expansion to neighboring markets (Uganda, Tanzania, Rwanda) with minimal localization requirements. Success in Kenya provides a proven model for replication across similar emerging markets in East Africa and beyond. The dual account system is universally applicable, the trust and verification features address common concerns across markets, and the mobile-first approach aligns with regional technology adoption patterns. Potential market reach extends to 50+ million users across East Africa, with expansion opportunities into West Africa (Nigeria, Ghana) and Southeast Asia (Philippines, Indonesia) where similar market conditions exist.',
     wireframes: 'The wireframing process began with low-fidelity sketches exploring different approaches to information architecture and user flows. We created over 40 wireframe variations, testing different layouts for the home feed, product details, and listing creation process. Key decisions included adopting a card-based layout for product browsing (improving scannability by 40% in user tests), implementing a bottom navigation bar for quick access to core features, and designing a progressive disclosure pattern for the listing form that breaks the process into digestible steps. We conducted three rounds of wireframe testing with 15 users, iterating based on feedback about navigation clarity, information hierarchy, and task completion ease. The final wireframes established a modular design system that could scale across different screen sizes while maintaining consistency.',
     goals: [
       'Create seamless buying and selling experience',

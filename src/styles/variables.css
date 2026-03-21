@@ -4,7 +4,7 @@
   /* ========== Typography ========== */
   
   /* Font Family */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-primary: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   
   /* Font Sizes */
   --font-size-h1: 3.5rem;      /* 56px */
@@ -30,44 +30,41 @@
   /* ========== Colors ========== */
   
   /* Neutral Base */
-  --color-white: #ffffff;
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
+  --color-white: #FFFFFF;
+  --color-gray-50: #F0F2F5;
+  --color-gray-100: #f9fafb;
   --color-gray-200: #e5e7eb;
   --color-gray-300: #d1d5db;
   --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
+  --color-gray-500: #8E94A3;
   --color-gray-600: #4b5563;
   --color-gray-700: #374151;
-  --color-gray-800: #1f2937;
+  --color-gray-800: #1D1F23;
   --color-gray-900: #111827;
   --color-black: #000000;
   
-  /* Primary Accent */
-  --color-primary: #6366f1;
-  --color-primary-dark: #4f46e5;
-  --color-primary-light: #818cf8;
+  /* Primary Accent - Orange */
+  --color-primary: #FF6835;
+  --color-primary-dark: #e55a2f;
+  --color-primary-light: #ff7d4d;
   
   /* Secondary Accent */
-  --color-secondary: #8b5cf6;
-  --color-secondary-dark: #7c3aed;
-  --color-secondary-light: #a78bfa;
+  --color-secondary: #8E94A3;
+  --color-secondary-dark: #7a7f8c;
+  --color-secondary-light: #a5abb8;
   
   /* Accent Colors */
-  --color-accent: #ec4899;
+  --color-accent: #FF6835;
   --color-accent-yellow: #fbbf24;
 
   
-  /* Semantic Colors */
-  --color-text-primary: var(--color-gray-900);
+  /* Semantic Colors - Light Mode */
+  --color-text-primary: var(--color-gray-800);
   --color-text-secondary: var(--color-gray-500);
   --color-bg-primary: var(--color-white);
   --color-bg-secondary: var(--color-gray-50);
-  
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-accent-1: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-accent-2: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --color-border: var(--color-gray-200);
+  --color-card-bg: var(--color-white);
   
   /* ========== Spacing ========== */
   

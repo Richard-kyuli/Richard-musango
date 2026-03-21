@@ -3,7 +3,7 @@
 }
 
 .contact-hero {
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, var(--color-gray-800) 0%, var(--color-gray-700) 100%);
   color: var(--color-white);
   padding: var(--space-12) var(--space-4) var(--space-10);
   text-align: center;
@@ -11,6 +11,7 @@
 
 .contact-content {
   padding: var(--section-padding) var(--space-4);
+  background: var(--color-gray-50);
 }
 
 .contact-grid {
@@ -81,12 +82,13 @@
 
 .social-card {
   padding: var(--space-3);
-  background: var(--color-bg-secondary);
+  background: var(--color-white);
   border-radius: var(--border-radius-lg);
   text-decoration: none;
   color: inherit;
   transition: all var(--transition-base);
   text-align: center;
+  box-shadow: var(--shadow-sm);
 }
 
 .social-card:hover {
