@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
-import { caseStudies } from '../data/caseStudiesNew'
+import { caseStudies } from '../data/caseStudies'
 import './CaseStudies.css'
 
 function CaseStudies() {
@@ -37,7 +37,7 @@ function CaseStudies() {
                   </div>
                   <h3>{study.title}</h3>
                   <p className="role">{study.role}</p>
-                  <p className="overview">{study.overview}</p>
+                  <p className="description">{study.description}</p>
                   <div className="tags">
                     {study.tags.map((tag, i) => (
                       <span key={i} className="tag">{tag}</span>

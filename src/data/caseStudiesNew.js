@@ -5,6 +5,7 @@ export const caseStudies = [
     platform: 'Web',
     role: 'UI/UX Designer',
     timeline: '4 months',
+    description: 'A modern admin dashboard that streamlined content management and reduced task completion time by 50% through intuitive navigation and real-time analytics.',
     overview: 'Royal Times Admin Dashboard is a comprehensive web-based management system designed to streamline operations for the Royal Times organization. The platform serves as a central hub for content management, user administration, analytics, and reporting. Built with scalability in mind, the dashboard empowers staff members to efficiently manage large volumes of data while maintaining high standards of accuracy and security. The project focused on transforming a legacy system into a modern, intuitive interface that reduces operational overhead and improves decision-making through real-time insights.',
     problem: 'The existing admin system at Royal Times had become a significant bottleneck in daily operations. Staff members reported spending up to 3 hours daily navigating through multiple disconnected tools to complete routine tasks. The interface was cluttered with outdated design patterns, making it difficult for new employees to learn the system without extensive training. Critical issues included: a confusing navigation structure that required users to remember specific paths to reach features, lack of real-time data updates forcing manual page refreshes, no role-based access control leading to security concerns, and an absence of data visualization making it hard to identify trends or issues. The cumulative effect was decreased productivity, increased error rates, and growing frustration among the team.',
     solution: 'We designed and delivered a modern, responsive admin dashboard that consolidates all management functions into a unified interface. The solution features an intelligent navigation system with contextual menus that adapt based on user roles and frequently accessed features. We implemented a modular dashboard with customizable widgets allowing users to personalize their workspace. Real-time data synchronization ensures information is always current, while interactive charts and graphs transform raw data into actionable insights. The drag-and-drop content management system simplifies publishing workflows, and the advanced reporting module generates comprehensive reports with just a few clicks. Role-based access control provides granular permission management, ensuring security without sacrificing usability.',
@@ -108,6 +109,7 @@ export const caseStudies = [
     role: 'UI/UX Designer',
     timeline: '1 month',
     image: '/Buysell/buysellthumb.png',
+    description: 'A trusted marketplace connecting local buyers and sellers with streamlined listing creation, dual account types, and comprehensive admin tools.',
     mobileScreens: [
       { image: '/Buysell/splash1.png', title: 'Splash Screen 1' },
       { image: '/Buysell/splash2.png', title: 'Splash Screen 2' },
@@ -122,6 +124,17 @@ export const caseStudies = [
       { image: '/Buysell/Posts8.png', title: 'Create Post - Step 8' },
       { image: '/Buysell/Feedbackoverlay1.png', title: 'Feedback Overlay 1' },
       { image: '/Buysell/Feedbackoverlay2.png', title: 'Feedback Overlay 2' }
+    ],
+    adminScreens: [
+      { image: '/Buysell/Admin/login.png', title: 'Admin Login' },
+      { image: '/Buysell/Admin/Dashboard.png', title: 'Dashboard Overview' },
+      { image: '/Buysell/Admin/Users.png', title: 'User Management' },
+      { image: '/Buysell/Admin/Product-Listing.png', title: 'Product Listings' },
+      { image: '/Buysell/Admin/Product-Listing3.png', title: 'System Administrators' },
+      { image: '/Buysell/Admin/Category.png', title: 'Category Management' },
+      { image: '/Buysell/Admin/Ad Package.png', title: 'Ad Package Management' },
+      { image: '/Buysell/Admin/Finances.png', title: 'Financial Reports' },
+      { image: '/Buysell/Admin/profile.png', title: 'User Profile View' }
     ],
     userFlowScreens: [
       { image: '/Buysell/Splash.png', title: 'Splash Screen' },
@@ -297,6 +310,7 @@ export const caseStudies = [
     platform: 'Mobile & Web',
     role: 'UI/UX Designer',
     timeline: '4 months',
+    description: 'An education platform connecting students with verified teachers through intuitive search, scheduling, and secure payment features.',
     overview: 'Platform connecting students with qualified teachers for personalized learning',
     problem: 'Students and parents struggled to find qualified, verified teachers for home tutoring and online lessons.',
     goals: [
@@ -393,6 +407,7 @@ export const caseStudies = [
     role: 'UI/UX Designer',
     timeline: '3 months',
     image: '/Nannies/Nanny-thumb-nail.png',
+    description: 'A trusted childcare platform connecting families with verified nannies through comprehensive background checks and detailed profiles.',
     overview: 'Web platform connecting families with qualified, verified nannies and childcare providers',
     problem: 'Parents needed a reliable way to find trustworthy, qualified nannies with proper background checks and references.',
     goals: [
@@ -488,6 +503,7 @@ export const caseStudies = [
     platform: 'Mobile & Web',
     role: 'UI/UX Designer',
     timeline: '5 months',
+    description: 'A job marketplace simplifying the connection between job seekers and employers with one-tap applications and smart matching.',
     overview: 'Job marketplace platform connecting job seekers with employers across various industries',
     problem: 'Job seekers needed an efficient way to find opportunities while employers struggled to reach qualified candidates.',
     goals: [
@@ -583,6 +599,7 @@ export const caseStudies = [
     platform: 'Web',
     role: 'UI/UX Designer',
     timeline: '4 months',
+    description: 'A centralized dashboard that reduced administrative tasks by 60% through automated rent tracking and streamlined maintenance workflows.',
     overview: 'Comprehensive dashboard for property managers to oversee rentals, tenants, and maintenance',
     problem: 'Property managers juggled multiple tools for tenant management, rent collection, and maintenance tracking, leading to inefficiency.',
     goals: [
