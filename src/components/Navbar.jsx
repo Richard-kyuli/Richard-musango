@@ -4,10 +4,22 @@ import './Navbar.css'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
   const navRef = useRef(null)
 
   const isActive = (path) => location.pathname === path
+
+  // Handle scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      setIsScrolled(scrollTop > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   // Close menu on escape key
   useEffect(() => {
@@ -46,10 +58,10 @@ function Navbar() {
   }, [isOpen])
 
   return (
-    <nav className="navbar" ref={navRef} role="navigation" aria-label="Main navigation">
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} ref={navRef} role="navigation" aria-label="Main navigation">
       <div className="container">
-        <Link to="/" className="logo" aria-label="Richard Musango - Home">
-          Richard Musango
+        <Link to="/" className="logo" aria-label="Richard - Home">
+          Richard
         </Link>
         <ul 
           className={`nav-links ${isOpen ? 'active' : ''}`}
@@ -67,42 +79,22 @@ function Navbar() {
           </li>
           <li>
             <Link 
+              to="/case-studies" 
+              className={isActive('/case-studies') || location.pathname.startsWith('/case-studies/') ? 'active' : ''} 
+              onClick={() => setIsOpen(false)}
+              aria-current={isActive('/case-studies') || location.pathname.startsWith('/case-studies/') ? 'page' : undefined}
+            >
+              Portfolio
+            </Link>
+          </li>
+          <li>
+            <Link 
               to="/about" 
               className={isActive('/about') ? 'active' : ''} 
               onClick={() => setIsOpen(false)}
               aria-current={isActive('/about') ? 'page' : undefined}
             >
               About
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/case-studies" 
-              className={isActive('/case-studies') || location.pathname.startsWith('/case-studies/') ? 'active' : ''} 
-              onClick={() => setIsOpen(false)}
-              aria-current={isActive('/case-studies') || location.pathname.startsWith('/case-studies/') ? 'page' : undefined}
-            >
-              Case Studies
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/resume" 
-              className={isActive('/resume') ? 'active' : ''} 
-              onClick={() => setIsOpen(false)}
-              aria-current={isActive('/resume') ? 'page' : undefined}
-            >
-              Resume
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/contact" 
-              className={isActive('/contact') ? 'active' : ''} 
-              onClick={() => setIsOpen(false)}
-              aria-current={isActive('/contact') ? 'page' : undefined}
-            >
-              Contact
             </Link>
           </li>
         </ul>

@@ -13,9 +13,9 @@ function CaseStudies() {
       
       <section className="case-studies-hero">
         <div className="container">
-          <h1 className="page-title">Case Studies</h1>
+          <h1 className="page-title">Portfolio</h1>
           <p className="page-subtitle">
-            Deep dives into my design process and problem-solving approach
+            Check out some of my latest product design case studies. I've led design for millions of users across startups and global corporations.
           </p>
         </div>
       </section>
@@ -29,21 +29,18 @@ function CaseStudies() {
                 key={study.id} 
                 className="case-study-card"
               >
-                <div className={`case-study-image gradient-${index + 1}`}></div>
+                <div 
+                  className="case-study-image"
+                  style={{
+                    backgroundImage: study.image && study.image.startsWith('/') 
+                      ? `url('${study.image}')` 
+                      : undefined
+                  }}
+                  data-gradient={!study.image || !study.image.startsWith('/') ? `gradient-${index + 1}` : undefined}
+                ></div>
                 <div className="case-study-content">
-                  <div className="case-study-meta">
-                    <span className="platform-tag">{study.platform}</span>
-                    <span className="timeline">{study.timeline}</span>
-                  </div>
+                  <span className="tag">{study.tags[0]}</span>
                   <h3>{study.title}</h3>
-                  <p className="role">{study.role}</p>
-                  <p className="description">{study.description}</p>
-                  <div className="tags">
-                    {study.tags.map((tag, i) => (
-                      <span key={i} className="tag">{tag}</span>
-                    ))}
-                  </div>
-                  <span className="read-more">Read Full Case Study →</span>
                 </div>
               </Link>
             ))}

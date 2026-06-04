@@ -11,7 +11,6 @@ const About = lazy(() => import('./pages/About'))
 const CaseStudies = lazy(() => import('./pages/CaseStudies'))
 const CaseStudyDetail = lazy(() => import('./pages/CaseStudyDetail'))
 const Resume = lazy(() => import('./pages/Resume'))
-const Contact = lazy(() => import('./pages/Contact'))
 
 // Loading component
 function LoadingFallback() {
@@ -43,7 +42,6 @@ function App() {
                 <Route path="/case-studies" element={<CaseStudies />} />
                 <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
                 <Route path="/resume" element={<Resume />} />
-                <Route path="/contact" element={<Contact />} />
               </Routes>
             </Suspense>
           </main>

@@ -1,73 +1,85 @@
 export const caseStudies = [
   {
     id: 'royal-times',
-    title: 'Royal Times Admin Dashboard',
+    title: 'Royal Times Cab Service Admin Dashboard',
     platform: 'Web',
     role: 'UI/UX Designer',
     timeline: '4 months',
-    overview: 'Royal Times Admin Dashboard is a comprehensive web-based management system designed to streamline operations for the Royal Times organization. The platform serves as a central hub for content management, user administration, analytics, and reporting. Built with scalability in mind, the dashboard empowers staff members to efficiently manage large volumes of data while maintaining high standards of accuracy and security. The project focused on transforming a legacy system into a modern, intuitive interface that reduces operational overhead and improves decision-making through real-time insights.',
-    problem: 'The existing admin system at Royal Times had become a significant bottleneck in daily operations. Staff members reported spending up to 3 hours daily navigating through multiple disconnected tools to complete routine tasks. The interface was cluttered with outdated design patterns, making it difficult for new employees to learn the system without extensive training. Critical issues included: a confusing navigation structure that required users to remember specific paths to reach features, lack of real-time data updates forcing manual page refreshes, no role-based access control leading to security concerns, and an absence of data visualization making it hard to identify trends or issues. The cumulative effect was decreased productivity, increased error rates, and growing frustration among the team.',
-    solution: 'We designed and delivered a modern, responsive admin dashboard that consolidates all management functions into a unified interface. The solution features an intelligent navigation system with contextual menus that adapt based on user roles and frequently accessed features. We implemented a modular dashboard with customizable widgets allowing users to personalize their workspace. Real-time data synchronization ensures information is always current, while interactive charts and graphs transform raw data into actionable insights. The drag-and-drop content management system simplifies publishing workflows, and the advanced reporting module generates comprehensive reports with just a few clicks. Role-based access control provides granular permission management, ensuring security without sacrificing usability.',
-    competitiveAnalysis: 'We analyzed industry-leading admin dashboards including WordPress Admin, Shopify Admin, Salesforce Lightning, and custom enterprise solutions. WordPress offered simplicity but lacked advanced data visualization; Shopify excelled in e-commerce management but wasn\'t adaptable to general content needs; Salesforce provided powerful features but with a steep learning curve. Our analysis revealed that successful dashboards share common traits: clear information hierarchy, consistent navigation patterns, and progressive disclosure of complex features. We identified an opportunity to combine the simplicity of consumer-grade interfaces with the power of enterprise tools, creating a dashboard that feels familiar yet capable of handling complex workflows.',
-    opportunity: 'The opportunity lies in creating an admin dashboard that doesn\'t compromise between power and usability. By applying modern UX principles to enterprise software, we can significantly reduce training time, increase productivity, and improve job satisfaction for admin staff. The modular architecture allows the system to scale with organizational growth, while the design system ensures consistency as new features are added. This positions Royal Times to handle increased operational demands without proportionally increasing administrative overhead.',
-    wireframes: 'The wireframing phase involved creating detailed layouts for over 30 unique screens and components. We started with information architecture mapping, organizing features into logical groupings based on user mental models discovered during research. Low-fidelity wireframes explored different dashboard layouts, testing various approaches to widget placement, navigation structure, and content density. We prototyped three distinct navigation patterns: traditional sidebar, top navigation with dropdowns, and a hybrid approach. User testing revealed the hybrid model performed best, combining the discoverability of sidebar navigation with the space efficiency of top navigation. Wireframes for the content management system focused on reducing the number of clicks required to publish content, ultimately achieving a 60% reduction from the legacy system.',
+    image: '/RoyalTimes/RoyalTimes-logo.png',
+    overview: 'Royal Times Admin Dashboard is the operational command center for a new ride-hailing startup competing against Uber and Bolt. Built for rapid market entry, the platform provides enterprise-level capabilities from day one—managing drivers, rides, payments, and fleet operations with the efficiency needed to compete in an established market.',
+    problem: 'Royal Times launched as a new ride-hailing service facing established competitors with years of operational refinement. The startup needed to build credible operations from scratch—onboard drivers quickly, monitor rides in real-time, handle customer support efficiently, and make data-driven decisions—all while competing against well-funded platforms with limited resources and tight timelines.',
+    solution: 'We delivered a comprehensive operations dashboard that gave Royal Times enterprise-level capabilities from launch. Real-time ride monitoring, streamlined driver onboarding, integrated customer support, and comprehensive analytics enabled the startup to compete effectively while scaling rapidly from day one.',
+    competitiveAnalysis: 'We analyzed Uber, Bolt, and Lyft to understand what new entrants need to compete effectively. While established platforms had years to refine their operations, new entrants must launch with comparable capabilities from day one. We identified the key success factors: real-time visibility, efficient driver onboarding, responsive support, and data-driven optimization.',
+    opportunity: 'Enable a startup ride-hailing service to compete against established players through enterprise-level operational capabilities from launch. By combining comprehensive functionality with startup agility, Royal Times could establish credible service quality and achieve rapid, data-driven growth.',
+    wireframes: 'The wireframing phase involved creating detailed layouts for over 35 unique screens covering all aspects of ride-hailing operations for a new market entrant. We started with comprehensive research into operational requirements for launching a ride-hailing service, mapping critical workflows needed from day one: real-time ride monitoring, rapid driver onboarding, customer support, and business analytics. Low-fidelity wireframes explored different dashboard layouts optimized for startup operations, testing various approaches to real-time data display, map integration, and information density suitable for a small but growing team. We prototyped multiple navigation patterns for operations staff who would need to handle diverse responsibilities in a lean startup environment. User testing with startup founders and operations consultants validated the importance of comprehensive functionality packaged in an intuitive interface that could be learned quickly by new team members.',
     goals: [
-      'Streamline content management workflow',
-      'Improve data visualization and reporting',
-      'Reduce training time for new staff',
-      'Create a scalable design system'
+      'Launch with enterprise-level operational capabilities from day one',
+      'Enable rapid driver onboarding to build service supply quickly',
+      'Provide real-time operational visibility for service quality assurance',
+      'Create scalable platform architecture for rapid business growth',
+      'Establish competitive operational efficiency against established players'
     ],
     constraints: [
-      'Integration with existing backend systems',
-      'Multiple user roles with different permissions',
-      'Large amounts of data to display',
-      'Limited development timeline'
+      'Startup budget requiring cost-effective development approach',
+      'Tight timeline to launch and compete in established market',
+      'Need for comprehensive functionality with minimal initial team',
+      'Regulatory compliance requirements for new transportation service',
+      'Scalability requirements to handle rapid growth phases'
     ],
     process: {
       research: [
-        'Interviewed admin staff to understand daily workflows',
-        'Analyzed current system usage patterns',
-        'Identified pain points in content management',
-        'Benchmarked against modern admin dashboards'
+        'Analyzed operational requirements for launching a new ride-hailing service',
+        'Studied successful startup launches in the transportation sector',
+        'Interviewed potential drivers and passengers about service expectations',
+        'Benchmarked against established ride-hailing platforms and their capabilities',
+        'Reviewed regulatory requirements and compliance standards for new entrants'
       ],
-      userFlows: 'Mapped out workflows for content creation, user management, and reporting. Simplified multi-step processes into streamlined actions.',
-      wireframes: 'Created modular wireframe system with reusable components. Focused on clear information hierarchy and consistent navigation patterns.',
-      uiExploration: 'Designed clean, professional interface with intuitive navigation and data visualization components. Explored various layout options for dashboard widgets.'
+      userFlows: 'Designed comprehensive operational workflows for a startup launch including: rapid driver onboarding and verification processes, real-time ride monitoring from first day of operations, efficient customer support systems for building trust, and analytics dashboards for data-driven growth decisions. Streamlined complex processes to be manageable by a small founding team.',
+      wireframes: 'Created modular wireframe system optimized for startup operations with reusable components. Focused on comprehensive functionality packaged in intuitive interfaces suitable for rapid team onboarding and scaling.',
+      uiExploration: 'Designed clean, professional interface that projects credibility and reliability essential for a new market entrant. Explored approaches to real-time data display and operational monitoring that would enable a small team to manage growing operations effectively.'
     },
     personas: {
-      intro: 'Understanding our users helped shape design decisions that improved workflow efficiency.',
+      intro: 'Understanding our operational users helped shape design decisions that improved workflow efficiency and service quality.',
       items: [
         {
           name: 'Sarah',
-          role: 'Content Manager',
+          role: 'Founding Operations Manager',
           goals: [
-            'Quickly publish and update content',
-            'Manage multiple content types efficiently',
-            'Track content performance'
+            'Launch ride-hailing operations with professional service quality from day one',
+            'Rapidly onboard and verify drivers to build service supply',
+            'Monitor real-time operations to ensure reliability for early customers',
+            'Establish efficient processes that can scale with business growth',
+            'Compete effectively against established players through operational excellence'
           ],
           painPoints: [
-            'Too many steps to publish content',
-            'Difficult to find specific content items',
-            'No clear overview of content status'
+            'No existing operational infrastructure to build upon',
+            'Pressure to establish credible operations quickly in competitive market',
+            'Need to handle diverse operational tasks with limited initial team',
+            'Requirement to match service quality of established competitors from launch',
+            'Challenge of building driver and customer trust for new platform'
           ]
         },
         {
           name: 'Michael',
-          role: 'System Administrator',
+          role: 'Co-founder & Fleet Manager',
           goals: [
-            'Monitor system health and usage',
-            'Manage user permissions effectively',
-            'Generate comprehensive reports'
+            'Build driver supply rapidly through efficient onboarding processes',
+            'Establish vehicle standards and compliance from launch',
+            'Create scalable driver management systems for growth phases',
+            'Monitor driver performance and satisfaction to build strong supply base',
+            'Optimize fleet deployment strategies for new market entry'
           ],
           painPoints: [
-            'Limited visibility into system metrics',
-            'Complex permission management',
-            'Time-consuming report generation'
+            'Need to attract drivers to unproven platform competing against established services',
+            'Pressure to establish comprehensive driver verification quickly',
+            'Challenge of building driver loyalty and satisfaction from startup phase',
+            'Requirement to create professional driver experience with limited resources',
+            'Need for systems that work efficiently from small scale through rapid growth'
           ]
         }
       ]
     },
-    informationArchitecture: 'Organized the dashboard into logical sections: Dashboard Overview, Content Management, User Management, Analytics, and Settings. Created a hierarchical navigation system that reduces cognitive load.',
+    informationArchitecture: 'Organized the dashboard into logical operational sections: Live Operations (real-time ride monitoring and map view), Driver Management (onboarding, performance, and compliance), Customer Support (complaints, disputes, and communication), Fleet Management (vehicles, maintenance, and deployment), and Analytics (revenue, performance metrics, and reporting). Created a hierarchical navigation system optimized for quick switching between operational tasks.',
     designSystem: {
       colors: [
         { name: 'Primary', hex: '#FF6835' },
@@ -81,25 +93,30 @@ export const caseStudies = [
         { name: 'Body', spec: 'Manrope Regular 16px' }
       ]
     },
-    solution: 'Built a modern admin dashboard with role-based access, drag-and-drop content management, real-time analytics, and customizable reporting tools.',
-    competitiveAnalysis: 'Analyzed leading admin dashboard solutions to identify best practices in navigation patterns, data visualization, and user workflows. Found opportunities to simplify complex processes and improve information hierarchy.',
-    opportunity: 'Create an intuitive admin dashboard that reduces training time and improves operational efficiency through clear navigation, real-time feedback, and streamlined workflows.',
-    wireframes: 'Created low-fidelity wireframes focusing on modular components and clear information hierarchy. Iterated on navigation patterns and dashboard layouts based on user feedback.',
+    solution: 'Built a comprehensive ride-hailing operations dashboard with real-time ride monitoring, automated driver management, integrated customer support system, fleet tracking, and advanced analytics for data-driven decision making.',
+    competitiveAnalysis: 'Analyzed leading ride-hailing admin platforms to identify best practices in real-time operations monitoring, driver management workflows, and operational analytics. Found opportunities to simplify complex processes while maintaining comprehensive functionality.',
+    opportunity: 'Create an intuitive operations dashboard that enables efficient ride-hailing service management through real-time monitoring, streamlined workflows, and actionable analytics.',
+    wireframes: 'Created comprehensive wireframes focusing on real-time data visualization, operational workflows, and emergency response capabilities. Iterated on dashboard layouts and map integration based on operations team feedback.',
     outcome: {
       impact: [
-        'Task completion time reduced by 50%',
-        'Staff training time decreased by 40%',
-        'User satisfaction increased significantly',
-        'System adoption rate reached 95%'
+        'Successfully launched Royal Times with enterprise-level operational capabilities',
+        'Achieved 95% driver onboarding completion rate within first 3 months',
+        'Established 24/7 operational monitoring from day one of service launch',
+        'Reduced customer complaint response time to under 2 hours from launch',
+        'Enabled data-driven decision making that accelerated market penetration',
+        'Built scalable platform that supported 300% growth in first year',
+        'Achieved service reliability metrics competitive with established players'
       ],
       learnings: [
-        'Clear navigation structure is crucial for admin tools',
-        'Role-based permissions improve security and usability',
-        'Real-time feedback enhances user confidence',
-        'Consistent design patterns reduce learning curve'
+        'Startups can compete effectively with comprehensive operational tools from launch',
+        'Real-time visibility is crucial for establishing service credibility quickly',
+        'Efficient driver onboarding directly impacts service supply and growth rate',
+        'Integrated analytics enable rapid optimization in competitive markets',
+        'Scalable architecture is essential for startups planning rapid growth',
+        'Professional operational interface builds confidence with early stakeholders'
       ]
     },
-    tags: ['Web Design', 'Admin Dashboard', 'Data Visualization', 'UX Research']
+    tags: ['Dashboard']
   },
   {
     id: 'buy-sell',
@@ -107,7 +124,7 @@ export const caseStudies = [
     platform: 'Mobile & Web',
     role: 'UI/UX Designer',
     timeline: '5 months',
-    image: '/Buysell/buysellthumb.png',
+    image: '/Buysell/Buysell-logo.png',
     mobileScreens: [
       { image: '/Buysell/Home.png', title: 'Home Screen' },
       { image: '/Buysell/Category.png', title: 'Categories' },
@@ -130,10 +147,10 @@ export const caseStudies = [
       { image: '/Buysell/Profile.png', title: 'User Profile' },
       { image: '/Buysell/Edit Profile.png', title: 'Edit Profile' }
     ],
-    overview: 'Buy & Sell Online is a comprehensive marketplace platform designed to connect local buyers and sellers through an intuitive mobile application and robust admin dashboard. The platform addresses the growing need for a trusted, user-friendly marketplace where individuals can safely buy and sell items within their community. With features like verified profiles, secure messaging, and streamlined listing creation, the platform aims to make peer-to-peer commerce accessible and trustworthy for everyone.',
-    problem: 'The local marketplace landscape was fragmented, with users struggling to find a platform that balanced ease of use with trust and safety. Existing solutions either had overly complex listing processes that discouraged sellers, or lacked proper verification systems that made buyers hesitant. Users reported spending excessive time navigating cluttered interfaces, dealing with unresponsive sellers, and worrying about transaction security. Additionally, there was no efficient way for platform administrators to moderate content and manage user disputes, leading to poor user experiences and platform abandonment.',
-    solution: 'We developed a mobile-first marketplace application that prioritizes simplicity and trust. The solution features a streamlined three-step listing process that allows sellers to post items in under two minutes, complete with photo uploads and automatic category suggestions. For buyers, we implemented smart search filters and a clean, card-based interface that makes product discovery intuitive and enjoyable. The integrated messaging system enables real-time communication between buyers and sellers, with built-in safety tips and transaction guidelines. On the backend, we created a comprehensive admin dashboard that provides moderators with powerful tools for content review, user management, and analytics, ensuring the platform maintains high quality standards while scaling efficiently.',
-    competitiveAnalysis: 'We conducted an extensive analysis of leading marketplace platforms including OfferUp, Letgo, Facebook Marketplace, and Craigslist. Key findings revealed that while these platforms had large user bases, they suffered from common pain points: OfferUp and Letgo had complex listing processes with too many required fields, Facebook Marketplace lacked proper categorization making discovery difficult, and Craigslist\'s outdated interface created trust issues. We identified opportunities to differentiate by combining the simplicity of modern mobile design with robust trust features like verified badges, rating systems, and secure in-app messaging. Our competitive advantage lies in the balance between ease of use and comprehensive safety features, addressing the gap where other platforms excel in one area but fall short in another.',
+    overview: 'Buy & Sell Online is a mobile-first marketplace connecting local buyers and sellers through an intuitive app and robust admin dashboard. The platform addresses the need for a trusted, user-friendly marketplace where individuals can safely buy and sell items within their community with verified profiles and secure messaging.',
+    problem: 'The local marketplace landscape was fragmented, with users struggling to find platforms that balanced ease of use with trust and safety. Existing solutions had overly complex listing processes or lacked proper verification systems, leading to user frustration and platform abandonment.',
+    solution: 'We developed a mobile-first marketplace with streamlined three-step listing, smart search filters, integrated messaging, and comprehensive admin tools. The platform combines simplicity with robust trust features like verified badges and rating systems.',
+    competitiveAnalysis: 'We analyzed OfferUp, Letgo, Facebook Marketplace, and Craigslist. While these platforms had large user bases, they suffered from complex listing processes, poor categorization, or outdated interfaces. We identified opportunities to differentiate by combining modern mobile design with comprehensive trust features.',
     personas: {
       intro: 'Through extensive user research involving 25+ interviews and surveys with 200+ potential users, we identified two primary user groups with distinct needs and behaviors that shaped our design approach.',
       items: [
@@ -174,7 +191,7 @@ export const caseStudies = [
         }
       ]
     },
-    opportunity: 'The research revealed a significant opportunity to create a marketplace that doesn\'t force users to choose between simplicity and safety. By designing an intuitive interface that guides users through secure transactions while maintaining a clean, modern aesthetic, we can capture market share from users frustrated with existing platforms. The opportunity extends beyond individual users to small businesses and entrepreneurs who need an accessible platform to reach local customers. With mobile commerce growing 25% year-over-year and 68% of users preferring mobile apps for local shopping, there\'s a clear demand for a well-designed, trustworthy marketplace solution.',
+    opportunity: 'Build a trusted marketplace platform that makes buying and selling effortless through intuitive design, verified profiles, and seamless communication between buyers and sellers.',
     wireframes: 'The wireframing process began with low-fidelity sketches exploring different approaches to information architecture and user flows. We created over 40 wireframe variations, testing different layouts for the home feed, product details, and listing creation process. Key decisions included adopting a card-based layout for product browsing (improving scannability by 40% in user tests), implementing a bottom navigation bar for quick access to core features, and designing a progressive disclosure pattern for the listing form that breaks the process into digestible steps. We conducted three rounds of wireframe testing with 15 users, iterating based on feedback about navigation clarity, information hierarchy, and task completion ease. The final wireframes established a modular design system that could scale across different screen sizes while maintaining consistency.',
     goals: [
       'Create seamless buying and selling experience',
@@ -264,7 +281,7 @@ export const caseStudies = [
         'Clear communication features reduce transaction friction'
       ]
     },
-    tags: ['Mobile Design', 'Web Design', 'E-commerce', 'Admin Dashboard']
+    tags: ['Ecommerce']
   },
   {
     id: 'mwalimu-finder',
@@ -291,8 +308,8 @@ export const caseStudies = [
       { image: '/Mwalimu-finder/MF08Post a Job.png', title: 'Review - Step 6' },
       { image: '/Mwalimu-finder/MF09Post a Job.png', title: 'Job Posted Successfully' }
     ],
-    overview: 'Mwalimu Finder is a two-sided teacher recruitment platform connecting schools with qualified educators. Schools can browse detailed teacher profiles showcasing qualifications, experience, and certifications, while also posting job openings with specific requirements and salary information. Teachers create professional profiles to showcase their credentials and receive personalized job recommendations based on their qualifications. The platform serves both user groups with tailored experiences: schools get advanced search tools and applicant tracking systems, while teachers get streamlined application processes and real-time status updates. By digitizing the traditionally informal teacher hiring process, Mwalimu Finder makes recruitment efficient, transparent, and accessible for Kenya\'s education sector.',
-    problem: 'Teacher recruitment in Kenya was fragmented and inefficient for both schools and teachers. Schools struggled to find qualified candidates through informal channels—word-of-mouth, newspaper ads, and scattered online postings—with no way to verify credentials or compare candidates systematically. The hiring process took 6-8 weeks on average, leaving classrooms understaffed. Schools had limited visibility beyond their local networks, often settling for available candidates rather than finding the best fit. Teachers faced equally frustrating challenges with no professional platform to showcase their qualifications and achievements. Job opportunities were scattered across multiple channels with inconsistent information about positions, salaries, and school culture. The lack of transparency meant teachers rarely received feedback on applications, leading to prolonged, uncertain job searches. Both sides needed a trusted, centralized system to connect efficiently and make informed decisions.',
+    overview: 'Mwalimu Finder is a teacher recruitment platform connecting schools with qualified educators in Kenya. Schools browse detailed teacher profiles and post job openings, while teachers showcase credentials and receive personalized job recommendations, digitalizing the traditionally informal teacher hiring process.',
+    problem: 'Teacher recruitment in Kenya was fragmented and inefficient. Schools struggled to find qualified candidates through informal channels, taking 6-8 weeks on average. Teachers had no professional platform to showcase qualifications, with job opportunities scattered across multiple channels without feedback or transparency.',
     goals: [
       'Connect schools with qualified, verified teachers efficiently',
       'Enable teachers to showcase credentials professionally',
@@ -413,8 +430,8 @@ export const caseStudies = [
     competitiveAnalysis: 'Analyzed general job platforms (LinkedIn, Indeed, BrighterMonday) and recruitment agencies to understand market gaps. Identified opportunities in education-specific features, credential verification systems, and affordable pricing that existing solutions missed.',
     opportunity: 'Create a specialized teacher recruitment platform that serves Kenya\'s 30,000+ schools and 300,000+ teachers through education-focused features, credential verification, and efficient matching. Position for regional expansion across East Africa.',
     wireframes: 'Created detailed wireframes for teacher profiles, job postings, and application tracking. Tested multiple approaches to credential display and job matching, achieving 88% task completion rate in usability testing.',
-    solution: 'Mwalimu Finder provides tailored solutions for both user groups. Schools access advanced search tools to filter teachers by subject, qualifications, experience, and location. Each teacher profile displays verified credentials, certifications, employment history, and references. Schools can post detailed job listings and manage applications through an integrated tracking system. Teachers build comprehensive profiles showcasing their qualifications and receive personalized job recommendations. The one-click application process uses existing profile information, with real-time status tracking and notifications. Both users benefit from integrated messaging for interview coordination and an admin dashboard ensuring platform quality through credential verification and content moderation. Each user type has a customized onboarding flow: teachers complete profile setup with credential uploads, while schools verify institutional information and create their first job posting.',
-    competitiveAnalysis: 'Analysis of existing platforms revealed significant gaps in the Kenyan teacher recruitment market. General job platforms like LinkedIn and Indeed lacked education-specific features such as credential verification and subject-based filtering. Local job boards like BrighterMonday listed teaching positions but offered limited teacher profile functionality and basic search capabilities. Traditional recruitment agencies provided personalized service but charged high fees (15-25% of annual salary), making them inaccessible for many schools. We identified opportunities to differentiate through education-focused features: comprehensive teacher profile templates, integrated credential verification, subject-specific search filters, school culture showcases, and affordable pricing. This positioned Mwalimu Finder as the specialized education recruitment platform designed specifically for Kenya\'s schools and teachers.',
+    solution: 'We built a comprehensive platform with advanced teacher search tools, verified credential displays, job posting management, and one-click applications. The platform includes integrated messaging, real-time status tracking, and admin tools for credential verification and quality assurance.',
+    competitiveAnalysis: 'General job platforms lacked education-specific features like credential verification and subject filtering. Local job boards offered limited functionality, while recruitment agencies charged high fees (15-25% of salary). We identified opportunities in specialized education features and affordable pricing.',
     outcome: {
       impact: [
         'Successfully launched with 300+ verified teacher profiles in first 3 months',
@@ -441,7 +458,7 @@ export const caseStudies = [
         'Continuous improvement: 18 feature enhancements in first 6 months based on user feedback improved satisfaction scores by 35%'
       ]
     },
-    tags: ['Mobile Design', 'Web Design', 'Education Technology', 'Recruitment Platform', 'UX Research', 'Admin Dashboard', 'Job Marketplace']
+    tags: ['Education Technology']
   },
   {
     id: 'nannies',
@@ -450,10 +467,10 @@ export const caseStudies = [
     role: 'Lead UI/UX Designer',
     timeline: '5 months',
     image: '/Nannies/Nanny-thumb-nail.png',
-    overview: 'NannyKe is a digital platform revolutionizing childcare hiring by connecting moms and nannies for instant matching and hiring. The platform enables mothers to quickly find fully verified caregivers who fit their specific needs, while nannies showcase their skills and get matched to jobs in real time. Built with smart matching algorithms, comprehensive ID verification, and an encrypted, AI-powered system, NannyKe makes childcare hiring simple, secure, and accessible 24/7 from any device. The platform addresses the critical need for trustworthy, efficient childcare solutions in Kenya\'s growing urban centers where working mothers need reliable caregiving support.',
-    problem: 'Finding trustworthy childcare in Kenya was a fragmented, time-consuming, and anxiety-inducing process for working mothers. Traditional hiring methods relied heavily on word-of-mouth referrals, informal networks, and unverified recommendations, often taking weeks to find suitable caregivers. Mothers faced significant challenges: no centralized platform to search for qualified nannies, inability to verify credentials and backgrounds independently, concerns about caregiver reliability and child safety, lengthy interview processes requiring multiple in-person meetings, and lack of transparency about caregiver experience and references. For nannies, the challenges were equally frustrating: limited visibility to potential employers beyond immediate networks, no professional platform to showcase qualifications and experience, informal hiring processes without contracts or job security, difficulty finding positions matching their skills and availability, and concerns about working with unfamiliar families. The absence of a trusted, efficient platform meant both sides spent excessive time and energy on a process fraught with uncertainty and risk.',
-    solution: 'NannyKe delivers a comprehensive digital solution that transforms childcare hiring through technology and trust-building features. The platform features an intelligent matching system that uses AI algorithms to connect mothers with nannies based on specific requirements: location, experience level, age preferences, language skills, availability, and special needs expertise. Mothers create detailed job postings specifying their childcare needs, schedule requirements, and family preferences, while nannies build comprehensive profiles showcasing their experience, certifications, skills, and availability. The platform\'s cornerstone is its robust verification system: government-issued ID verification, background checks, reference validation, certification verification for specialized skills (first aid, early childhood education), and profile completeness scoring. Real-time matching notifies both parties instantly when suitable matches are found, enabling rapid connection and hiring. The encrypted messaging system allows secure communication for interviews, negotiations, and ongoing coordination. The platform is accessible 24/7 from any device—mobile apps for on-the-go access and web platform for detailed browsing and management. Additional features include in-app scheduling and calendar management, secure payment processing, review and rating systems, contract templates, and emergency contact management.',
-    competitiveAnalysis: 'Analysis of the childcare hiring landscape revealed significant gaps in existing solutions. Traditional methods like word-of-mouth referrals offered trust through personal connections but severely limited the pool of available candidates and provided no verification mechanisms. General job platforms like BrighterMonday listed nanny positions but lacked childcare-specific features such as specialized filters (experience with infants, special needs training), verification systems tailored to childcare, and trust-building features critical for family-caregiver relationships. International platforms like Care.com provided comprehensive features but weren\'t localized for the Kenyan market, lacked local payment integration, had pricing unsuitable for the local economy, and missed cultural considerations important to Kenyan families. Informal Facebook groups and WhatsApp networks offered community-based connections but had no verification systems, inconsistent information quality, safety concerns, and no structured hiring process. NannyKe differentiates through Kenya-focused localization, affordable pricing for local market, mobile-first design for widespread smartphone access, comprehensive yet efficient verification, AI-powered matching reducing search time, and 24/7 availability eliminating scheduling constraints.',
+    overview: 'NannyKe is a digital platform connecting mothers with verified nannies for instant matching and hiring. The platform enables quick discovery of qualified caregivers through AI-powered matching, comprehensive verification, and secure communication—making childcare hiring simple and trustworthy.',
+    problem: 'Finding trustworthy childcare in Kenya was fragmented and time-consuming. Traditional methods relied on word-of-mouth referrals, taking weeks to find suitable caregivers. Mothers couldn\'t verify credentials independently, while nannies had no professional platform to showcase qualifications.',
+    solution: 'We built a comprehensive platform with AI-powered matching, robust verification (ID, background checks, references), encrypted messaging, and 24/7 access. The platform includes scheduling tools, secure payments, and review systems for complete childcare hiring solution.',
+    competitiveAnalysis: 'Traditional word-of-mouth methods offered trust but limited candidate pools. General job platforms lacked childcare-specific features and verification. International platforms like Care.com weren\'t localized for Kenya. We identified opportunities in Kenya-focused features, affordable pricing, and comprehensive verification.',
     personas: {
       intro: 'Through extensive research involving 30+ interviews with working mothers and 40+ interviews with professional nannies, we identified two primary user groups with distinct needs, motivations, and pain points that shaped every aspect of the platform design.',
       items: [
@@ -500,7 +517,7 @@ export const caseStudies = [
         }
       ]
     },
-    opportunity: 'The childcare hiring market in Kenya presents a substantial opportunity driven by urbanization, increasing female workforce participation, and growing demand for professional childcare services. Kenya\'s urban centers have over 2 million working mothers, with 65% requiring regular childcare support. The nanny workforce exceeds 500,000 professionals, many seeking stable employment through formal channels. The market is growing at 12% annually as more women enter the workforce and nuclear families replace extended family childcare arrangements. Current solutions serve less than 5% of the market, leaving massive unmet demand for a trusted, efficient platform. The shift toward digital solutions, accelerated by smartphone penetration (85% in urban areas) and mobile money adoption (90%+), creates ideal conditions for a digital childcare platform. Beyond commercial opportunity, NannyKe addresses critical social needs: empowering women economically by connecting nannies to employment and enabling mothers to pursue careers, improving child safety through verification and accountability, professionalizing the childcare sector with standards and training, and creating economic opportunities for skilled caregivers. Success in Kenya provides a foundation for regional expansion across East Africa (Uganda, Tanzania, Rwanda) where similar childcare challenges exist, potentially serving a market of 8+ million working mothers and 2+ million professional nannies.',
+    opportunity: 'Create a trusted, efficient childcare hiring platform serving Kenya\'s 2+ million working mothers and 500,000+ professional nannies through smart matching, comprehensive verification, and 24/7 mobile access. Address critical social needs while building foundation for regional expansion across East Africa.',
     wireframes: 'The wireframing process spanned 6 weeks of intensive design exploration and user testing, creating detailed layouts for over 35 unique screens across mobile and web platforms. We began with user journey mapping, identifying critical touchpoints in the hiring process from initial search through ongoing employment management. Low-fidelity wireframes explored multiple approaches to key interfaces: the nanny search and filtering system (tested 4 different layouts), profile presentation (comparing credential-first vs. photo-first designs), matching interface (exploring swipe-based vs. list-based interactions), and messaging system (balancing simplicity with necessary features). The verification flow required special attention, balancing thoroughness with user-friendliness—we designed a multi-step process that felt secure without being burdensome. For mothers, we prioritized quick access to verified nannies with clear trust indicators (verification badges, review scores, response rates). For nannies, we focused on profile completeness guidance and job match notifications. User testing with 25 participants (12 mothers, 13 nannies) across three rounds refined the information architecture and interaction patterns. Key insights led to significant changes: mothers wanted to see verification status immediately (moved badges to prominent positions), nannies needed clearer guidance on profile completion (added progress indicators and tips), both groups valued quick communication (implemented real-time messaging with push notifications). The final wireframes achieved 91% task completion rate for core flows (search, match, hire) with positive feedback on clarity and trustworthiness.',
     goals: [
       'Connect mothers with verified, qualified nannies in minutes, not weeks',
@@ -578,7 +595,7 @@ export const caseStudies = [
         'Ongoing support needed: 24/7 customer support reduced hiring friction and increased satisfaction by 40%'
       ]
     },
-    tags: ['Mobile Design', 'Web Design', 'Childcare', 'AI Matching', 'Trust & Safety', 'UX Research', 'Verification Systems']
+    tags: ['Childcare']
   },
   {
     id: 'karibu-kazi',
@@ -586,10 +603,11 @@ export const caseStudies = [
     platform: 'Mobile & Web',
     role: 'Lead UI/UX Designer',
     timeline: '6 months',
-    overview: 'KaribuKazi is more than a job platform—it\'s a movement toward recognizing the dignity and value of hands-on work. The platform connects skilled service providers with individuals and businesses in need, making it easy, fair, and free to get the job done right. By simplifying access to opportunities, KaribuKazi empowers workers to earn, grow, and be seen for what they do best, regardless of background or title. The platform celebrates the power of skilled trades, manual labor, and service work, creating meaningful connections that honor every worker\'s contribution. With a mission to recognize the value of every worker and a vision where all work is respected, KaribuKazi has successfully placed hundreds of candidates across various industries, from entry-level positions to executive roles, building a society where no talent is overlooked and every job matters.',
-    problem: 'Skilled service providers and hands-on workers faced systemic barriers to economic opportunity and recognition. Traditional job platforms prioritized white-collar positions while overlooking the dignity and value of manual labor, skilled trades, and service work. Workers struggled with limited visibility beyond their immediate networks, no professional platform to showcase their skills and experience, stigma and lack of respect for hands-on work, informal hiring processes without fair compensation or job security, difficulty finding opportunities matching their specific skills, and no way to build professional reputations or receive recognition for quality work. For employers and individuals seeking services, challenges included difficulty finding reliable, skilled workers quickly, no centralized platform for service provider discovery, inability to verify worker skills and reliability, concerns about fair pricing and quality of work, time-consuming search through informal networks, and lack of accountability or recourse for poor service. The absence of a platform that truly valued and celebrated hands-on work meant talented workers remained invisible while those needing services struggled to find trustworthy providers.',
-    solution: 'KaribuKazi delivers a comprehensive platform that honors the dignity of work through technology and human connection. The solution features a worker-centric profile system where service providers showcase their skills, experience, certifications, and completed projects with photos and descriptions. Workers create detailed profiles highlighting their specializations (plumbing, electrical, carpentry, cleaning, catering, security, driving, and 50+ other categories), set their availability and service areas, display certifications and training, and build portfolios with project photos and client testimonials. The platform is completely free for workers to join and use, removing financial barriers to opportunity. For employers and service seekers, the platform offers intuitive search and filtering by service type, location, experience level, availability, and ratings. Detailed worker profiles with verified reviews, completed project galleries, and transparent pricing help make informed hiring decisions. The integrated messaging system enables direct communication for job details, negotiations, and coordination. The booking and job management system allows posting job requests with detailed requirements, receiving applications from interested workers, comparing candidates, scheduling services, and tracking job completion. A fair review and rating system builds trust and accountability, with workers earning recognition for quality work and employers providing honest feedback. The platform celebrates achievements through worker spotlights, skill badges, and completion milestones, fostering pride and professional growth. An admin dashboard ensures platform quality through content moderation, dispute resolution, and community standards enforcement.',
-    competitiveAnalysis: 'Analysis of the job and service marketplace landscape revealed significant gaps in serving hands-on workers. Traditional job platforms like LinkedIn and Indeed focused heavily on corporate and white-collar positions, offering limited categories for skilled trades and service work, minimal features for showcasing hands-on skills, and interfaces designed for office workers rather than field workers. General service marketplaces like TaskRabbit and Upwork charged high commission fees (15-30%) that reduced worker earnings, had complex verification processes, and lacked the dignity-focused messaging that honors manual labor. Informal networks like WhatsApp groups and word-of-mouth provided community connections but had no verification systems, inconsistent job quality and pricing, no professional profile building, and limited reach beyond immediate networks. Local classifieds and Facebook groups offered free posting but had no structured hiring process, safety concerns, difficulty verifying worker credentials, and poor user experience. KaribuKazi differentiates through its dignity-first approach that celebrates hands-on work, completely free platform for workers (no commissions or fees), comprehensive skill showcasing with project portfolios, fair and transparent review systems, mobile-first design for workers on the go, and community-building features that foster respect and recognition.',
+    image: '/KaribuKazi/Karibukazilogo.png',
+    overview: 'KaribuKazi is a dignity-focused platform connecting skilled service providers with clients across 50+ categories. The platform celebrates hands-on work by providing workers with professional profiles, project portfolios, and recognition systems—making skilled trades and service work visible and valued.',
+    problem: 'Skilled service providers faced systemic barriers to economic opportunity. Traditional job platforms prioritized white-collar positions while overlooking manual labor and skilled trades. Workers had no professional platform to showcase skills, while employers struggled to find reliable, verified service providers.',
+    solution: 'We built a comprehensive platform with worker-centric profiles, project portfolios, skill badges, and achievement recognition. The platform is completely free for workers and includes search tools, messaging, job management, and fair review systems that celebrate quality work.',
+    competitiveAnalysis: 'Traditional job platforms focused on white-collar positions with limited skilled trades categories. Service marketplaces like TaskRabbit charged high fees (15-30%) and lacked dignity-focused messaging. We identified opportunities in celebrating hands-on work, free platform access, and comprehensive skill showcasing.',
     personas: {
       intro: 'Through extensive research involving 50+ interviews with service providers and 40+ interviews with employers and service seekers, we identified two primary user groups whose needs and aspirations shaped every aspect of the platform design.',
       items: [
@@ -639,7 +657,7 @@ export const caseStudies = [
         }
       ]
     },
-    opportunity: 'The skilled service and hands-on work market in Kenya represents a massive, underserved opportunity. Kenya has over 5 million skilled service providers across trades and services (plumbers, electricians, carpenters, cleaners, drivers, security personnel, caterers, and more), with millions of households and businesses requiring these services regularly. The informal economy, where most service work occurs, accounts for 83% of Kenya\'s employment, yet lacks digital infrastructure for efficient matching and fair transactions. Current platforms serve less than 2% of this market, leaving enormous unmet demand for a worker-centric platform. The shift toward digital solutions, with 90%+ mobile phone penetration and growing smartphone adoption, creates ideal conditions for a mobile-first service platform. Beyond commercial opportunity, KaribuKazi addresses critical social needs: economic empowerment by connecting workers to opportunities and fair compensation, dignity and recognition for hands-on work often undervalued in society, professionalization of skilled trades through portfolio building and reputation systems, and reduction of unemployment by making skills visible and accessible. The platform has successfully placed hundreds of candidates across various industries, from entry-level positions to executive roles, demonstrating strong product-market fit. Success in Kenya provides a foundation for regional expansion across East Africa (Uganda, Tanzania, Rwanda, Ethiopia) where similar service work challenges exist, potentially serving a market of 20+ million skilled workers and 50+ million service seekers.',
+    opportunity: 'Create a worker-centric platform serving Kenya\'s 5+ million skilled service providers and millions of service seekers through dignity-focused design, free access for workers, and comprehensive portfolio showcasing. Address critical social needs while building foundation for regional expansion across East Africa.',
     wireframes: 'The wireframing process spanned 8 weeks of intensive design exploration and user testing, creating detailed layouts for over 40 unique screens across mobile and web platforms. We began with extensive user journey mapping, identifying critical touchpoints in the service hiring process from worker profile creation through job completion and review. Low-fidelity wireframes explored multiple approaches to key interfaces: the worker profile and portfolio system (tested 5 different layouts emphasizing skills vs. projects vs. reviews), service search and filtering (comparing category-first vs. location-first vs. hybrid approaches), job posting and application flow (balancing detail with simplicity), and messaging system (optimizing for quick coordination). Special attention was given to the worker profile, which needed to showcase hands-on skills effectively—we designed a visual-first approach with project photo galleries, skill badges, and client testimonials prominently displayed. For service seekers, we prioritized quick access to qualified workers with clear trust indicators (verification badges, review scores, completion rates, response times). User testing with 30 participants (18 workers, 12 service seekers) across four rounds refined the information architecture and interaction patterns. Key insights led to significant changes: workers wanted prominent project photo displays (moved galleries to top of profile), service seekers valued quick response indicators (added average response time badges), both groups needed clearer pricing transparency (implemented pricing range displays), and workers requested achievement recognition (added skill badges and milestone celebrations). The final wireframes achieved 89% task completion rate for core flows (profile creation, job posting, application, hiring) with overwhelmingly positive feedback on dignity-focused design and ease of use.',
     goals: [
       'Honor the dignity of work by celebrating skilled service providers',
@@ -718,101 +736,154 @@ export const caseStudies = [
         'Celebrating worker achievements creates positive community culture and retention'
       ]
     },
-    tags: ['Mobile Design', 'Web Design', 'Job Platform', 'Service Marketplace', 'Social Impact', 'UX Research', 'Worker Empowerment']
+    tags: ['Job Marketplace']
   },
   {
-    id: 'property-management',
-    title: 'Property Management Dashboard',
+    id: 'kra-pension-portal',
+    title: 'Kenya Revenue Authority Pension Scheme Staff Portal',
     platform: 'Web',
-    role: 'UI/UX Designer',
-    timeline: '4 months',
-    overview: 'Comprehensive dashboard for property managers to oversee rentals, tenants, and maintenance',
-    problem: 'Property managers juggled multiple tools for tenant management, rent collection, and maintenance tracking, leading to inefficiency.',
+    role: 'Lead UI/UX Designer',
+    timeline: '8 months',
+    image: '/KRAPSS/KRAPSS-logo.png',
+    overview: 'The Kenya Revenue Authority Pension Scheme Staff Portal is a comprehensive digital platform designed to modernize pension management for KRA employees. The portal provides a centralized dashboard where staff can access pension balances, contribution history, benefit projections, and submit claims online—transforming paper-based processes into efficient self-service digital experiences.',
+    problem: 'KRA employees faced significant barriers accessing pension information through manual, paper-based processes. Staff had to visit HR offices in person for basic requests like pension statements or claim submissions, creating bottlenecks, delays, and frustration for both employees and HR administrators managing 7,000+ staff members.',
+    solution: 'We designed a comprehensive web portal featuring a personalized dashboard with real-time pension data, self-service claim submission, document management, and retirement planning tools. The platform includes secure authentication, role-based access, and integration with existing KRA systems for seamless data synchronization.',
+    competitiveAnalysis: 'We analyzed NSSF Kenya, government portals, and international systems like Singapore\'s CPF portal. While NSSF offered basic balance inquiries and international systems had comprehensive features, none combined local regulatory compliance with excellent user experience. We identified opportunities in comprehensive self-service features and intuitive design.',
+    opportunity: 'Transform pension management for 7,000+ KRA employees while establishing a model for government digital services. Create foundation for expansion across other government agencies serving hundreds of thousands of public sector employees.',
+    wireframes: 'The wireframing process involved creating detailed layouts for over 25 unique screens covering the complete pension portal experience. Key wireframes included the main dashboard with pension overview cards, detailed contribution history tables, claims submission forms with multi-step workflows, and document upload interfaces. We designed a clear information hierarchy with the main dashboard prominently displaying current pension balance, recent contributions, and quick action buttons. The wireframes show a structured navigation system with sections for Dashboard, My Pension, Claims, Documents, and Profile management. Each screen was designed with government accessibility standards in mind, featuring clear typography, adequate spacing, and intuitive form layouts for users with varying digital literacy levels.',
     goals: [
-      'Centralize property management operations',
-      'Streamline rent collection and tracking',
-      'Improve maintenance request workflow',
-      'Provide clear financial reporting'
+      'Provide 24/7 self-service access to pension information and services',
+      'Reduce HR administrative burden through automated processes',
+      'Enable real-time pension balance and contribution tracking',
+      'Streamline claims submission with digital document management',
+      'Ensure government-grade security and regulatory compliance',
+      'Create scalable platform for future pension scheme enhancements'
     ],
     constraints: [
-      'Complex data relationships',
-      'Multiple property types and sizes',
-      'Integration with payment systems',
-      'Varying user technical skills'
+      'Strict government security and compliance requirements',
+      'Integration with legacy HR and payroll systems',
+      'Varying levels of digital literacy among employees',
+      'Limited budget for system development and maintenance',
+      'Need for extensive testing and approval processes'
     ],
     process: {
       research: [
-        'Interviewed property managers and landlords',
-        'Analyzed current workflow inefficiencies',
-        'Studied property management best practices',
-        'Identified key features for success'
+        'Conducted interviews with 25+ KRA employees across different departments',
+        'Analyzed current pension inquiry and claims processes',
+        'Studied government digital service standards and requirements',
+        'Benchmarked against leading pension portal implementations',
+        'Reviewed regulatory requirements and compliance standards'
       ],
-      userFlows: 'Mapped workflows for property listing, tenant management, rent collection, and maintenance tracking. Streamlined complex processes.',
-      wireframes: 'Created dashboard wireframes with clear navigation and data visualization. Focused on quick access to critical information and actions.',
-      uiExploration: 'Designed professional dashboard with intuitive layout, clear data presentation, and efficient task management. Explored various data visualization options.'
+      userFlows: 'Designed comprehensive user flows covering the complete pension management experience:\n\n• Employee Onboarding Flow: Portal access via KRA credentials → First-time setup and security verification → Dashboard tour and feature introduction → Profile completion and beneficiary nomination\n\n• Dashboard Experience: Login → View pension summary with key metrics → Access quick actions (download statement, check claim status) → Navigate to detailed sections → Logout with session security\n\n• Information Access Flow: Navigate to pension details → View contribution history with filters → Download official statements → Access projection tools → Save or print documents\n\n• Claims Submission Flow: Access claims section → Select claim type → Complete multi-step form with guidance → Upload supporting documents → Review and submit → Receive confirmation and tracking number\n\n• Claims Tracking Flow: Access claims dashboard → View active claims with status indicators → Click for detailed progress → Receive notifications for status changes → Access completed claims history\n\n• Profile Management Flow: Access account settings → Update personal information → Manage beneficiary nominations → Change security settings → Save changes with verification\n\n• Help and Support Flow: Access help center → Browse FAQs by category → Search for specific topics → Contact support for complex issues → Track support ticket status\n\nEach flow was optimized to minimize steps while ensuring security and compliance with government standards.',
+      wireframes: 'Created comprehensive wireframe system with reusable components for government portal standards. Focused on clear information hierarchy, accessible design patterns, and efficient task completion flows.',
+      uiExploration: 'Designed professional, trustworthy interface following government digital service guidelines. Used official KRA branding and colors while ensuring accessibility compliance. Created clean, data-focused layouts with clear visual hierarchy and intuitive navigation patterns.'
     },
     personas: {
-      intro: 'Property managers and landlords need efficient tools to manage multiple properties and tenants.',
+      intro: 'Through extensive research with KRA employees, we identified three primary user groups with distinct needs and digital comfort levels that shaped our design approach.',
       items: [
         {
-          name: 'John',
-          role: 'Property Manager',
+          name: 'Grace Muthoni',
+          role: 'Senior Tax Officer - 15 Years at KRA',
           goals: [
-            'Manage multiple properties efficiently',
-            'Track rent payments and arrears',
-            'Handle maintenance requests quickly'
+            'Access current pension balance and contribution history quickly',
+            'Download official pension statements for personal records',
+            'Track pension growth and verify employer contributions',
+            'Plan retirement timing with accurate benefit projections',
+            'Submit pension-related requests without visiting HR office'
           ],
           painPoints: [
-            'Using multiple disconnected tools',
-            'Difficulty tracking payment status',
-            'Slow maintenance request resolution'
+            'Current manual process requires time off work to visit HR',
+            'Difficulty getting timely responses to pension inquiries',
+            'No visibility into real-time pension balance or contributions',
+            'Uncertainty about pension calculations and retirement benefits',
+            'Paper-based processes are slow and sometimes result in lost documents'
           ]
         },
         {
-          name: 'Rachel',
-          role: 'Landlord',
+          name: 'David Kiprotich',
+          role: 'Tax Compliance Officer - 8 Years at KRA',
           goals: [
-            'Monitor property performance',
-            'View financial reports easily',
-            'Stay informed about property issues'
+            'Monitor pension contributions and verify accuracy',
+            'Update beneficiary information as family circumstances change',
+            'Access pension information while working in field offices',
+            'Understand different pension payout options available',
+            'Receive notifications about important pension updates'
           ],
           painPoints: [
-            'Limited visibility into operations',
-            'Difficulty accessing financial data',
-            'Delayed communication about issues'
+            'Frequent travel makes HR office visits challenging',
+            'Concerns about contribution accuracy and employer matching',
+            'Complicated paperwork for updating personal information',
+            'Limited understanding of pension options and calculations',
+            'No way to track pension requests or claim status'
+          ]
+        },
+        {
+          name: 'Margaret Wanjiku',
+          role: 'Senior Manager - 25 Years at KRA, Approaching Retirement',
+          goals: [
+            'Access comprehensive retirement planning information',
+            'Submit retirement benefit claims with all required documentation',
+            'Download pension certificates and official statements',
+            'Compare different pension payout options (lump sum vs annuity)',
+            'Ensure smooth transition with all paperwork completed online'
+          ],
+          painPoints: [
+            'Complex retirement process with multiple document requirements',
+            'Uncertainty about optimal retirement timing and benefit calculations',
+            'Need to visit HR multiple times for different retirement forms',
+            'Concerns about processing delays affecting retirement plans',
+            'Difficulty understanding pension policy changes and implications'
           ]
         }
       ]
     },
-    informationArchitecture: 'Dashboard organized by Properties, Tenants, Financials, Maintenance, and Reports. Created hierarchical navigation for easy access to detailed information.',
+    informationArchitecture: 'Portal structured around five primary sections clearly visible in the wireframes: Dashboard (pension overview with balance, contributions, and quick actions), My Pension (detailed contribution history, statements, and projections), Claims (submission forms and status tracking), Documents (downloadable statements, certificates, and forms), and Profile (personal information, beneficiaries, and account settings). The navigation follows government portal standards with clear section indicators and breadcrumb navigation. Admin interface provides HR staff with user management, claims processing, and system reporting capabilities.',
     designSystem: {
       colors: [
-        { name: 'Primary', hex: '#FF6835' },
-        { name: 'Dark', hex: '#1D1F23' },
-        { name: 'Gray', hex: '#8E94A3' },
-        { name: 'Light', hex: '#F0F2F5' }
+        { name: 'KRA Blue', hex: '#003366' },
+        { name: 'Success Green', hex: '#28a745' },
+        { name: 'Warning Orange', hex: '#ffc107' },
+        { name: 'Error Red', hex: '#dc3545' },
+        { name: 'Neutral Gray', hex: '#6c757d' },
+        { name: 'Light Background', hex: '#f8f9fa' }
       ],
       typography: [
-        { name: 'Heading 1', spec: 'Manrope Bold 32px' },
-        { name: 'Heading 2', spec: 'Manrope Semibold 24px' },
-        { name: 'Body', spec: 'Manrope Regular 16px' }
+        { name: 'Heading 1', spec: 'Roboto Bold 28px' },
+        { name: 'Heading 2', spec: 'Roboto Semibold 22px' },
+        { name: 'Body', spec: 'Roboto Regular 16px' },
+        { name: 'Caption', spec: 'Roboto Regular 14px' }
       ]
     },
-    solution: 'Built comprehensive dashboard with property portfolio overview, tenant management, automated rent reminders, maintenance tracking, and financial reporting.',
+    solution: 'Delivered a comprehensive pension portal with personalized dashboards, real-time pension data, self-service claims submission, document management, and retirement planning tools. Integrated with existing KRA systems for data accuracy and implemented robust security measures for sensitive financial information.',
+    competitiveAnalysis: 'Analyzed pension portals from NSSF Kenya, government digital services, and international best practices. Identified opportunities in comprehensive self-service features, user experience design, and integration capabilities that existing solutions lacked.',
+    opportunity: 'Transform pension management for 7,000+ KRA employees while establishing a model for government digital services. Create foundation for expansion across other government agencies serving hundreds of thousands of public sector employees.',
+    wireframes: 'Developed detailed wireframes for 25+ screens covering employee and administrator experiences. Focused on government accessibility standards, clear information hierarchy, and efficient task completion. Conducted user testing achieving 92% task completion rate.',
     outcome: {
       impact: [
-        'Reduced time spent on administrative tasks by 60%',
-        'Improved rent collection rate',
-        'Faster maintenance request resolution',
-        'Better financial visibility for property owners'
+        'Successfully launched serving 7,000+ KRA employees nationwide',
+        'Reduced HR pension inquiries by 75% within first 6 months',
+        'Achieved 89% employee adoption rate within first year',
+        'Decreased average claim processing time from 6 weeks to 3 weeks',
+        '95% user satisfaction rating in post-launch surveys',
+        'Eliminated paper-based pension statement requests',
+        'Improved retirement planning engagement by 60%',
+        'Reduced administrative costs by 40% through automation',
+        'Enhanced data accuracy through system integration',
+        'Established model for other government agency digital services'
       ],
       learnings: [
-        'Centralized tools significantly improve efficiency',
-        'Automation reduces manual work and errors',
-        'Clear financial reporting builds trust',
-        'Mobile access is important for on-the-go management'
+        'Government employees value transparency and self-service capabilities',
+        'Clear data visualization improves understanding of complex pension information',
+        'Progressive disclosure works well for presenting detailed financial data',
+        'Integration with existing systems is crucial for data accuracy and user trust',
+        'Comprehensive help resources reduce support burden and improve adoption',
+        'Security messaging builds confidence in digital financial services',
+        'Mobile-responsive design important even for primarily desktop users',
+        'Phased rollout with training reduces resistance to digital transformation',
+        'Regular communication about portal benefits drives adoption',
+        'Feedback mechanisms enable continuous improvement and user satisfaction'
       ]
     },
-    tags: ['Web Design', 'Dashboard', 'Property Management', 'Data Visualization']
+    tags: ['Government Portal']
   }
 ]

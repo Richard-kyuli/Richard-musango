@@ -4,9 +4,22 @@
 
 .case-studies-hero {
   background: linear-gradient(135deg, var(--color-gray-800) 0%, var(--color-gray-700) 100%);
-  color: var(--color-white);
+  color: white !important;
   padding: var(--space-12) var(--space-4) var(--space-10);
   text-align: center;
+}
+
+.case-studies-hero .page-title {
+  color: white !important;
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-2);
+}
+
+.case-studies-hero .page-subtitle {
+  color: white !important;
+  font-size: var(--font-size-body);
+  opacity: 0.9;
 }
 
 .case-studies-content {
@@ -16,15 +29,15 @@
 
 .case-studies-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
-  max-width: 1000px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
 }
 
 .case-study-card {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: var(--space-4);
+  display: flex;
+  flex-direction: column;
   background: var(--color-white);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
@@ -34,6 +47,10 @@
   color: inherit;
 }
 
+.case-study-card:hover h3 {
+  color: var(--color-primary);
+}
+
 .case-study-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-xl);
@@ -41,58 +58,81 @@
 
 .case-study-image {
   width: 100%;
-  height: 100%;
-  min-height: 250px;
+  height: 250px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.case-study-image[data-gradient="gradient-1"] { background: linear-gradient(135deg, #FF6835 0%, #e55a2f 100%); }
+.case-study-image[data-gradient="gradient-2"] { background: linear-gradient(135deg, #8E94A3 0%, #7a7f8c 100%); }
+.case-study-image[data-gradient="gradient-3"] { background: linear-gradient(135deg, #1D1F23 0%, #374151 100%); }
+.case-study-image[data-gradient="gradient-4"] { background: linear-gradient(135deg, #FF6835 20%, #8E94A3 100%); }
+.case-study-image[data-gradient="gradient-5"] { background: linear-gradient(135deg, #374151 0%, #8E94A3 100%); }
+.case-study-image[data-gradient="gradient-6"] { background: linear-gradient(135deg, #1D1F23 0%, #FF6835 100%); }
+
+/* Specific image backgrounds */
+.case-study-image[style*="RoyalTimes/RoyalTimes-logo.png"] {
+  background-size: 70% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.case-study-image[style*="KRAPSS/KRAPSS-logo.png"] {
+  background-size: 70% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.case-study-image[style*="KaribuKazi/Karibukazilogo.png"] {
+  background-size: 60% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.case-study-image[style*="Buysell/Buysell-logo.png"] {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 
 .case-study-content {
-  padding: var(--space-4) var(--space-4) var(--space-4) 0;
-}
-
-.case-study-meta {
+  padding: var(--space-4);
+  flex: 1;
   display: flex;
-  gap: var(--space-2);
-  margin-bottom: var(--space-2);
-  align-items: center;
+  flex-direction: column;
 }
 
-.timeline {
-  color: var(--color-text-secondary);
+.case-study-content .tag {
+  display: inline-block;
   font-size: var(--font-size-caption);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-semibold);
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  text-transform: uppercase;
 }
 
 .case-study-content h3 {
   font-size: var(--font-size-h3);
   margin-bottom: var(--space-1);
   color: var(--color-text-primary);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.role {
-  color: var(--color-primary);
-  font-weight: var(--font-weight-semibold);
-  margin-bottom: var(--space-2);
-}
-
-.description {
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-normal);
-  margin-bottom: var(--space-2);
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-1);
-  margin-bottom: var(--space-2);
-}
-
-.read-more {
-  color: var(--color-primary);
-  font-weight: var(--font-weight-semibold);
+@media (max-width: 1024px) {
+  .case-studies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .case-study-card {
+  .case-studies-grid {
     grid-template-columns: 1fr;
   }
 
@@ -101,6 +141,6 @@
   }
 
   .case-study-image {
-    min-height: 200px;
+    height: 200px;
   }
 }
