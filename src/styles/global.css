@@ -1,10 +1,31 @@
-/* Global Styles */
+/* Tailwind CSS v4 */
+@import "tailwindcss";
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
 /* Import Design System Variables */
 @import './variables.css';
+
+/* Tailwind CSS Override Layer */
+@layer base {
+  /* Ensure Tailwind styles take precedence over existing CSS */
+  .bg-white { background-color: white !important; }
+  .bg-gray-50 { background-color: #f9fafb !important; }
+  .border { border-width: 1px !important; }
+  .border-gray-200 { border-color: #e5e7eb !important; }
+  .rounded-xl { border-radius: 0.75rem !important; }
+  .p-8 { padding: 2rem !important; }
+  .p-6 { padding: 1.5rem !important; }
+  .text-center { text-align: center !important; }
+  .grid { display: grid !important; }
+  .gap-6 { gap: 1.5rem !important; }
+  .shadow-sm { box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important; }
+  .shadow-md { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important; }
+  .shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important; }
+}
+
+/* Global Styles */
 
 /* ========== CSS Reset / Normalize ========== */
 

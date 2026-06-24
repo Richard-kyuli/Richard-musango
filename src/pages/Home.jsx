@@ -10,25 +10,28 @@ function Home() {
       id: 1,
       title: 'Royal Times Admin Dashboard',
       category: 'Web Design',
-      image: 'royal-times-logo',
+      image: '/RoyalTimes/Dashboard.png',
       link: '/case-studies/royal-times',
-      tags: ['Dashboard']
+      tags: ['Dashboard'],
+      description: 'A comprehensive ride-hailing operations dashboard for real-time monitoring and fleet management.'
     },
     {
       id: 2,
       title: 'Buy & Sell Online',
       category: 'Mobile & Web',
-      image: 'buysell-logo',
+      image: '/Buysell/Posts2.png',
       link: '/case-studies/buy-sell',
-      tags: ['Ecommerce']
+      tags: ['Ecommerce'],
+      description: 'Mobile-first marketplace connecting local buyers and sellers with verified listings.'
     },
     {
       id: 3,
       title: 'Mwalimu Finder',
       category: 'Mobile & Web',
-      image: 'mwalimu-logo',
+      image: '/Mwalimu-finder/MF03Post a Job.png',
       link: '/case-studies/mwalimu-finder',
-      tags: ['Education Technology']
+      tags: ['Education Technology'],
+      description: 'Teacher recruitment platform connecting schools with qualified educators.'
     }
   ]
 
@@ -78,18 +81,24 @@ function Home() {
           <div className="portfolio-grid">
             {projects.map((project, index) => (
               <Link to={project.link} key={project.id} className="portfolio-card">
-                <div 
-                  className="portfolio-image"
-                  style={{
-                    backgroundImage: project.image && project.image.startsWith('/') 
-                      ? `url('${project.image}')` 
-                      : undefined
-                  }}
-                  data-gradient={!project.image || !project.image.startsWith('/') ? project.image : undefined}
-                ></div>
+                <div className="portfolio-image">
+                  <div className="portfolio-platform-tag">
+                    {project.category === 'Web Design' ? 'WEB APP' : 
+                     project.category === 'Mobile & Web' ? 'MOBILE & WEB' : 
+                     'MOBILE APP'}
+                  </div>
+                  <img 
+                    src={project.image} 
+                    alt={`${project.title} mockup`}
+                    className="portfolio-mockup"
+                  />
+                </div>
                 <div className="portfolio-content">
-                  <span className="tag">{project.tags[0]}</span>
-                  <h3>{project.title}</h3>
+                  <span className="category-tag">{project.tags[0]}</span>
+                  <h3 className="portfolio-title">{project.title}</h3>
+                  <p className="portfolio-description">
+                    {project.description}
+                  </p>
                 </div>
               </Link>
             ))}
