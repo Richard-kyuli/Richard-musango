@@ -9,6 +9,11 @@
 
 /* Tailwind CSS Override Layer */
 @layer base {
+  /* Ensure Manrope font is used by all Tailwind classes */
+  * {
+    font-family: 'Manrope', var(--font-primary);
+  }
+  
   /* Ensure Tailwind styles take precedence over existing CSS */
   .bg-white { background-color: white !important; }
   .bg-gray-50 { background-color: #f9fafb !important; }
@@ -59,7 +64,7 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-primary);
+  font-family: 'Manrope', var(--font-primary);
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-normal);
@@ -70,6 +75,11 @@ body {
 }
 
 /* ========== Typography ========== */
+
+/* Ensure Manrope font is applied consistently */
+html, body, h1, h2, h3, h4, h5, h6, p, span, div, button, input, textarea, select, a {
+  font-family: 'Manrope', var(--font-primary);
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;

@@ -102,7 +102,7 @@ function ResultsSection({ study }) {
               <div style={{
                 fontSize: '3rem',
                 color: '#fed7aa',
-                fontFamily: 'serif',
+                fontFamily: 'Manrope, serif',
                 lineHeight: '1',
                 marginBottom: '16px'
               }}>
