@@ -269,65 +269,220 @@ function KeyDesignDecisions({ study }) {
   const decisions = getDesignDecisions(study?.id)
 
   return (
-    <section className="bg-gray-50 py-20 md:py-24">
-      <div className="max-w-6xl mx-auto px-6 md:px-8">
+    <section style={{ backgroundColor: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <div style={{ maxWidth: '72rem', margin: '0 auto', paddingLeft: '1.5rem', paddingRight: '1.5rem' }}>
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#111827', marginBottom: '1rem', lineHeight: '1.2' }}>
             Key Design Decisions
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p style={{ fontSize: '1.125rem', color: '#6b7280', maxWidth: '42rem', margin: '0 auto' }}>
             Critical choices that shaped the solution and drove measurable impact. 
             Each decision was informed by user research, tested with real users, and validated by results.
           </p>
         </div>
 
         {/* Decision Cards */}
-        <div className="space-y-8">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {decisions.map((decision, index) => (
             <div 
               key={index}
-              className="bg-white rounded-2xl border border-gray-200 p-8 md:p-10 hover:shadow-lg transition-shadow duration-300"
+              style={{
+                backgroundColor: '#ffffff',
+                borderRadius: '1rem',
+                border: '1px solid #e5e7eb',
+                padding: '0',
+                boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+                overflow: 'hidden',
+                transition: 'box-shadow 0.3s ease, transform 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+                e.currentTarget.style.transform = 'translateY(-2px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
+                e.currentTarget.style.transform = 'translateY(0)'
+              }}
             >
-              <div className="flex items-start gap-6">
-                {/* Icon */}
-                <div className="flex-shrink-0 w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
+              {/* Top Bar with Icon and Title */}
+              <div style={{
+                background: 'linear-gradient(135deg, #fed7aa 0%, #fdba74 100%)',
+                padding: '1.5rem 2rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem'
+              }}>
+                <div style={{
+                  width: '3rem',
+                  height: '3rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  borderRadius: '0.75rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#ea580c',
+                  flexShrink: 0,
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                }}>
                   {decision.icon}
                 </div>
+                <h3 style={{
+                  fontSize: '1.5rem',
+                  fontWeight: 'bold',
+                  color: '#78350f',
+                  margin: 0
+                }}>
+                  {decision.title}
+                </h3>
+              </div>
 
-                {/* Content */}
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {decision.title}
-                  </h3>
+              {/* Content Grid */}
+              <div style={{ padding: '2rem' }}>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr',
+                  gap: '1.5rem'
+                }}>
+                  <style>{`
+                    @media (min-width: 768px) {
+                      .decision-grid-${index} {
+                        grid-template-columns: 1fr 1fr !important;
+                      }
+                    }
+                  `}</style>
                   
-                  <div className="space-y-4">
-                    <div>
-                      <span className="text-sm font-semibold text-orange-600 uppercase tracking-wide">
-                        Challenge
-                      </span>
-                      <p className="text-gray-700 mt-1">
+                  <div className={`decision-grid-${index}`} style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr',
+                    gap: '1.5rem'
+                  }}>
+                    {/* Challenge */}
+                    <div style={{
+                      backgroundColor: '#fef3c7',
+                      borderRadius: '0.75rem',
+                      padding: '1.5rem',
+                      borderLeft: '4px solid #f59e0b'
+                    }}>
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        marginBottom: '0.75rem'
+                      }}>
+                        <svg style={{ width: '1.25rem', height: '1.25rem', color: '#f59e0b' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                        <span style={{
+                          fontSize: '0.75rem',
+                          fontWeight: '700',
+                          color: '#92400e',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.05em'
+                        }}>
+                          Challenge
+                        </span>
+                      </div>
+                      <p style={{
+                        color: '#78350f',
+                        fontSize: '0.9375rem',
+                        lineHeight: '1.625',
+                        margin: 0,
+                        fontWeight: '500'
+                      }}>
                         {decision.challenge}
                       </p>
                     </div>
 
-                    <div>
-                      <span className="text-sm font-semibold text-orange-600 uppercase tracking-wide">
-                        Decision
-                      </span>
-                      <p className="text-gray-700 mt-1">
+                    {/* Decision */}
+                    <div style={{
+                      backgroundColor: '#dbeafe',
+                      borderRadius: '0.75rem',
+                      padding: '1.5rem',
+                      borderLeft: '4px solid #3b82f6'
+                    }}>
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        marginBottom: '0.75rem'
+                      }}>
+                        <svg style={{ width: '1.25rem', height: '1.25rem', color: '#3b82f6' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                        <span style={{
+                          fontSize: '0.75rem',
+                          fontWeight: '700',
+                          color: '#1e3a8a',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.05em'
+                        }}>
+                          Decision
+                        </span>
+                      </div>
+                      <p style={{
+                        color: '#1e40af',
+                        fontSize: '0.9375rem',
+                        lineHeight: '1.625',
+                        margin: 0,
+                        fontWeight: '500'
+                      }}>
                         {decision.decision}
                       </p>
                     </div>
+                  </div>
 
-                    <div className="bg-green-50 border border-green-100 rounded-lg p-4">
-                      <span className="text-sm font-semibold text-green-700 uppercase tracking-wide">
-                        Impact
+                  {/* Impact - Full Width */}
+                  <div style={{
+                    background: 'linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%)',
+                    borderRadius: '0.75rem',
+                    padding: '1.5rem',
+                    borderLeft: '4px solid #16a34a',
+                    position: 'relative',
+                    overflow: 'hidden'
+                  }}>
+                    {/* Decorative Element */}
+                    <div style={{
+                      position: 'absolute',
+                      right: '-1rem',
+                      bottom: '-1rem',
+                      width: '6rem',
+                      height: '6rem',
+                      backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                      borderRadius: '50%'
+                    }} />
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      marginBottom: '0.75rem',
+                      position: 'relative',
+                      zIndex: 10
+                    }}>
+                      <svg style={{ width: '1.25rem', height: '1.25rem', color: '#16a34a' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                      <span style={{
+                        fontSize: '0.75rem',
+                        fontWeight: '700',
+                        color: '#14532d',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em'
+                      }}>
+                        Impact & Results
                       </span>
-                      <p className="text-green-800 mt-1 font-medium">
-                        {decision.impact}
-                      </p>
                     </div>
+                    <p style={{
+                      color: '#15803d',
+                      fontSize: '1rem',
+                      lineHeight: '1.625',
+                      margin: 0,
+                      fontWeight: '600',
+                      position: 'relative',
+                      zIndex: 10
+                    }}>
+                      {decision.impact}
+                    </p>
                   </div>
                 </div>
               </div>
