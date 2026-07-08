@@ -390,7 +390,7 @@ function FinalDesignSection({ study }) {
 
   const CheckmarkIcon = () => (
     <svg 
-      className="check-icon"
+      className="w-4 h-4 text-green-500" 
       fill="none" 
       stroke="currentColor" 
       viewBox="0 0 24 24"
@@ -405,38 +405,42 @@ function FinalDesignSection({ study }) {
   )
 
   return (
-    <section className="final-design-section">
-      <div className="container">
+    <section className="bg-white py-20 md:py-24">
+      <div className="max-w-6xl mx-auto px-6 md:px-8">
         {/* Header */}
-        <div className="final-design-header">
-          <h2>Final Design Screens</h2>
-          <p>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Final Design Screens
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             A complete user journey showcasing the key screens that deliver our solution. 
             Each screen is carefully crafted to guide users through a seamless experience.
           </p>
         </div>
 
         {/* Zig-Zag Screen Items */}
-        <div className="final-design-screens">
+        <div>
           {screens.map((screen, index) => (
             <div 
               key={screen.id}
-              className={`final-design-item ${screen.alignment === 'right' ? 'reverse' : ''} ${index === screens.length - 1 ? 'last' : ''}`}
+              className={`flex flex-col md:flex-row items-center gap-12 ${
+                screen.alignment === 'right' ? 'md:flex-row-reverse' : ''
+              } ${index === screens.length - 1 ? '' : 'mb-20'}`}
             >
               {/* Content Column */}
-              <div className="screen-content">
-                <span className="screen-badge">
+              <div className="flex-1">
+                <span className="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block uppercase tracking-wide">
                   {screen.badge}
                 </span>
-                <h3 className="screen-title">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {screen.title}
                 </h3>
-                <p className="screen-description">
+                <p className="text-gray-600 leading-relaxed mb-6">
                   {screen.description}
                 </p>
-                <ul className="screen-features">
+                <ul className="space-y-2">
                   {screen.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="feature-item">
+                    <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-600">
                       <CheckmarkIcon />
                       <span>{feature}</span>
                     </li>
@@ -445,30 +449,37 @@ function FinalDesignSection({ study }) {
               </div>
 
               {/* Device Mockup Column */}
-              <div className="screen-mockup">
+              <div className="flex-1 flex justify-center">
                 {screen.deviceType === 'mobile' ? (
                   /* Mobile Device Mockup */
-                  <div className="mobile-frame">
-                    <div className="mobile-notch"></div>
-                    <img 
-                      src={screen.image}
-                      alt={screen.title}
-                      className="screen-image mobile-image"
-                    />
-                    <div className="mobile-home-indicator"></div>
+                  <div className="bg-gray-900 p-3 rounded-[2.5rem] shadow-2xl w-[280px] relative">
+                    {/* Mobile Notch */}
+                    <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-[140px] h-7 bg-gray-900 rounded-b-[20px] z-10"></div>
+                    {/* Screen Container */}
+                    <div className="bg-gray-100 rounded-[2rem] overflow-hidden">
+                      <img 
+                        src={screen.image}
+                        alt={screen.title}
+                        className="w-full h-auto rounded-[1.4rem]"
+                      />
+                    </div>
+                    {/* Home Indicator */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[134px] h-1 bg-white bg-opacity-40 rounded-full"></div>
                   </div>
                 ) : (
                   /* Desktop/Browser Mockup */
-                  <div className="desktop-mockup">
-                    <div className="browser-chrome">
-                      <div className="chrome-dot chrome-red"></div>
-                      <div className="chrome-dot chrome-yellow"></div>
-                      <div className="chrome-dot chrome-green"></div>
+                  <div className="shadow-2xl rounded-xl overflow-hidden border border-gray-200 max-w-[600px] w-full">
+                    {/* Browser Chrome */}
+                    <div className="bg-gray-50 px-4 py-3 flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-[#ff5f57]"></div>
+                      <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                      <div className="w-3 h-3 rounded-full bg-[#28ca42]"></div>
                     </div>
+                    {/* Screen */}
                     <img 
                       src={screen.image}
                       alt={screen.title}
-                      className="screen-image desktop-image"
+                      className="w-full h-auto"
                     />
                   </div>
                 )}

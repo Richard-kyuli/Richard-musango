@@ -45,9 +45,9 @@ function CaseStudyDetail() {
       <ProblemSection study={study} />
       <SolutionSection study={study} />
       <ResearchSection study={study} />
-      <ResultsSection study={study} />
-      <FinalDesignSection study={study} />
       <KeyDesignDecisions study={study} />
+      <FinalDesignSection study={study} />
+      <ResultsSection study={study} />
       <LessonsLearned study={study} />
       <KeyAchievements study={study} />
     </div>
