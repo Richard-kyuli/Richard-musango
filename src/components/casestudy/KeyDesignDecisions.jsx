@@ -283,13 +283,13 @@ function KeyDesignDecisions({ study }) {
         </div>
 
         {/* Decision Cards */}
-        <div className="space-y-8">
+        <div className="space-y-8 max-w-4xl mx-auto">
           {decisions.map((decision, index) => (
             <div 
               key={index}
               className="bg-white rounded-2xl border border-gray-200 p-8 md:p-10 hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row items-start gap-6">
                 {/* Icon */}
                 <div className="flex-shrink-0 w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
                   {decision.icon}
