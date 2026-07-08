@@ -9,6 +9,7 @@ import SolutionSection from '../components/casestudy/SolutionSection'
 import ResearchSection from '../components/casestudy/ResearchSection'
 import ResultsSection from '../components/casestudy/ResultsSection'
 import FinalDesignSection from '../components/casestudy/FinalDesignSection'
+import KeyDesignDecisions from '../components/casestudy/KeyDesignDecisions'
 import LessonsLearned from '../components/casestudy/LessonsLearned'
 import KeyAchievements from '../components/casestudy/KeyAchievements'
 
@@ -46,6 +47,7 @@ function CaseStudyDetail() {
       <ResearchSection study={study} />
       <ResultsSection study={study} />
       <FinalDesignSection study={study} />
+      <KeyDesignDecisions study={study} />
       <LessonsLearned study={study} />
       <KeyAchievements study={study} />
     </div>
