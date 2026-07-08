@@ -405,14 +405,14 @@ function FinalDesignSection({ study }) {
   )
 
   return (
-    <section className="bg-white py-20 md:py-24">
-      <div className="max-w-6xl mx-auto px-6 md:px-8">
+    <section style={{ backgroundColor: '#f9fafb', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <div style={{ maxWidth: '72rem', margin: '0 auto', paddingLeft: '1.5rem', paddingRight: '1.5rem' }}>
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#111827', marginBottom: '1rem', lineHeight: '1.2' }}>
             Final Design Screens
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p style={{ fontSize: '1.125rem', color: '#6b7280', maxWidth: '42rem', margin: '0 auto' }}>
             A complete user journey showcasing the key screens that deliver our solution. 
             Each screen is carefully crafted to guide users through a seamless experience.
           </p>
@@ -423,66 +423,79 @@ function FinalDesignSection({ study }) {
           {screens.map((screen, index) => (
             <div 
               key={screen.id}
-              className={`flex flex-col md:flex-row items-center gap-12 ${
-                screen.alignment === 'right' ? 'md:flex-row-reverse' : ''
-              } ${index === screens.length - 1 ? '' : 'mb-20'}`}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '3rem',
+                marginBottom: index === screens.length - 1 ? '0' : '5rem'
+              }}
             >
-              {/* Content Column */}
-              <div className="flex-1">
-                <span className="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block uppercase tracking-wide">
-                  {screen.badge}
-                </span>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {screen.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  {screen.description}
-                </p>
-                <ul className="space-y-2">
-                  {screen.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-600">
-                      <CheckmarkIcon />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <style>{`
+                @media (min-width: 768px) {
+                  .screen-layout-${screen.id} {
+                    flex-direction: ${screen.alignment === 'right' ? 'row-reverse' : 'row'} !important;
+                  }
+                }
+              `}</style>
+              <div className={`screen-layout-${screen.id}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '3rem', width: '100%' }}>
+                {/* Content Column */}
+                <div style={{ flex: 1 }}>
+                  <span style={{ backgroundColor: '#fef7f0', color: '#FF6835', fontSize: '0.75rem', fontWeight: 'bold', padding: '0.25rem 0.75rem', borderRadius: '9999px', marginBottom: '1rem', display: 'inline-block', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    {screen.badge}
+                  </span>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '1rem' }}>
+                    {screen.title}
+                  </h3>
+                  <p style={{ color: '#4b5563', lineHeight: '1.625', marginBottom: '1.5rem' }}>
+                    {screen.description}
+                  </p>
+                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', listStyle: 'none', padding: 0, margin: 0 }}>
+                    {screen.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: '#4b5563' }}>
+                        <CheckmarkIcon />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-              {/* Device Mockup Column */}
-              <div className="flex-1 flex justify-center">
-                {screen.deviceType === 'mobile' ? (
-                  /* Mobile Device Mockup */
-                  <div className="bg-gray-900 p-3 rounded-[2.5rem] shadow-2xl w-[280px] relative">
-                    {/* Mobile Notch */}
-                    <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-[140px] h-7 bg-gray-900 rounded-b-[20px] z-10"></div>
-                    {/* Screen Container */}
-                    <div className="bg-gray-100 rounded-[2rem] overflow-hidden">
+                {/* Device Mockup Column */}
+                <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                  {screen.deviceType === 'mobile' ? (
+                    /* Mobile Device Mockup */
+                    <div style={{ backgroundColor: '#1a1a1a', padding: '0.75rem', borderRadius: '2.5rem', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)', width: '280px', position: 'relative' }}>
+                      {/* Mobile Notch */}
+                      <div style={{ position: 'absolute', top: '0.75rem', left: '50%', transform: 'translateX(-50%)', width: '140px', height: '28px', backgroundColor: '#1a1a1a', borderRadius: '0 0 20px 20px', zIndex: 10 }}></div>
+                      {/* Screen Container */}
+                      <div style={{ backgroundColor: '#f3f4f6', borderRadius: '2rem', overflow: 'hidden' }}>
+                        <img 
+                          src={screen.image}
+                          alt={screen.title}
+                          style={{ width: '100%', height: 'auto', borderRadius: '1.4rem', display: 'block' }}
+                        />
+                      </div>
+                      {/* Home Indicator */}
+                      <div style={{ position: 'absolute', bottom: '1rem', left: '50%', transform: 'translateX(-50%)', width: '134px', height: '4px', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '9999px' }}></div>
+                    </div>
+                  ) : (
+                    /* Desktop/Browser Mockup */
+                    <div style={{ boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)', borderRadius: '0.75rem', overflow: 'hidden', border: '1px solid #e5e7eb', maxWidth: '600px', width: '100%' }}>
+                      {/* Browser Chrome */}
+                      <div style={{ backgroundColor: '#f9fafb', padding: '0.75rem 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <div style={{ width: '0.75rem', height: '0.75rem', borderRadius: '9999px', backgroundColor: '#ff5f57' }}></div>
+                        <div style={{ width: '0.75rem', height: '0.75rem', borderRadius: '9999px', backgroundColor: '#ffbd2e' }}></div>
+                        <div style={{ width: '0.75rem', height: '0.75rem', borderRadius: '9999px', backgroundColor: '#28ca42' }}></div>
+                      </div>
+                      {/* Screen */}
                       <img 
                         src={screen.image}
                         alt={screen.title}
-                        className="w-full h-auto rounded-[1.4rem]"
+                        style={{ width: '100%', height: 'auto', display: 'block' }}
                       />
                     </div>
-                    {/* Home Indicator */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[134px] h-1 bg-white bg-opacity-40 rounded-full"></div>
-                  </div>
-                ) : (
-                  /* Desktop/Browser Mockup */
-                  <div className="shadow-2xl rounded-xl overflow-hidden border border-gray-200 max-w-[600px] w-full">
-                    {/* Browser Chrome */}
-                    <div className="bg-gray-50 px-4 py-3 flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-[#ff5f57]"></div>
-                      <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-                      <div className="w-3 h-3 rounded-full bg-[#28ca42]"></div>
-                    </div>
-                    {/* Screen */}
-                    <img 
-                      src={screen.image}
-                      alt={screen.title}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           ))}

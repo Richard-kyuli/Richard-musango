@@ -269,64 +269,87 @@ function KeyDesignDecisions({ study }) {
   const decisions = getDesignDecisions(study?.id)
 
   return (
-    <section className="bg-gray-50 py-20 md:py-24">
-      <div className="max-w-6xl mx-auto px-6 md:px-8">
+    <section style={{ backgroundColor: 'white', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <div style={{ maxWidth: '72rem', margin: '0 auto', paddingLeft: '1.5rem', paddingRight: '1.5rem' }}>
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#111827', marginBottom: '1rem', lineHeight: '1.2' }}>
             Key Design Decisions
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p style={{ fontSize: '1.125rem', color: '#6b7280', maxWidth: '42rem', margin: '0 auto' }}>
             Critical choices that shaped the solution and drove measurable impact. 
             Each decision was informed by user research, tested with real users, and validated by results.
           </p>
         </div>
 
         {/* Decision Cards */}
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {decisions.map((decision, index) => (
             <div 
               key={index}
-              className="bg-white rounded-2xl border border-gray-200 p-8 md:p-10 hover:shadow-lg transition-shadow duration-300"
+              style={{
+                backgroundColor: 'white',
+                borderRadius: '1rem',
+                border: '1px solid #e5e7eb',
+                padding: '2rem 2.5rem',
+                boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+                transition: 'box-shadow 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
+              }}
             >
-              <div className="flex flex-col md:flex-row items-start gap-6">
-                {/* Icon */}
-                <div className="flex-shrink-0 w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
-                  {decision.icon}
-                </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <style>{`
+                  @media (min-width: 768px) {
+                    .decision-content-${index} {
+                      flex-direction: row !important;
+                      align-items: flex-start !important;
+                    }
+                  }
+                `}</style>
+                <div className={`decision-content-${index}`} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                  {/* Icon */}
+                  <div style={{ flexShrink: 0, width: '3rem', height: '3rem', backgroundColor: '#fef7f0', borderRadius: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FF6835' }}>
+                    {decision.icon}
+                  </div>
 
-                {/* Content */}
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {decision.title}
-                  </h3>
-                  
-                  <div className="space-y-4">
-                    <div>
-                      <span className="text-sm font-semibold text-orange-600 uppercase tracking-wide">
-                        Challenge
-                      </span>
-                      <p className="text-gray-700 mt-1">
-                        {decision.challenge}
-                      </p>
-                    </div>
+                  {/* Content */}
+                  <div style={{ flex: 1 }}>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.75rem' }}>
+                      {decision.title}
+                    </h3>
+                    
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                      <div>
+                        <span style={{ fontSize: '0.875rem', fontWeight: '600', color: '#FF6835', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                          Challenge
+                        </span>
+                        <p style={{ color: '#374151', marginTop: '0.25rem' }}>
+                          {decision.challenge}
+                        </p>
+                      </div>
 
-                    <div>
-                      <span className="text-sm font-semibold text-orange-600 uppercase tracking-wide">
-                        Decision
-                      </span>
-                      <p className="text-gray-700 mt-1">
-                        {decision.decision}
-                      </p>
-                    </div>
+                      <div>
+                        <span style={{ fontSize: '0.875rem', fontWeight: '600', color: '#FF6835', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                          Decision
+                        </span>
+                        <p style={{ color: '#374151', marginTop: '0.25rem' }}>
+                          {decision.decision}
+                        </p>
+                      </div>
 
-                    <div className="bg-green-50 border border-green-100 rounded-lg p-4">
-                      <span className="text-sm font-semibold text-green-700 uppercase tracking-wide">
-                        Impact
-                      </span>
-                      <p className="text-green-800 mt-1 font-medium">
-                        {decision.impact}
-                      </p>
+                      <div style={{ backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '0.5rem', padding: '1rem' }}>
+                        <span style={{ fontSize: '0.875rem', fontWeight: '600', color: '#15803d', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                          Impact
+                        </span>
+                        <p style={{ color: '#166534', marginTop: '0.25rem', fontWeight: '500' }}>
+                          {decision.impact}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
