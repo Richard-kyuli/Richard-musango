@@ -913,6 +913,8 @@
   position: relative;
   width: 280px;
   max-width: 100%;
+  aspect-ratio: 9/19.5;
+  overflow: hidden;
 }
 
 .mobile-notch {
@@ -929,9 +931,11 @@
 
 .mobile-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 22px;
   display: block;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .mobile-home-indicator {
@@ -943,6 +947,7 @@
   height: 4px;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 2px;
+  z-index: 3;
 }
 
 /* Desktop Device Mockup Styles */
@@ -953,12 +958,15 @@
   border: 1px solid var(--color-border);
   max-width: 600px;
   width: 100%;
+  aspect-ratio: 16/10;
 }
 
 .desktop-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  object-position: top center;
 }
 
 /* ========== Responsive Design ========== */

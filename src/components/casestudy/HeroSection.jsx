@@ -15,7 +15,7 @@ function HeroSection({ study }) {
       case 'nannies':
         return '/Nannies/MacBook Pro 16_ - 19.png'
       case 'karibu-kazi':
-        return '/KaribuKazi/Android Large - 320Post Job emp.png' // Use mobile as fallback
+        return '/KaribuKazi/Admin/Brands Home.png'
       default:
         return study.image
     }
@@ -28,7 +28,7 @@ function HeroSection({ study }) {
       case 'mwalimu-finder':
         return '/Mwalimu-finder/MF03Post a Job.png'
       case 'nannies':
-        return '/Nannies/MacBook Pro 16_ - 44.png'
+        return '/Nannies/Mobileview.png'
       case 'karibu-kazi':
         return '/KaribuKazi/Android Large - 320Post Job emp.png'
       default:

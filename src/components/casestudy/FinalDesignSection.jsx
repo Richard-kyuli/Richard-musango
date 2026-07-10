@@ -169,166 +169,308 @@ function FinalDesignSection({ study }) {
         };
 
       case 'mwalimu-finder':
-        return [
-          {
-            id: 1,
-            badge: "JOB POSTING",
-            title: "School Job Posting - Step 1",
-            description: "Comprehensive job posting workflow starts with basic position details. Schools provide subject area, grade level, and key requirements in an intuitive form design.",
-            features: ["Subject selection", "Grade levels", "Position details"],
-            image: "/Mwalimu-finder/MF03Post a Job.png",
-            alignment: "left",
-            deviceType: "mobile"
-          },
-          {
-            id: 2,
-            badge: "REQUIREMENTS",
-            title: "Teacher Requirements - Step 2", 
-            description: "Detailed requirements specification including qualifications, experience level, and special skills. Helps schools attract the right candidates with clear expectations.",
-            features: ["Qualification requirements", "Experience criteria", "Skill specifications"],
-            image: "/Mwalimu-finder/MF04Post a Job.png",
-            alignment: "right",
-            deviceType: "mobile"
-          },
-          {
-            id: 3,
-            badge: "QUALIFICATIONS",
-            title: "Education & Certifications - Step 3",
-            description: "Specific education and certification requirements tailored to the position. Integration with teaching certification bodies for verification and validation.",
-            features: ["Education requirements", "Certification verification", "Professional credentials"],
-            image: "/Mwalimu-finder/MF05Post a Job.png",
-            alignment: "left",
-            deviceType: "mobile"
-          },
-          {
-            id: 4,
-            badge: "COMPENSATION",
-            title: "Salary & Benefits - Step 4",
-            description: "Transparent salary ranges and comprehensive benefits package details. Helps attract quality candidates by being upfront about compensation structure.",
-            features: ["Salary transparency", "Benefits package", "Additional perks"],
-            image: "/Mwalimu-finder/MF06Post a Job.png",
-            alignment: "right",
-            deviceType: "mobile"
-          },
-          {
-            id: 5,
-            badge: "COMPLETION",
-            title: "Job Posted Successfully",
-            description: "Confirmation screen with job posting summary and next steps. Clear call-to-actions for managing applications and candidate pipeline.",
-            features: ["Posting confirmation", "Application tracking", "Management tools"],
-            image: "/Mwalimu-finder/MF09Post a Job.png",
-            alignment: "left",
-            deviceType: "mobile"
-          }
-        ];
+        return {
+          user: [
+            {
+              id: 1,
+              badge: "JOB POSTING",
+              title: "School Job Posting - Step 1",
+              description: "Comprehensive job posting workflow starts with basic position details. Schools provide subject area, grade level, and key requirements in an intuitive form design.",
+              features: ["Subject selection", "Grade levels", "Position details"],
+              image: "/Mwalimu-finder/MF03Post a Job.png",
+              alignment: "left",
+              deviceType: "mobile"
+            },
+            {
+              id: 2,
+              badge: "REQUIREMENTS",
+              title: "Teacher Requirements - Step 2", 
+              description: "Detailed requirements specification including qualifications, experience level, and special skills. Helps schools attract the right candidates with clear expectations.",
+              features: ["Qualification requirements", "Experience criteria", "Skill specifications"],
+              image: "/Mwalimu-finder/MF04Post a Job.png",
+              alignment: "right",
+              deviceType: "mobile"
+            },
+            {
+              id: 3,
+              badge: "QUALIFICATIONS",
+              title: "Education & Certifications - Step 3",
+              description: "Specific education and certification requirements tailored to the position. Integration with teaching certification bodies for verification and validation.",
+              features: ["Education requirements", "Certification verification", "Professional credentials"],
+              image: "/Mwalimu-finder/MF05Post a Job.png",
+              alignment: "left",
+              deviceType: "mobile"
+            },
+            {
+              id: 4,
+              badge: "COMPENSATION",
+              title: "Salary & Benefits - Step 4",
+              description: "Transparent salary ranges and comprehensive benefits package details. Helps attract quality candidates by being upfront about compensation structure.",
+              features: ["Salary transparency", "Benefits package", "Additional perks"],
+              image: "/Mwalimu-finder/MF06Post a Job.png",
+              alignment: "right",
+              deviceType: "mobile"
+            },
+            {
+              id: 5,
+              badge: "COMPLETION",
+              title: "Job Posted Successfully",
+              description: "Confirmation screen with job posting summary and next steps. Clear call-to-actions for managing applications and candidate pipeline.",
+              features: ["Posting confirmation", "Application tracking", "Management tools"],
+              image: "/Mwalimu-finder/MF09Post a Job.png",
+              alignment: "left",
+              deviceType: "mobile"
+            }
+          ],
+          admin: [
+            {
+              id: 1,
+              badge: "VERIFICATION",
+              title: "Teacher Profile Verification",
+              description: "Administrative interface for verifying teacher credentials, certifications, and background checks. Streamlined workflow for credential validation.",
+              features: ["Credential verification", "Background checks", "Certification validation"],
+              image: "/Mwalimu-finder/MF07Post a Job.png",
+              alignment: "left",
+              deviceType: "mobile"
+            },
+            {
+              id: 2,
+              badge: "MANAGEMENT",
+              title: "Application Management",
+              description: "Monitor and manage all job applications, track hiring progress, and facilitate school-teacher connections. Complete oversight of the hiring pipeline.",
+              features: ["Application tracking", "Match management", "Communication tools"],
+              image: "/Mwalimu-finder/MF08Post a Job.png",
+              alignment: "right",
+              deviceType: "mobile"
+            }
+          ]
+        };
 
       case 'nannies':
-        return [
-          {
-            id: 1,
-            badge: "DISCOVERY",
-            title: "Nanny Search & Discovery",
-            description: "Advanced search interface with filters for location, experience, skills, and availability. Smart matching algorithm suggests the best candidates based on family needs.",
-            features: ["Smart matching", "Advanced filters", "Location-based search"],
-            image: "/Nannies/MacBook Pro 16_ - 19.png",
-            alignment: "left",
-            deviceType: "desktop"
-          },
-          {
-            id: 2,
-            badge: "PROFILES",
-            title: "Verified Nanny Profiles", 
-            description: "Comprehensive nanny profiles with verification badges, background checks, certifications, and detailed experience information. Trust indicators prominently displayed.",
-            features: ["Background verification", "Certification display", "Experience timeline"],
-            image: "/Nannies/MacBook Pro 16_ - 20.png",
-            alignment: "right",
-            deviceType: "desktop"
-          },
-          {
-            id: 3,
-            badge: "MOBILE",
-            title: "Mobile Nanny Profiles",
-            description: "Mobile-optimized nanny profiles allowing mothers to browse and connect with caregivers on-the-go. Quick access to verification status and key information.",
-            features: ["Mobile browsing", "Quick verification", "On-the-go access"],
-            image: "/Nannies/MacBook Pro 16_ - 44.png",
-            alignment: "left",
-            deviceType: "mobile"
-          },
-          {
-            id: 4,
-            badge: "ADMIN",
-            title: "Admin Management System",
-            description: "Robust admin dashboard for managing user verification, content moderation, and platform quality. Tools for maintaining high safety and trust standards.",
-            features: ["User verification", "Content moderation", "Quality assurance"],
-            image: "/Nannies/Admin.png",
-            alignment: "right",
-            deviceType: "desktop"
-          },
-          {
-            id: 5,
-            badge: "COMMUNICATION",
-            title: "Secure Messaging Platform",
-            description: "Encrypted messaging system for safe communication between mothers and nannies. Interview scheduling, reference sharing, and contract negotiation.",
-            features: ["Encrypted messaging", "Interview scheduling", "Document sharing"],
-            image: "/Nannies/MacBook Pro 16_ - 22.png",
-            alignment: "left",
-            deviceType: "desktop"
-          }
-        ];
+        return {
+          user: [
+            {
+              id: 1,
+              badge: "ONBOARDING - STEP 1",
+              title: "Welcome & Account Creation",
+              description: "User-friendly onboarding process starts with creating an account. Mothers can sign up quickly to begin searching for trusted nannies in their area.",
+              features: ["Quick signup", "Profile creation", "Email verification"],
+              image: "/Nannies/1.png",
+              alignment: "left",
+              deviceType: "desktop"
+            },
+            {
+              id: 2,
+              badge: "ONBOARDING - STEP 2",
+              title: "Personal Information",
+              description: "Mothers provide essential information about their family and childcare needs. This helps the platform suggest the most suitable nanny matches.",
+              features: ["Family details", "Childcare preferences", "Location setup"],
+              image: "/Nannies/2.png",
+              alignment: "right",
+              deviceType: "desktop"
+            },
+            {
+              id: 3,
+              badge: "ONBOARDING - STEP 3",
+              title: "Requirements & Preferences",
+              description: "Detailed preferences for nanny qualifications, experience, skills, and schedule requirements. Ensures accurate matching with qualified caregivers.",
+              features: ["Skill requirements", "Schedule preferences", "Experience level"],
+              image: "/Nannies/3.png",
+              alignment: "left",
+              deviceType: "desktop"
+            },
+            {
+              id: 4,
+              badge: "ONBOARDING - STEP 4",
+              title: "Background Check Preferences",
+              description: "Set verification and safety requirements including background checks, references, and certifications. Platform prioritizes child safety above all.",
+              features: ["Background checks", "Reference verification", "Safety standards"],
+              image: "/Nannies/4.png",
+              alignment: "right",
+              deviceType: "desktop"
+            },
+            {
+              id: 5,
+              badge: "ONBOARDING - STEP 5",
+              title: "Budget & Payment Setup",
+              description: "Establish budget range and payment preferences for nanny services. Transparent pricing helps find matches within family's financial comfort zone.",
+              features: ["Budget setting", "Payment preferences", "Service packages"],
+              image: "/Nannies/5.png",
+              alignment: "left",
+              deviceType: "desktop"
+            },
+            {
+              id: 6,
+              badge: "ONBOARDING - STEP 6",
+              title: "Onboarding Complete",
+              description: "Profile setup complete! Mothers can now browse verified nanny profiles, receive smart matches, and connect with qualified caregivers for their family.",
+              features: ["Profile complete", "Smart recommendations", "Start browsing"],
+              image: "/Nannies/6.png",
+              alignment: "right",
+              deviceType: "desktop"
+            }
+          ],
+          admin: [
+            {
+              id: 1,
+              badge: "DASHBOARD",
+              title: "Admin Dashboard",
+              description: "Comprehensive admin dashboard for managing platform operations, user verification, and quality control. Real-time monitoring of all platform activities.",
+              features: ["Platform overview", "User metrics", "Activity monitoring"],
+              image: "/Nannies/Admin.png",
+              alignment: "left",
+              deviceType: "desktop"
+            },
+            {
+              id: 2,
+              badge: "VERIFICATION",
+              title: "Nanny Verification System",
+              description: "Robust verification workflow for background checks, certification validation, and identity verification. Multi-step approval process ensuring platform safety.",
+              features: ["Background checks", "Document verification", "Approval workflow"],
+              image: "/Nannies/Admin1.png",
+              alignment: "right",
+              deviceType: "desktop"
+            },
+            {
+              id: 3,
+              badge: "MODERATION",
+              title: "Content Moderation",
+              description: "Review and moderate user profiles, messages, and reported content. Tools for maintaining high quality and safety standards across the platform.",
+              features: ["Profile review", "Content flagging", "Report management"],
+              image: "/Nannies/Admin2.png",
+              alignment: "left",
+              deviceType: "desktop"
+            },
+            {
+              id: 4,
+              badge: "ANALYTICS",
+              title: "Platform Analytics",
+              description: "Detailed analytics and insights into user behavior, matching success rates, and platform performance. Data-driven decision making for platform improvements.",
+              features: ["User analytics", "Match statistics", "Performance metrics"],
+              image: "/Nannies/admin3.png",
+              alignment: "right",
+              deviceType: "desktop"
+            },
+            {
+              id: 5,
+              badge: "SUPPORT",
+              title: "User Support Management",
+              description: "Manage user support tickets, handle disputes, and facilitate communication between users. Complete customer service tools for platform administrators.",
+              features: ["Ticket management", "Dispute resolution", "User communication"],
+              image: "/Nannies/Admin4.png",
+              alignment: "left",
+              deviceType: "desktop"
+            }
+          ]
+        };
 
       case 'karibu-kazi':
-        return [
-          {
-            id: 1,
-            badge: "OPPORTUNITY",
-            title: "Job Discovery Platform",
-            description: "Comprehensive job discovery interface showcasing opportunities across 50+ service categories. Dignity-focused design that celebrates skilled work and craftsmanship.",
-            features: ["50+ job categories", "Skill-based matching", "Professional profiles"],
-            image: "/KaribuKazi/Android Large - 320Post Job emp.png",
-            alignment: "left",
-            deviceType: "mobile"
-          },
-          {
-            id: 2,
-            badge: "APPLICATION",
-            title: "Job Application Process", 
-            description: "Streamlined application process that allows skilled workers to showcase their expertise and portfolio. Easy-to-use interface designed for mobile-first experience.",
-            features: ["Portfolio showcase", "Skill verification", "Quick applications"],
-            image: "/KaribuKazi/Android Large - 322Post Job emp.png",
-            alignment: "right",
-            deviceType: "mobile"
-          },
-          {
-            id: 3,
-            badge: "DETAILS",
-            title: "Job Details & Requirements",
-            description: "Detailed job information with clear requirements, compensation, and project scope. Transparent communication helps workers make informed decisions.",
-            features: ["Clear requirements", "Transparent pricing", "Project details"],
-            image: "/KaribuKazi/Android Large - 329Post Job emp.png",
-            alignment: "left",
-            deviceType: "mobile"
-          },
-          {
-            id: 4,
-            badge: "PORTFOLIO",
-            title: "Worker Portfolio System",
-            description: "Professional portfolio platform where skilled workers can showcase completed projects, certifications, and client testimonials. Builds credibility and attracts clients.",
-            features: ["Project portfolio", "Client testimonials", "Skill badges"],
-            image: "/KaribuKazi/Android Large - 435Post Job emp.png",
-            alignment: "right",
-            deviceType: "mobile"
-          },
-          {
-            id: 5,
-            badge: "SUCCESS",
-            title: "Achievement Recognition",
-            description: "Recognition system that celebrates quality work and professional growth. Awards, badges, and testimonials that build worker reputation and self-worth.",
-            features: ["Achievement badges", "Quality awards", "Professional recognition"],
-            image: "/KaribuKazi/Android Large - 436Post Job emp.png",
-            alignment: "left",
-            deviceType: "mobile"
-          }
-        ];
+        return {
+          user: [
+            {
+              id: 1,
+              badge: "DISCOVERY",
+              title: "Job Discovery Platform",
+              description: "Comprehensive job discovery interface showcasing opportunities across 50+ service categories. Dignity-focused design that celebrates skilled work and craftsmanship.",
+              features: ["50+ job categories", "Skill-based matching", "Professional profiles"],
+              image: "/KaribuKazi/Android Large - 320Post Job emp.png",
+              alignment: "left",
+              deviceType: "mobile"
+            },
+            {
+              id: 2,
+              badge: "APPLICATION",
+              title: "Job Application Process", 
+              description: "Streamlined application process that allows skilled workers to showcase their expertise and portfolio. Easy-to-use interface designed for mobile-first experience.",
+              features: ["Portfolio showcase", "Skill verification", "Quick applications"],
+              image: "/KaribuKazi/Android Large - 322Post Job emp.png",
+              alignment: "right",
+              deviceType: "mobile"
+            },
+            {
+              id: 3,
+              badge: "JOB POSTING",
+              title: "Employer Job Posting",
+              description: "Simple job posting interface for employers to list opportunities. Clear form fields for job requirements, compensation, and project details.",
+              features: ["Easy job posting", "Clear requirements", "Quick publication"],
+              image: "/KaribuKazi/Android Large - 329Post Job emp.png",
+              alignment: "left",
+              deviceType: "mobile"
+            },
+            {
+              id: 4,
+              badge: "PORTFOLIO",
+              title: "Worker Portfolio Showcase",
+              description: "Professional portfolio platform where skilled workers can showcase completed projects, certifications, and client testimonials. Builds credibility and attracts clients.",
+              features: ["Project portfolio", "Client testimonials", "Skill badges"],
+              image: "/KaribuKazi/Android Large - 435Post Job emp.png",
+              alignment: "right",
+              deviceType: "mobile"
+            },
+            {
+              id: 5,
+              badge: "SUCCESS",
+              title: "Achievement Recognition",
+              description: "Recognition system that celebrates quality work and professional growth. Awards, badges, and testimonials that build worker reputation and self-worth.",
+              features: ["Achievement badges", "Quality awards", "Professional recognition"],
+              image: "/KaribuKazi/Android Large - 436Post Job emp.png",
+              alignment: "left",
+              deviceType: "mobile"
+            }
+          ],
+          admin: [
+            {
+              id: 1,
+              badge: "DASHBOARD",
+              title: "Admin Dashboard Overview",
+              description: "Comprehensive platform management dashboard providing real-time insights into job postings, worker activity, and platform health metrics.",
+              features: ["Platform overview", "Activity monitoring", "Real-time metrics"],
+              image: "/KaribuKazi/Admin/Brands Home.png",
+              alignment: "left",
+              deviceType: "desktop"
+            },
+            {
+              id: 2,
+              badge: "VERIFICATION",
+              title: "Worker Verification System",
+              description: "Robust verification workflow for validating worker credentials, skills, and professional background. Multi-step approval process ensuring platform quality.",
+              features: ["Credential verification", "Skill validation", "Background checks"],
+              image: "/KaribuKazi/Admin/Brands Home-1.png",
+              alignment: "right",
+              deviceType: "desktop"
+            },
+            {
+              id: 3,
+              badge: "MODERATION",
+              title: "Content Moderation Tools",
+              description: "Review and moderate job postings, worker profiles, and platform content. Maintain quality standards and handle reported issues efficiently.",
+              features: ["Content review", "Flagging system", "Quality control"],
+              image: "/KaribuKazi/Admin/Brands Home-2.png",
+              alignment: "left",
+              deviceType: "desktop"
+            },
+            {
+              id: 4,
+              badge: "ANALYTICS",
+              title: "Platform Analytics & Insights",
+              description: "Detailed analytics on platform usage, job matching success rates, and user engagement. Data-driven insights for platform optimization.",
+              features: ["Usage analytics", "Match rates", "Engagement metrics"],
+              image: "/KaribuKazi/Admin/Brands Home-3.png",
+              alignment: "right",
+              deviceType: "desktop"
+            },
+            {
+              id: 5,
+              badge: "MANAGEMENT",
+              title: "User & Brand Management",
+              description: "Manage user accounts, brand partnerships, and platform relationships. Tools for onboarding, support, and partnership management.",
+              features: ["User management", "Brand partnerships", "Account tools"],
+              image: "/KaribuKazi/Admin/Brands Home-4.png",
+              alignment: "left",
+              deviceType: "desktop"
+            }
+          ]
+        };
 
       case 'kra-pension-portal':
         return [
@@ -442,7 +584,7 @@ function FinalDesignSection({ study }) {
   }
 
   const screensData = getProjectScreens(study?.id)
-  const hasTabs = study?.id === 'buy-sell' && screensData.user && screensData.admin
+  const hasTabs = study?.id !== 'royal-times' && study?.id !== 'kra-pension-portal' && screensData.user && screensData.admin
   const screens = hasTabs ? (activeTab === 'user' ? screensData.user : screensData.admin) : screensData
 
   const CheckmarkIcon = () => (
