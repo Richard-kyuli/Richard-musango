@@ -755,7 +755,7 @@ export const caseStudies = [
     deviceType: 'laptop',
     role: 'Lead UI/UX Designer',
     timeline: '8 months',
-    image: '/KRAPSS/MacBook Pro 16_ - 21.png',
+    image: '/KRASSP/MacBook Pro 16_ - 21.png',
     description: 'Comprehensive digital platform modernizing pension management for 7,000+ KRA employees.',
     overview: 'The Kenya Revenue Authority Pension Scheme Staff Portal is a comprehensive digital platform designed to modernize pension management for KRA employees. The portal provides a centralized dashboard where staff can access pension balances, contribution history, benefit projections, and submit claims online—transforming paper-based processes into efficient self-service digital experiences.',
     problem: 'KRA employees faced significant barriers accessing pension information through manual, paper-based processes. Staff had to visit HR offices in person for basic requests like pension statements or claim submissions, creating bottlenecks, delays, and frustration for both employees and HR administrators managing 7,000+ staff members.',
