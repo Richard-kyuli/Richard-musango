@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function FinalDesignSection({ study }) {
+  const [activeTab, setActiveTab] = useState('user') // For buy-sell tabs
   
   // Get project-specific screens based on study ID
   const getProjectScreens = (studyId) => {
@@ -60,58 +61,112 @@ function FinalDesignSection({ study }) {
         ];
 
       case 'buy-sell':
-        return [
-          {
-            id: 1,
-            badge: "ONBOARDING",
-            title: "Welcome & Authentication",
-            description: "Streamlined onboarding process that builds trust from the first interaction. Quick sign-up with social login options and progressive profile completion to reduce friction.",
-            features: ["Social login integration", "Quick verification", "Profile setup"],
-            image: "/Buysell/Splash.png",
-            alignment: "left",
-            deviceType: "mobile"
-          },
-          {
-            id: 2,
-            badge: "DISCOVERY",
-            title: "Smart Product Discovery", 
-            description: "AI-powered feed showing personalized recommendations based on user behavior and preferences. Category-based navigation with visual cards for easy browsing.",
-            features: ["Personalized feed", "Smart categories", "Visual browsing"],
-            image: "/Buysell/Posts2.png",
-            alignment: "right",
-            deviceType: "mobile"
-          },
-          {
-            id: 3,
-            badge: "LISTING",
-            title: "Easy Product Listing",
-            description: "Simplified three-step listing process with photo upload, category selection, and pricing. Progressive disclosure keeps the experience manageable while capturing essential details.",
-            features: ["Photo upload", "Auto-categorization", "Smart pricing"],
-            image: "/Buysell/Post1.png",
-            alignment: "left",
-            deviceType: "mobile"
-          },
-          {
-            id: 4,
-            badge: "ADMIN",
-            title: "Admin Dashboard",
-            description: "Comprehensive admin dashboard for managing users, listings, transactions, and platform analytics. Desktop interface for administrators to oversee marketplace operations.",
-            features: ["User management", "Content moderation", "Analytics dashboard"],
-            image: "/Buysell/Admin/Dashboard.png",
-            alignment: "right",
-            deviceType: "desktop"
-          },
-          {
-            id: 5,
-            badge: "COMMUNICATION",
-            title: "In-App Messaging",
-            description: "Secure messaging system with offer negotiation, photo sharing, and safety reminders. All communication stays within the platform for accountability and user safety.",
-            features: ["Secure messaging", "Offer negotiation", "Photo sharing"],
-            image: "/Buysell/Posts4.png",
-            alignment: "left",
-            deviceType: "mobile"
-          }
-        ];
+        return {
+          user: [
+            {
+              id: 1,
+              badge: "DISCOVERY",
+              title: "Product Discovery Feed",
+              description: "Personalized feed showing relevant products based on location, preferences, and browsing history. Smart algorithms surface the best matches for each user.",
+              features: ["Personalized recommendations", "Location-based", "Category filters"],
+              image: "/Buysell/Posts1.png",
+              alignment: "left",
+              deviceType: "mobile"
+            },
+            {
+              id: 2,
+              badge: "BROWSING",
+              title: "Product Browse & Search",
+              description: "Intuitive browsing experience with advanced search and filtering. Users can easily find what they're looking for through categories, price ranges, and conditions.",
+              features: ["Advanced search", "Smart filters", "Save searches"],
+              image: "/Buysell/Posts2.png",
+              alignment: "right",
+              deviceType: "mobile"
+            },
+            {
+              id: 3,
+              badge: "LISTING",
+              title: "Create Product Listing",
+              description: "Simple three-step process to list items for sale. Upload photos, select category, set price, and publish - all in under 2 minutes.",
+              features: ["Quick photo upload", "Auto-categorization", "Smart pricing suggestions"],
+              image: "/Buysell/Post+shop.png",
+              alignment: "left",
+              deviceType: "mobile"
+            },
+            {
+              id: 4,
+              badge: "OPTIONS",
+              title: "Listing Options & Features",
+              description: "Flexible listing options including featured placement, premium ads, and boost visibility. Sellers can choose the best package for their needs.",
+              features: ["Promotion options", "Featured listings", "Boost visibility"],
+              image: "/Buysell/Posts-option.png",
+              alignment: "right",
+              deviceType: "mobile"
+            },
+            {
+              id: 5,
+              badge: "SUCCESS",
+              title: "Listing Published",
+              description: "Confirmation screen showing listing is live with immediate visibility metrics. Sellers can track views, favorites, and messages in real-time.",
+              features: ["Live confirmation", "View tracking", "Instant notifications"],
+              image: "/Buysell/Posts-success.png",
+              alignment: "left",
+              deviceType: "mobile"
+            }
+          ],
+          admin: [
+            {
+              id: 1,
+              badge: "DASHBOARD",
+              title: "Admin Dashboard Overview",
+              description: "Comprehensive dashboard providing real-time insights into platform activity, user metrics, and revenue. Quick access to all administrative functions.",
+              features: ["Real-time analytics", "User metrics", "Revenue tracking"],
+              image: "/Buysell/Admin/Dashboard.png",
+              alignment: "left",
+              deviceType: "desktop"
+            },
+            {
+              id: 2,
+              badge: "USERS",
+              title: "User Management",
+              description: "Complete user management system for viewing, verifying, and moderating user accounts. Track user activity, handle reports, and manage verification status.",
+              features: ["User verification", "Activity tracking", "Account management"],
+              image: "/Buysell/Admin/Users.png",
+              alignment: "right",
+              deviceType: "desktop"
+            },
+            {
+              id: 3,
+              badge: "LISTINGS",
+              title: "Product Listing Management",
+              description: "Moderate and manage all product listings on the platform. Review flagged content, approve/reject listings, and maintain marketplace quality.",
+              features: ["Content moderation", "Listing approval", "Quality control"],
+              image: "/Buysell/Admin/Product-Listing.png",
+              alignment: "left",
+              deviceType: "desktop"
+            },
+            {
+              id: 4,
+              badge: "CATEGORIES",
+              title: "Category Management",
+              description: "Organize and manage marketplace categories. Add new categories, update existing ones, and optimize the browsing experience.",
+              features: ["Category organization", "Metadata management", "SEO optimization"],
+              image: "/Buysell/Admin/Category.png",
+              alignment: "right",
+              deviceType: "desktop"
+            },
+            {
+              id: 5,
+              badge: "FINANCE",
+              title: "Financial Management",
+              description: "Track platform revenue, manage ad packages, monitor transactions, and generate financial reports. Complete financial oversight in one place.",
+              features: ["Revenue tracking", "Transaction history", "Financial reports"],
+              image: "/Buysell/Admin/Finances.png",
+              alignment: "left",
+              deviceType: "desktop"
+            }
+          ]
+        };
 
       case 'mwalimu-finder':
         return [
@@ -386,7 +441,9 @@ function FinalDesignSection({ study }) {
     }
   }
 
-  const screens = getProjectScreens(study?.id)
+  const screensData = getProjectScreens(study?.id)
+  const hasTabs = study?.id === 'buy-sell' && screensData.user && screensData.admin
+  const screens = hasTabs ? (activeTab === 'user' ? screensData.user : screensData.admin) : screensData
 
   const CheckmarkIcon = () => (
     <svg 
@@ -408,7 +465,7 @@ function FinalDesignSection({ study }) {
     <section style={{ backgroundColor: '#f9fafb', paddingTop: '5rem', paddingBottom: '5rem' }}>
       <div style={{ maxWidth: '72rem', margin: '0 auto', paddingLeft: '1.5rem', paddingRight: '1.5rem' }}>
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: hasTabs ? '2rem' : '4rem' }}>
           <h2 style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#111827', marginBottom: '1rem', lineHeight: '1.2' }}>
             Final Design Screens
           </h2>
@@ -417,6 +474,48 @@ function FinalDesignSection({ study }) {
             Each screen is carefully crafted to guide users through a seamless experience.
           </p>
         </div>
+
+        {/* Tabs for Buy & Sell */}
+        {hasTabs && (
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '4rem' }}>
+            <div style={{ display: 'inline-flex', backgroundColor: '#f3f4f6', borderRadius: '0.5rem', padding: '0.25rem' }}>
+              <button
+                onClick={() => setActiveTab('user')}
+                style={{
+                  padding: '0.75rem 2rem',
+                  fontSize: '0.9375rem',
+                  fontWeight: '600',
+                  borderRadius: '0.375rem',
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s',
+                  backgroundColor: activeTab === 'user' ? 'white' : 'transparent',
+                  color: activeTab === 'user' ? '#111827' : '#6b7280',
+                  boxShadow: activeTab === 'user' ? '0 1px 3px 0 rgba(0, 0, 0, 0.1)' : 'none'
+                }}
+              >
+                User Screens
+              </button>
+              <button
+                onClick={() => setActiveTab('admin')}
+                style={{
+                  padding: '0.75rem 2rem',
+                  fontSize: '0.9375rem',
+                  fontWeight: '600',
+                  borderRadius: '0.375rem',
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s',
+                  backgroundColor: activeTab === 'admin' ? 'white' : 'transparent',
+                  color: activeTab === 'admin' ? '#111827' : '#6b7280',
+                  boxShadow: activeTab === 'admin' ? '0 1px 3px 0 rgba(0, 0, 0, 0.1)' : 'none'
+                }}
+              >
+                Admin Screens
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Zig-Zag Screen Items */}
         <div>
