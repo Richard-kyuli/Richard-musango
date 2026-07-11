@@ -24,7 +24,7 @@ function HeroSection({ study }) {
   const getMobileImage = (projectId) => {
     switch(projectId) {
       case 'buy-sell':
-        return '/Buysell/Posts2.png'
+        return '/Buysell/1.png'
       case 'mwalimu-finder':
         return '/Mwalimu-finder/MF03Post a Job.png'
       case 'nannies':
