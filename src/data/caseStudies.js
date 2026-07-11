@@ -127,7 +127,7 @@ export const caseStudies = [
     deviceType: 'mobile',
     role: 'UI/UX Designer',
     timeline: '5 months',
-    image: '/Buysell/Posts2.png',
+    image: '/Buysell/1.png',
     description: 'Mobile-first marketplace connecting local buyers and sellers with verified profiles and secure messaging.',
     mobileScreens: [
       { image: '/Buysell/Home.png', title: 'Home Screen' },
