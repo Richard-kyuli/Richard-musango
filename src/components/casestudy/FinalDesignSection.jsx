@@ -115,20 +115,20 @@ function FinalDesignSection({ study }) {
             },
             {
               id: 6,
-              badge: "OPTIONS",
-              title: "Publish, Edit or Delete Options",
-              description: "Action overlay showing options to publish the product listing, edit product details, or delete the draft. Sellers can review their choices before making the listing live or make final adjustments.",
-              features: ["Publish button", "Edit option", "Delete option"],
+              badge: "SUCCESS",
+              title: "Product Listed Successfully",
+              description: "Success overlay confirmation message indicating the product has been successfully listed on the marketplace. Notification confirms the listing is now live and visible to buyers.",
+              features: ["Success message", "Confirmation overlay", "Listing confirmation"],
               image: "/Buysell/6.png",
               alignment: "right",
               deviceType: "mobile"
             },
             {
               id: 7,
-              badge: "SUCCESS",
-              title: "Product Listed Successfully",
-              description: "Success overlay confirmation message indicating the product has been successfully listed on the marketplace. Notification confirms the listing is now live and visible to buyers.",
-              features: ["Success message", "Confirmation overlay", "Listing confirmation"],
+              badge: "OPTIONS",
+              title: "Publish, Edit or Delete Options",
+              description: "Action overlay showing options to publish the product listing, edit product details, or delete the draft. Sellers can review their choices before making the listing live or make final adjustments.",
+              features: ["Publish button", "Edit option", "Delete option"],
               image: "/Buysell/7.png",
               alignment: "left",
               deviceType: "mobile"
