@@ -13,7 +13,7 @@ function HeroSection({ study }) {
       case 'mwalimu-finder':
         return '/Mwalimu-finder/MF03Post a Job.png' // Use mobile as fallback
       case 'nannies':
-        return '/Nannies/MacBook Pro 16_ - 19.png'
+        return '/Nannies/1.png'
       case 'karibu-kazi':
         return '/KaribuKazi/Admin/Brands Home.png'
       default:
