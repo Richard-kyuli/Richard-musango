@@ -133,6 +133,31 @@
   color: var(--color-text-secondary);
 }
 
+.typing-text {
+  color: var(--color-primary);
+  font-weight: 600;
+  min-width: 300px;
+  display: inline-block;
+  text-align: left;
+}
+
+.cursor {
+  display: inline-block;
+  color: var(--color-primary);
+  animation: blink 1s infinite;
+  margin-left: 2px;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
 .hero-description {
   font-size: 1.1rem;
   margin-bottom: 2.5rem;
@@ -251,6 +276,10 @@
     font-size: 1.25rem;
   }
 
+  .typing-text {
+    min-width: 200px;
+  }
+
   .hero-description {
     font-size: 1rem;
   }
@@ -278,6 +307,10 @@
 
   .hero-subtitle {
     font-size: 1.1rem;
+  }
+
+  .typing-text {
+    min-width: 150px;
   }
 
   .hero-image img {

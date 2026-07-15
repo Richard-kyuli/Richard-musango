@@ -127,7 +127,7 @@ export const caseStudies = [
     deviceType: 'mobile',
     role: 'UI/UX Designer',
     timeline: '5 months',
-    image: '/Buysell/1.png',
+    image: '/Buysell/3.png',
     description: 'Mobile-first marketplace connecting local buyers and sellers with verified profiles and secure messaging.',
     mobileScreens: [
       { image: '/Buysell/Home.png', title: 'Home Screen' },
@@ -473,7 +473,7 @@ export const caseStudies = [
     deviceType: 'laptop',
     role: 'Lead UI/UX Designer',
     timeline: '5 months',
-    image: '/Nannies/MacBook Pro 16_ - 19.png',
+    image: '/Nannies/1.png',
     description: 'AI-powered platform connecting mothers with verified nannies through comprehensive matching and verification.',
     overview: 'NannyKe is a digital platform connecting mothers with verified nannies for instant matching and hiring. The platform enables quick discovery of qualified caregivers through AI-powered matching, comprehensive verification, and secure communication—making childcare hiring simple and trustworthy.',
     problem: 'Finding trustworthy childcare in Kenya was fragmented and time-consuming. Traditional methods relied on word-of-mouth referrals, taking weeks to find suitable caregivers. Mothers couldn\'t verify credentials independently, while nannies had no professional platform to showcase qualifications.',
