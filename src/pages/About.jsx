@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import './About.css'
 
@@ -193,13 +194,13 @@ function About() {
                   <span>Notion</span>
                 </div>
                 <div className="tool-item">
-                  <div className="tool-icon principle">
+                  <div className="tool-icon uxpilot">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <rect width="24" height="24" rx="4" fill="#6C5CE7"/>
-                      <path d="M8 7H12C14.2 7 16 8.8 16 11C16 13.2 14.2 15 12 15H10V17H8V7ZM10 9V13H12C13.1 13 14 12.1 14 11C14 9.9 13.1 9 12 9H10Z" fill="white"/>
+                      <rect width="24" height="24" rx="6" fill="#7C6FDC"/>
+                      <text x="12" y="17" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">P</text>
                     </svg>
                   </div>
-                  <span>Principle</span>
+                  <span>UX Pilot</span>
                 </div>
               </div>
             </div>
@@ -243,7 +244,14 @@ function About() {
               design tokens, and guidelines that streamline the 
               design and development process.
             </p>
-            <button className="view-system-btn">View full design system →</button>
+            <a 
+              href="https://www.figma.com/design/IvymjBwOXpQH8TNVst5p40/My-Design-System--Copy-?node-id=2383-20190&t=H4yqNk8Ube1I2NC4-1" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="view-system-btn"
+            >
+              View full design system →
+            </a>
           </div>
         </div>
       </div>
@@ -254,8 +262,15 @@ function About() {
           <h2>Let's work together</h2>
           <p>I'm always excited to take on new challenges and help solve design problems.</p>
           <div className="cta-buttons">
-            <button className="btn-primary">View my work</button>
-            <button className="btn-secondary">Contact on LinkedIn →</button>
+            <Link to="/case-studies" className="btn-primary">View my work</Link>
+            <a 
+              href="https://www.linkedin.com/in/richard-kyuli-a11376268/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-secondary"
+            >
+              Contact on LinkedIn →
+            </a>
           </div>
         </div>
       </div>

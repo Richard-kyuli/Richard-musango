@@ -263,7 +263,7 @@
   display: inline-block;
   font-size: 0.7rem;
   color: var(--color-gray-500);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
   font-weight: var(--font-weight-semibold);
   background: none !important;
   padding: 0 !important;
@@ -274,15 +274,17 @@
 
 .portfolio-title {
   font-size: var(--font-size-h3);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
   color: var(--color-text-primary);
   line-height: 1.3;
   font-weight: var(--font-weight-semibold);
+  /* Constrain title to 1 line */
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 2.6em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   transition: color 0.3s ease-in-out;
 }
 
@@ -299,6 +301,74 @@
 
 .portfolio-cta {
   text-align: center;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: var(--space-12) var(--space-4);
+  background: linear-gradient(135deg, #FF6835 0%, #f97316 100%);
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 2.75rem;
+  font-weight: var(--font-weight-bold);
+  color: white;
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+
+.cta-description {
+  font-size: var(--font-size-body);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-6);
+  line-height: var(--line-height-relaxed);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 14px 32px;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--color-primary);
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+}
+
+.btn-primary-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Gradient Backgrounds */
@@ -328,6 +398,20 @@
   }
 
   .about-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
     width: 100%;
     max-width: 300px;
   }

@@ -58,12 +58,6 @@ function Home() {
             </p>
             <div className="hero-buttons">
               <Link to="/case-studies" className="btn btn-primary">View My Work</Link>
-              <a href="/resume.pdf" download className="btn btn-outline">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-                </svg>
-                Download CV
-              </a>
             </div>
           </div>
         </div>
@@ -105,6 +99,31 @@ function Home() {
           </div>
           <div className="portfolio-cta">
             <Link to="/case-studies" className="btn btn-primary">View All Projects</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-content">
+            <h2 className="cta-title">Let's work together</h2>
+            <p className="cta-description">
+              I'm always excited to take on new challenges and help solve design problems.
+            </p>
+            <div className="cta-buttons">
+              <Link to="/case-studies" className="btn btn-secondary">
+                View my work
+              </Link>
+              <a 
+                href="https://www.linkedin.com/in/richard-kyuli-a11376268/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-primary-outline"
+              >
+                Contact on LinkedIn →
+              </a>
+            </div>
           </div>
         </div>
       </section>

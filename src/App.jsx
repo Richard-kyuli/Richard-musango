@@ -3,6 +3,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import { lazy, Suspense } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import GoogleAnalytics from './components/GoogleAnalytics'
 import './App.css'
 
 // Lazy load page components for code splitting
@@ -32,6 +33,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <GoogleAnalytics />
         <div className="App">
           <Navbar />
           <main id="main-content">
