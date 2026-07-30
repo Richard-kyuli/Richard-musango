@@ -3,11 +3,34 @@ import './CaseStudyComponents.css'
 function ResearchSection({ study }) {
   const getResearchPhases = () => {
     if (study.process && study.process.research) {
-      return study.process.research.map((item, index) => ({
-        phase: `Phase ${index + 1}`,
-        title: item.length > 50 ? item.substring(0, 50) + '...' : item,
-        description: item
-      }))
+      return study.process.research.map((item, index) => {
+        // Extract a short title from the description
+        let title = item;
+        
+        // Create a shorter, more punchy title
+        if (item.includes('interviews')) {
+          title = 'User Interviews';
+        } else if (item.includes('Analyzed') || item.includes('Studied')) {
+          title = 'Market Analysis';
+        } else if (item.includes('Surveyed')) {
+          title = 'User Surveys';
+        } else if (item.includes('Researched')) {
+          title = 'Requirements Research';
+        } else if (item.includes('competitive') || item.includes('competitor')) {
+          title = 'Competitive Analysis';
+        } else if (item.includes('patterns') || item.includes('pain points')) {
+          title = 'Insights & Patterns';
+        } else {
+          // Fallback: use first few words
+          title = item.split(' ').slice(0, 3).join(' ');
+        }
+        
+        return {
+          phase: `Phase ${index + 1}`,
+          title: title,
+          description: item
+        }
+      })
     }
     
     return [

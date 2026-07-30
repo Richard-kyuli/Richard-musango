@@ -19,7 +19,7 @@ function Home() {
       id: 2,
       title: 'Buy & Sell Online',
       category: 'Mobile & Web',
-      image: '/Buysell/Posts2.png',
+      image: '/Buysell/1.png',
       link: '/case-studies/buy-sell',
       tags: ['Ecommerce'],
       description: 'Mobile-first marketplace connecting local buyers and sellers with verified listings.'
@@ -28,7 +28,7 @@ function Home() {
       id: 3,
       title: 'Mwalimu Finder',
       category: 'Mobile & Web',
-      image: '/Mwalimu-finder/MF03Post a Job.png',
+      image: '/Mwalimu-finder/1.png',
       link: '/case-studies/mwalimu-finder',
       tags: ['Education Technology'],
       description: 'Teacher recruitment platform connecting schools with qualified educators.'

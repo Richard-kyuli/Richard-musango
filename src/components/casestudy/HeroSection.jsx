@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import './CaseStudyComponents.css'
 
 function HeroSection({ study }) {
-  // Determine if we should show dual screens for Mobile & Web projects
-  const isMobileAndWeb = study.platform === 'Mobile & Web'
+  // Determine if we should show dual screens for Mobile & Web projects or mobile-responsive web MVPs
+  const isMobileAndWeb = study.platform === 'Mobile & Web' || study.id === 'nannies'
   
   // Define web/desktop images for Mobile & Web projects
   const getWebImage = (projectId) => {
@@ -11,11 +11,11 @@ function HeroSection({ study }) {
       case 'buy-sell':
         return '/Buysell/Admin/Dashboard.png'
       case 'mwalimu-finder':
-        return '/Mwalimu-finder/MF03Post a Job.png' // Use mobile as fallback
+        return '/Mwalimu-finder/Admin/A1.png' // Admin login screen
       case 'nannies':
         return '/Nannies/1.png'
       case 'karibu-kazi':
-        return '/KaribuKazi/Admin/Brands Home.png'
+        return '/KaribuKazi/Admin/1.png' // Admin dashboard
       default:
         return study.image
     }
@@ -26,11 +26,11 @@ function HeroSection({ study }) {
       case 'buy-sell':
         return '/Buysell/1.png'
       case 'mwalimu-finder':
-        return '/Mwalimu-finder/MF03Post a Job.png'
+        return '/Mwalimu-finder/1.png' // Job posting options screen
       case 'nannies':
         return '/Nannies/Mobileview.png'
       case 'karibu-kazi':
-        return '/KaribuKazi/Android Large - 320Post Job emp.png'
+        return '/KaribuKazi/p1.png' // Job title and description
       default:
         return study.image
     }
@@ -62,10 +62,6 @@ function HeroSection({ study }) {
             <div className="meta-item">
               <div className="meta-label">Role</div>
               <div className="meta-value">{study.role}</div>
-            </div>
-            <div className="meta-item">
-              <div className="meta-label">Timeline</div>
-              <div className="meta-value">{study.timeline}</div>
             </div>
             <div className="meta-item">
               <div className="meta-label">Platform</div>

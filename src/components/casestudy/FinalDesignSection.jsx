@@ -3,6 +3,70 @@ import React, { useState } from 'react'
 function FinalDesignSection({ study }) {
   const [activeTab, setActiveTab] = useState('user') // For buy-sell tabs
   
+  // Get flow description based on study ID and tab
+  const getFlowDescription = (studyId, tab = 'user') => {
+    const flowDescriptions = {
+      'royal-times': {
+        flow: 'Admin Dashboard Flow',
+        purpose: 'Enabling efficient fleet management through real-time monitoring, driver management, and operational analytics.'
+      },
+      'buy-sell': {
+        user: {
+          flow: 'Product Listing Flow',
+          purpose: 'Guiding sellers through a streamlined 7-step process to create and publish product listings with photos, pricing, and contact details.'
+        },
+        admin: {
+          flow: 'Admin Management Flow',
+          purpose: 'Providing platform administrators with tools to manage users, moderate listings, and monitor platform health and revenue.'
+        }
+      },
+      'mwalimu-finder': {
+        user: {
+          flow: 'School Job Posting Flow',
+          purpose: 'Enabling schools to create comprehensive job postings with qualifications, responsibilities, and application requirements to attract qualified teachers.'
+        },
+        admin: {
+          flow: 'Admin Management Flow',
+          purpose: 'Providing platform oversight with tools to verify schools and teachers, manage job postings, and track platform financial metrics.'
+        }
+      },
+      'nannies': {
+        user: {
+          flow: 'Mummy Profile Creation Flow',
+          purpose: 'Guiding mothers through creating detailed profiles including service needs, preferences, household details, and budget to find matching nannies.'
+        },
+        admin: {
+          flow: 'Admin Management Flow',
+          purpose: 'Managing platform operations including nanny onboarding, mummy accounts, offer tracking, and commission monitoring.'
+        }
+      },
+      'karibu-kazi': {
+        user: {
+          flow: 'Employer Job Posting Flow',
+          purpose: 'Enabling employers to post jobs with detailed descriptions, budgets, and locations, then publish to skilled workers on the platform.'
+        },
+        admin: {
+          flow: 'Admin Dashboard Flow',
+          purpose: 'Providing comprehensive platform oversight including subscriptions, worker/employer management, job tracking, and profession categories.'
+        }
+      },
+      'kra-pension-portal': {
+        flow: 'Pension Management Flow',
+        purpose: 'Enabling KRA employees to access and manage their pension information including contributions, payouts, beneficiaries, and help resources.'
+      }
+    };
+
+    const desc = flowDescriptions[studyId];
+    if (!desc) return { flow: 'User Flow', purpose: 'Showcasing the key screens that deliver our solution.' };
+    
+    // Handle case studies with tabs (user/admin flows)
+    if (desc.user && desc.admin) {
+      return tab === 'admin' ? desc.admin : desc.user;
+    }
+    
+    return desc;
+  };
+  
   // Get project-specific screens based on study ID
   const getProjectScreens = (studyId) => {
     switch(studyId) {
@@ -193,51 +257,71 @@ function FinalDesignSection({ study }) {
           user: [
             {
               id: 1,
-              badge: "STEP 1",
-              title: "Job Position Details",
-              description: "Job posting form showing subject selection dropdown, grade level checkboxes, position type selector, and required qualifications input fields. Progress indicator shows Step 1 of multi-step process with 'Continue' button at bottom.",
-              features: ["Subject dropdown", "Grade checkboxes", "Position fields"],
-              image: "/Mwalimu-finder/MF03Post a Job.png",
+              badge: "OPTIONS",
+              title: "Job Posting Options",
+              description: "Options of whether to post a previous job, drafts, or a new job post. This initial screen gives schools flexibility to reuse previous job postings or start fresh.",
+              features: ["Previous jobs", "Draft posts", "New job option"],
+              image: "/Mwalimu-finder/1.png",
               alignment: "left",
               deviceType: "mobile"
             },
             {
               id: 2,
-              badge: "STEP 2",
-              title: "Teacher Requirements", 
-              description: "Requirements screen with form fields for minimum years of experience, teaching certifications needed, language proficiency selectors, and special skills checkboxes. Back and Continue navigation buttons with step progress bar.",
-              features: ["Experience input", "Certification list", "Skills checklist"],
-              image: "/Mwalimu-finder/MF04Post a Job.png",
+              badge: "STEP 1",
+              title: "Job Title", 
+              description: "Job title input field. Schools enter the specific teaching position they are hiring for in this step of the job posting flow.",
+              features: ["Job title input", "Position name", "Teaching role"],
+              image: "/Mwalimu-finder/2.png",
               alignment: "right",
               deviceType: "mobile"
             },
             {
               id: 3,
-              badge: "STEP 3",
-              title: "Education Requirements",
-              description: "Education qualifications form displaying minimum degree level selector, required certifications dropdown, TSC registration requirement toggle, and additional credentials text area. Multi-step progress indicator and navigation controls.",
-              features: ["Degree selector", "TSC registration", "Credentials input"],
-              image: "/Mwalimu-finder/MF05Post a Job.png",
+              badge: "STEP 2",
+              title: "Teacher Qualifications",
+              description: "Teacher qualifications required for the job. This screen captures the educational and professional credentials needed from applicants.",
+              features: ["Qualification requirements", "Education criteria", "Professional credentials"],
+              image: "/Mwalimu-finder/3.png",
               alignment: "left",
               deviceType: "mobile"
             },
             {
               id: 4,
-              badge: "STEP 4",
-              title: "Compensation Details",
-              description: "Salary and benefits screen with salary range slider, currency selector, payment frequency dropdown, benefits checklist (housing, medical, transport), and additional perks text field. Clear compensation breakdown display.",
-              features: ["Salary range slider", "Benefits checkboxes", "Perks field"],
-              image: "/Mwalimu-finder/MF06Post a Job.png",
+              badge: "STEP 3",
+              title: "Duties and Responsibilities",
+              description: "Duties and responsibilities input fields of the teacher when they get the job. Schools define the specific tasks and expectations for the teaching position.",
+              features: ["Duties input", "Responsibilities field", "Role expectations"],
+              image: "/Mwalimu-finder/4.png",
               alignment: "right",
               deviceType: "mobile"
             },
             {
               id: 5,
-              badge: "COMPLETE",
-              title: "Job Posting Success",
-              description: "Success confirmation screen with checkmark icon, job posting summary card showing position details, success message, and action buttons to 'View Job Posting', 'Post Another Job', and 'Manage Applications'. Job ID and publication timestamp displayed.",
-              features: ["Success checkmark", "Job summary", "Action buttons"],
-              image: "/Mwalimu-finder/MF09Post a Job.png",
+              badge: "STEP 4",
+              title: "Application Requirements",
+              description: "Application requirements (minimum requirements & additional requirements). Schools specify what documents and qualifications teachers must submit when applying.",
+              features: ["Minimum requirements", "Additional requirements", "Application criteria"],
+              image: "/Mwalimu-finder/5.png",
+              alignment: "left",
+              deviceType: "mobile"
+            },
+            {
+              id: 6,
+              badge: "STEP 5",
+              title: "Application Instructions",
+              description: "Application instructions (Deadline & how to apply). Schools set the application deadline and provide clear instructions on the application process.",
+              features: ["Application deadline", "How to apply", "Submission instructions"],
+              image: "/Mwalimu-finder/6.png",
+              alignment: "right",
+              deviceType: "mobile"
+            },
+            {
+              id: 7,
+              badge: "CONFIRM",
+              title: "Confirm Contacts",
+              description: "School to confirm contacts before posting the job for teachers to apply. Final verification step to ensure correct contact information is displayed to potential applicants.",
+              features: ["Contact verification", "Final review", "Publish job"],
+              image: "/Mwalimu-finder/7.png",
               alignment: "left",
               deviceType: "mobile"
             }
@@ -245,22 +329,52 @@ function FinalDesignSection({ study }) {
           admin: [
             {
               id: 1,
-              badge: "VERIFICATION",
-              title: "Teacher Credential Verification",
-              description: "Admin verification interface showing teacher profile with uploaded documents, TSC certificate viewer, education credential checklist, and verification status toggles. Approve/Reject buttons with notes field for verification decisions.",
-              features: ["Document viewer", "Verification checklist", "Approval actions"],
-              image: "/Mwalimu-finder/MF07Post a Job.png",
+              badge: "LOGIN",
+              title: "Admin Login",
+              description: "Login screen where the admins log in to the dashboard. Secure authentication entry point for platform administrators.",
+              features: ["Admin login", "Secure access", "Authentication"],
+              image: "/Mwalimu-finder/Admin/A1.png",
               alignment: "left",
               deviceType: "mobile"
             },
             {
               id: 2,
-              badge: "APPLICATIONS",
-              title: "Application Pipeline Management",
-              description: "Application management dashboard showing job listings with applicant counts, filter options by status (pending, shortlisted, interviewed), applicant cards with teacher profiles, and workflow actions to move candidates through hiring stages.",
-              features: ["Job listings", "Applicant cards", "Status filters"],
-              image: "/Mwalimu-finder/MF08Post a Job.png",
+              badge: "SCHOOLS",
+              title: "Schools Management",
+              description: "Schools screen shows list of schools in the platform and the jobs each school has posted, location of the school, and contact information. Comprehensive school management interface.",
+              features: ["School list", "Posted jobs", "Location and contacts"],
+              image: "/Mwalimu-finder/Admin/A2.png",
               alignment: "right",
+              deviceType: "mobile"
+            },
+            {
+              id: 3,
+              badge: "TEACHERS",
+              title: "Teachers Database",
+              description: "Teachers screen shows list of teachers in the platform, experience, institution level each teacher can teach in, location, job views, profile status, profile impressions and many more. The admin can add a teacher to the platform.",
+              features: ["Teacher list", "Experience tracking", "Profile analytics"],
+              image: "/Mwalimu-finder/Admin/A3.png",
+              alignment: "left",
+              deviceType: "mobile"
+            },
+            {
+              id: 4,
+              badge: "MANAGE POSTS",
+              title: "Manage Job Posts",
+              description: "Manage posts screen gives a list of jobs posted by schools with their details, and admins can manage them. Central hub for overseeing all job postings on the platform.",
+              features: ["Job posts list", "Post details", "Management tools"],
+              image: "/Mwalimu-finder/Admin/A4.png",
+              alignment: "right",
+              deviceType: "mobile"
+            },
+            {
+              id: 5,
+              badge: "FINANCES",
+              title: "Financial Overview",
+              description: "Finances screen gives an overview of the financial status of the platform. Shows total revenue from payment packages of job post, job views, profile posts and profile views.",
+              features: ["Revenue tracking", "Payment packages", "Financial metrics"],
+              image: "/Mwalimu-finder/Admin/A5.png",
+              alignment: "left",
               deviceType: "mobile"
             }
           ]
@@ -272,9 +386,9 @@ function FinalDesignSection({ study }) {
             {
               id: 1,
               badge: "STEP 1",
-              title: "Create Your Account",
-              description: "Account creation screen with welcome message, email/phone input field, password creation with strength indicator, profile type selector (Mother/Guardian), and sign-up button. Social login options and terms agreement checkbox visible.",
-              features: ["Email/phone input", "Password field", "Sign-up button"],
+              title: "Nanny Service Selection",
+              description: "What nanny service is the mammy looking for. Choose between Nanny for childcare, Nanny for the elderly, or Nanny for special needs. This initial screen helps direct mothers to the right type of care.",
+              features: ["Childcare option", "Elderly care option", "Special needs option"],
               image: "/Nannies/1.png",
               alignment: "left",
               deviceType: "desktop"
@@ -282,9 +396,9 @@ function FinalDesignSection({ study }) {
             {
               id: 2,
               badge: "STEP 2",
-              title: "Family Information",
-              description: "Family profile form showing input fields for parent/guardian name, number of children with age selectors, home address with location picker, contact information, and preferred language selection. Progress bar indicates Step 2 of 6.",
-              features: ["Name fields", "Children count", "Address picker"],
+              title: "Personal Profile Creation",
+              description: "Create personal profile for mammy with required data in the input fields. This screen captures essential information about the mother/guardian to create their account.",
+              features: ["Personal information", "Required fields", "Profile data"],
               image: "/Nannies/2.png",
               alignment: "right",
               deviceType: "desktop"
@@ -292,9 +406,9 @@ function FinalDesignSection({ study }) {
             {
               id: 3,
               badge: "STEP 3",
-              title: "Childcare Needs & Schedule",
-              description: "Requirements screen with care type checkboxes (full-time, part-time, occasional), schedule calendar picker, start date selector, special needs or requirements text area, and household tasks checkboxes if applicable.",
-              features: ["Care type options", "Schedule picker", "Requirements field"],
+              title: "Cultural Preferences",
+              description: "Preference in terms of religion and tribe. This screen allows mothers to specify cultural and religious preferences for their nanny match.",
+              features: ["Religion preference", "Tribe preference", "Cultural matching"],
               image: "/Nannies/3.png",
               alignment: "left",
               deviceType: "desktop"
@@ -302,9 +416,9 @@ function FinalDesignSection({ study }) {
             {
               id: 4,
               badge: "STEP 4",
-              title: "Safety & Verification Requirements",
-              description: "Safety preferences screen showing background check requirements toggle, reference checks selector, first aid certification requirement, vaccination status requirement, and additional safety preferences. Priority level indicators for each requirement.",
-              features: ["Background check toggle", "Certification requirements", "Safety preferences"],
+              title: "Residence Description",
+              description: "Describing the residence - who the mammy stays with, number of kids and their age range, number of adults in residence. Provides context about the home environment for potential nannies.",
+              features: ["Household members", "Kids and age range", "Adults count"],
               image: "/Nannies/4.png",
               alignment: "right",
               deviceType: "desktop"
@@ -312,19 +426,19 @@ function FinalDesignSection({ study }) {
             {
               id: 5,
               badge: "STEP 5",
-              title: "Budget & Payment Preferences",
-              description: "Compensation screen displaying hourly/monthly rate slider, payment frequency dropdown (weekly, bi-weekly, monthly), payment method options, and additional benefits willing to offer checkboxes. Budget calculator showing estimated costs.",
-              features: ["Rate slider", "Payment frequency", "Benefits options"],
+              title: "Budget and Location",
+              description: "Mammy sets budget and adds their location. This screen captures the financial expectations and geographic details for matching purposes.",
+              features: ["Budget setting", "Location input", "Geographic preferences"],
               image: "/Nannies/5.png",
               alignment: "left",
               deviceType: "desktop"
             },
             {
               id: 6,
-              badge: "COMPLETE",
-              title: "Profile Complete - Start Browsing",
-              description: "Onboarding completion screen with success animation, profile summary card, recommended nanny matches preview cards, and prominent 'Browse Nannies' button. Options to refine preferences or get smart recommendations.",
-              features: ["Success animation", "Profile summary", "Browse button"],
+              badge: "STEP 6",
+              title: "Google Sign Up",
+              description: "After the profile is created they need to sign up with Google. Mammies need convenience because they tend to forget passwords easily, so Google authentication provides a simple and secure login method.",
+              features: ["Google sign-up", "Easy authentication", "Password-free login"],
               image: "/Nannies/6.png",
               alignment: "right",
               deviceType: "desktop"
@@ -333,51 +447,51 @@ function FinalDesignSection({ study }) {
           admin: [
             {
               id: 1,
-              badge: "OVERVIEW",
-              title: "Admin Control Panel",
-              description: "Main admin dashboard displaying metrics cards for total nannies, active families, pending verifications, and recent matches. Quick stats charts, recent activity feed, and navigation menu to all admin functions.",
-              features: ["Metrics cards", "Activity feed", "Quick stats"],
-              image: "/Nannies/Admin.png",
+              badge: "LOGIN",
+              title: "Admin Login",
+              description: "Login screen where administrators access the platform dashboard. Secure authentication entry point for admin users.",
+              features: ["Admin authentication", "Secure login", "Dashboard access"],
+              image: "/Nannies/A1.png",
               alignment: "left",
               deviceType: "desktop"
             },
             {
               id: 2,
-              badge: "VERIFICATION",
-              title: "Nanny Verification Queue",
-              description: "Verification dashboard showing nanny applications pending review with profile photos, documents uploaded, verification status checklist (ID, background check, references, certifications), and approve/reject/request more info actions.",
-              features: ["Application queue", "Document viewer", "Verification actions"],
-              image: "/Nannies/Admin1.png",
+              badge: "NANNIES",
+              title: "Nannies List",
+              description: "List of nannies onboarded on the platform. Comprehensive view of all registered nannies with their details and status for management purposes.",
+              features: ["Nannies database", "Onboarding status", "Profile management"],
+              image: "/Nannies/A2.png",
               alignment: "right",
               deviceType: "desktop"
             },
             {
               id: 3,
-              badge: "MODERATION",
-              title: "Content & Profile Moderation",
-              description: "Moderation interface with flagged profiles table, reported content cards, review status filters, profile preview panel, and moderation actions (approve, remove, suspend, warn). Notes field for moderation decisions.",
-              features: ["Flagged items list", "Content preview", "Moderation tools"],
-              image: "/Nannies/Admin2.png",
+              badge: "MUMMIES",
+              title: "Mummies Management",
+              description: "Mummies list on the platform and manage them by either adding or deleting. Administrative control over mother/guardian accounts on the platform.",
+              features: ["Mummies list", "Add mummies", "Delete accounts"],
+              image: "/Nannies/A3.png",
               alignment: "left",
               deviceType: "desktop"
             },
             {
               id: 4,
-              badge: "INSIGHTS",
-              title: "Platform Analytics Dashboard",
-              description: "Analytics screen featuring user growth charts, matching success rate graphs, verification completion statistics, popular search criteria data, and platform engagement metrics. Date range selector and export options available.",
-              features: ["Growth charts", "Success metrics", "Engagement data"],
-              image: "/Nannies/admin3.png",
+              badge: "OFFERS",
+              title: "Offers Platform",
+              description: "Offers on the platform made by the mummies to the nannies on board. Tracks all job offers, proposals, and matches between mothers and nannies.",
+              features: ["Active offers", "Offer tracking", "Match management"],
+              image: "/Nannies/A4.png",
               alignment: "right",
               deviceType: "desktop"
             },
             {
               id: 5,
-              badge: "SUPPORT",
-              title: "Support Ticket Management",
-              description: "Support dashboard showing open tickets table with priority badges, ticket details panel, conversation history, status updates dropdown, canned response library, and resolution tracking. Filter by ticket type and priority level.",
-              features: ["Tickets table", "Conversation view", "Response tools"],
-              image: "/Nannies/Admin4.png",
+              badge: "FINANCES",
+              title: "Financial Overview",
+              description: "Finances - commissions made from paid offers. Shows the platform's revenue generated from successful matches and transactions.",
+              features: ["Commission tracking", "Revenue overview", "Payment analytics"],
+              image: "/Nannies/A5.png",
               alignment: "left",
               deviceType: "desktop"
             }
@@ -389,51 +503,51 @@ function FinalDesignSection({ study }) {
           user: [
             {
               id: 1,
-              badge: "JOB FEED",
-              title: "Browse Job Opportunities",
-              description: "Mobile job feed displaying available opportunities with job cards showing service category icons, job titles, location pins, pay rates, and urgency badges. Filter tabs for category, location, and pay range at top. Quick apply buttons on each card.",
-              features: ["Job cards", "Category filters", "Quick apply"],
-              image: "/KaribuKazi/Android Large - 320Post Job emp.png",
+              badge: "STEP 1",
+              title: "Job Title and Description",
+              description: "User fills in job title and job description. This is the first step in the employer's job posting flow where they define the basic details of the position they're hiring for.",
+              features: ["Job title input", "Job description text area", "Basic job details"],
+              image: "/KaribuKazi/p1.png",
               alignment: "left",
               deviceType: "mobile"
             },
             {
               id: 2,
-              badge: "APPLICATION",
-              title: "Job Application Form", 
-              description: "Application screen showing job details summary at top, application form with worker availability selector, expected pay input, cover message text area, portfolio attachments option, and submit application button. Estimated response time indicator visible.",
-              features: ["Job summary", "Application form", "Portfolio upload"],
-              image: "/KaribuKazi/Android Large - 322Post Job emp.png",
+              badge: "STEP 2",
+              title: "Location, Date and Budget", 
+              description: "User fills in the job location, start date, and estimated budget for the job. This screen captures the practical details needed for workers to assess the opportunity.",
+              features: ["Location picker", "Start date selector", "Budget input"],
+              image: "/KaribuKazi/p2.png",
               alignment: "right",
               deviceType: "mobile"
             },
             {
               id: 3,
-              badge: "POST JOB",
-              title: "Create Job Posting",
-              description: "Employer job posting form with service category dropdown, job title field, detailed description text area, required skills checkboxes, location picker, payment amount input, urgency level selector, and post job button. Character count for description field.",
-              features: ["Category selector", "Details form", "Payment input"],
-              image: "/KaribuKazi/Android Large - 329Post Job emp.png",
+              badge: "STEP 3",
+              title: "Confirm Job Post Details",
+              description: "User confirms job post details before publishing. This review screen allows employers to verify all the information they've entered is correct before making the job live.",
+              features: ["Job details review", "Confirmation screen", "Edit option"],
+              image: "/KaribuKazi/p3.png",
               alignment: "left",
               deviceType: "mobile"
             },
             {
               id: 4,
-              badge: "PORTFOLIO",
-              title: "Worker Profile & Portfolio",
-              description: "Worker profile page displaying profile photo, name, service categories, star rating, completed jobs counter, photo gallery of past work projects, skills badges, client reviews section, and contact/hire button. Verification status badge visible.",
-              features: ["Profile header", "Project gallery", "Reviews section"],
-              image: "/KaribuKazi/Android Large - 435Post Job emp.png",
+              badge: "EDIT",
+              title: "Edit Job Details",
+              description: "User can edit the job details after clicking the edit button on the previous screen. Provides flexibility to make changes before final publication.",
+              features: ["Edit job form", "Modify details", "Update information"],
+              image: "/KaribuKazi/p4.png",
               alignment: "right",
               deviceType: "mobile"
             },
             {
               id: 5,
-              badge: "ACHIEVEMENTS",
-              title: "Recognition & Milestones",
-              description: "Achievement screen showing earned badges for quality work, milestone celebrations (10 jobs, 50 jobs, etc.), skill level indicators, top worker badges, client testimonials, and achievement progress bars. Share achievements button at bottom.",
-              features: ["Achievement badges", "Milestone cards", "Progress indicators"],
-              image: "/KaribuKazi/Android Large - 436Post Job emp.png",
+              badge: "PUBLISH",
+              title: "Publish Job Post",
+              description: "Publish the job post by either 'Post and Invite top workers contracted before' or 'Post without inviting'. Gives employers the option to reach out to their preferred workers directly or open the job to all platform workers.",
+              features: ["Publish options", "Invite workers", "Post job"],
+              image: "/KaribuKazi/p5.png",
               alignment: "left",
               deviceType: "mobile"
             }
@@ -442,50 +556,70 @@ function FinalDesignSection({ study }) {
             {
               id: 1,
               badge: "DASHBOARD",
-              title: "Platform Management Dashboard",
-              description: "Admin dashboard showing key metrics: total workers, active jobs, completed projects, platform revenue. Real-time activity feed, pending verifications counter, recent registrations list, and quick access navigation to all admin modules.",
-              features: ["Metrics overview", "Activity feed", "Quick actions"],
-              image: "/KaribuKazi/Admin/Brands Home.png",
+              title: "Dashboard",
+              description: "Dashboard screen gives user quick view of subscriptions, ongoing jobs, employers on the platform, workers on the platform, and subscription graphs. Provides comprehensive overview of platform health and activity.",
+              features: ["Subscription metrics", "Jobs overview", "Platform statistics"],
+              image: "/KaribuKazi/Admin/1.png",
               alignment: "left",
               deviceType: "desktop"
             },
             {
               id: 2,
-              badge: "VERIFICATION",
-              title: "Worker Credential Verification",
-              description: "Verification interface displaying worker applications with profile details, uploaded ID documents, skill certification viewer, work history review, and verification checklist. Approve, reject, or request additional documents buttons with admin notes field.",
-              features: ["Application review", "Document viewer", "Verification actions"],
-              image: "/KaribuKazi/Admin/Brands Home-1.png",
+              badge: "FINANCES",
+              title: "Finances",
+              description: "Shows revenue raised from subscriptions (monthly & annually), data of users who have subscribed to the plans (employers & workers). Captures the payment methods of the plans and provides financial insights.",
+              features: ["Revenue tracking", "Subscription data", "Payment methods"],
+              image: "/KaribuKazi/Admin/2.png",
               alignment: "right",
               deviceType: "desktop"
             },
             {
               id: 3,
-              badge: "MODERATION",
-              title: "Content & Job Moderation",
-              description: "Moderation dashboard with flagged job postings table, reported worker profiles, moderation queue with priority sorting, content preview panel, policy violation indicators, and moderation actions (approve, remove, warn, suspend). Moderation notes and history.",
-              features: ["Flagged content", "Review queue", "Moderation tools"],
-              image: "/KaribuKazi/Admin/Brands Home-2.png",
+              badge: "WORKERS",
+              title: "Workers Screen",
+              description: "Captures list of workers on the platform with their professions, jobs awarded, location, and contacts. Provides comprehensive worker management capabilities.",
+              features: ["Worker list", "Profession details", "Contact information"],
+              image: "/KaribuKazi/Admin/3.png",
               alignment: "left",
               deviceType: "desktop"
             },
             {
               id: 4,
-              badge: "ANALYTICS",
-              title: "Platform Performance Analytics",
-              description: "Analytics dashboard featuring job posting trends chart, worker activity graphs, matching success rate metrics, category popularity data, geographic heat maps, and user engagement statistics. Custom date range selector and CSV export option.",
-              features: ["Trend charts", "Success metrics", "Geographic data"],
-              image: "/KaribuKazi/Admin/Brands Home-3.png",
+              badge: "EMPLOYERS",
+              title: "Employers Screen",
+              description: "Captures list of employers on the platform with their professions, jobs awarded to workers, location, and contacts. Admin can add an employer directly from this screen.",
+              features: ["Employer list", "Job awards tracking", "Add employer capability"],
+              image: "/KaribuKazi/Admin/4.png",
               alignment: "right",
               deviceType: "desktop"
             },
             {
               id: 5,
-              badge: "PARTNERS",
-              title: "Brand & Partnership Management",
-              description: "Partnership management interface showing active brand partnerships table, partner onboarding workflow, partnership tier levels, revenue sharing dashboard, partner performance metrics, and communication tools. Contract management and renewal tracking.",
-              features: ["Partners table", "Tier management", "Performance stats"],
-              image: "/KaribuKazi/Admin/Brands Home-4.png",
+              badge: "JOB POSTS",
+              title: "Job Posts Screen",
+              description: "Captures the jobs on the platform - either open for bidding, ongoing jobs, completed jobs, or canceled jobs. User can create a job post directly from this management interface.",
+              features: ["Job status tracking", "Create job post", "Job management"],
+              image: "/KaribuKazi/Admin/5.png",
+              alignment: "left",
+              deviceType: "desktop"
+            },
+            {
+              id: 6,
+              badge: "PROFESSIONS",
+              title: "Manage Professions",
+              description: "Screen to manage professions on the platform with the skills required in them and number of workers in each profession. User can add new profession or edit an existing one.",
+              features: ["Profession management", "Skills mapping", "Add/edit professions"],
+              image: "/KaribuKazi/Admin/6.png",
+              alignment: "right",
+              deviceType: "desktop"
+            },
+            {
+              id: 7,
+              badge: "SUBSCRIPTIONS",
+              title: "Subscriptions",
+              description: "Subscriptions screen where admin can see the plans list and manage them. Provides control over platform subscription tiers and pricing.",
+              features: ["Plans list", "Manage subscriptions", "Pricing control"],
+              image: "/KaribuKazi/Admin/7.png",
               alignment: "left",
               deviceType: "desktop"
             }
@@ -496,51 +630,71 @@ function FinalDesignSection({ study }) {
         return [
           {
             id: 1,
-            badge: "HOME",
-            title: "Employee Dashboard Overview",
-            description: "Main dashboard displaying employee welcome header with photo, pension balance summary card, recent contribution history table, upcoming payment schedule, quick action buttons (view statements, file claim, update profile), and notifications panel. Navigation sidebar for all portal sections.",
-            features: ["Balance summary", "Contribution history", "Quick actions"],
-            image: "/KRASSP/MacBook Pro 16_ - 21.png",
+            badge: "DASHBOARD",
+            title: "Dashboard",
+            description: "Gives the user a quick overview of the cumulative savings, recent contributions, and total monthly contributions. The dashboard provides at-a-glance access to key pension information and account status.",
+            features: ["Cumulative savings overview", "Recent contributions", "Monthly contributions total"],
+            image: "/KRAPSS/1.png",
             alignment: "left",
             deviceType: "desktop"
           },
           {
             id: 2,
-            badge: "CLAIMS",
-            title: "Claims Submission & Tracking", 
-            description: "Claims management interface showing active claims list with status badges, claim submission form with document upload, claim type selector (retirement, withdrawal, loan), amount calculator, submission timeline, and claim status tracker. Pending, approved, and completed claims tabs.",
-            features: ["Claim form", "Status tracker", "Document upload"],
-            image: "/KRASSP/MacBook Pro 16_ - 22.png",
+            badge: "PAYOUTS",
+            title: "Payouts",
+            description: "The user can see the total disbursements that he has received from the savings. Shows recent payouts with date, amount, for which period, reference number, and the receiving account.",
+            features: ["Total disbursements", "Payout history with dates", "Reference numbers and account details"],
+            image: "/KRAPSS/2.png",
             alignment: "right",
             deviceType: "desktop"
           },
           {
             id: 3,
-            badge: "DOCUMENTS",
-            title: "Document Management Center",
-            description: "Document repository showing categorized folders (ID documents, payslips, certificates, beneficiary forms), upload interface with drag-and-drop, document preview panel, verification status icons, and document actions (view, download, delete, share). File size and format indicators.",
-            features: ["Document folders", "Upload interface", "Preview panel"],
-            image: "/KRASSP/MacBook Pro 16_ - 23.png",
+            badge: "INBOX",
+            title: "Inbox",
+            description: "Conversations with the support team are recorded in this screen. Provides a centralized communication hub for users to track their support interactions and receive assistance.",
+            features: ["Support conversations", "Message history", "Communication tracking"],
+            image: "/KRAPSS/3.png",
             alignment: "left",
             deviceType: "desktop"
           },
           {
             id: 4,
-            badge: "CALCULATOR",
-            title: "Pension Benefits Calculator",
-            description: "Interactive calculator tool with input fields for current age, retirement age, monthly contributions, and years of service. Real-time calculation results showing projected pension amount, lump sum estimate, and monthly payout forecast. Comparison charts and retirement planning guidance.",
-            features: ["Input fields", "Calculation results", "Projection charts"],
-            image: "/KRASSP/MacBook Pro 16_ - 24.png",
+            badge: "BENEFICIARIES",
+            title: "Beneficiaries",
+            description: "Screen shows the list of beneficiaries with their contacts and the percentages they are supposed to receive from the savings. Allows users to manage and review their beneficiary information.",
+            features: ["Beneficiary list", "Contact information", "Distribution percentages"],
+            image: "/KRAPSS/4.png",
             alignment: "right",
             deviceType: "desktop"
           },
           {
             id: 5,
-            badge: "HELP",
-            title: "Self-Service Support Center",
-            description: "Help center interface with searchable FAQ database, category browsing (claims, contributions, documents, benefits), tutorial videos player, contact support form with ticket submission, live chat widget, and downloadable user guides. Recent support tickets section with status updates.",
-            features: ["FAQ search", "Video tutorials", "Support tickets"],
-            image: "/KRASSP/MacBook Pro 16_ - 25.png",
+            badge: "RESOURCES",
+            title: "Resources",
+            description: "Shows where users can access resources like Investment Policy Statement Handbook documents and many others. The resources can be downloaded for reading later, providing important pension information and guidelines.",
+            features: ["Investment Policy Statement", "Handbook documents", "Downloadable resources"],
+            image: "/KRAPSS/5.png",
+            alignment: "left",
+            deviceType: "desktop"
+          },
+          {
+            id: 6,
+            badge: "HELP CENTER",
+            title: "Help Center",
+            description: "Shows FAQs and Knowledge Base for KRA. It also shows office locations, contacts to the organisation, and socials. Provides comprehensive support resources for users.",
+            features: ["FAQs and Knowledge Base", "Office locations", "Contact information and socials"],
+            image: "/KRAPSS/6.png",
+            alignment: "right",
+            deviceType: "desktop"
+          },
+          {
+            id: 7,
+            badge: "USER PROFILE",
+            title: "User Profile",
+            description: "Shows information about the user, beneficiaries, and accounts. Centralized location for managing personal information and account settings within the pension portal.",
+            features: ["User information", "Beneficiaries overview", "Account management"],
+            image: "/KRAPSS/7.png",
             alignment: "left",
             deviceType: "desktop"
           }
@@ -606,6 +760,7 @@ function FinalDesignSection({ study }) {
   const screensData = getProjectScreens(study?.id)
   const hasTabs = study?.id !== 'royal-times' && study?.id !== 'kra-pension-portal' && screensData.user && screensData.admin
   const screens = hasTabs ? (activeTab === 'user' ? screensData.user : screensData.admin) : screensData
+  const flowInfo = getFlowDescription(study.id, activeTab);
 
   const CheckmarkIcon = () => (
     <svg 
@@ -632,8 +787,7 @@ function FinalDesignSection({ study }) {
             Final Design Screens
           </h2>
           <p style={{ fontSize: '1.125rem', color: '#6b7280', maxWidth: '42rem', margin: '0 auto' }}>
-            A complete user journey showcasing the key screens that deliver our solution. 
-            Each screen is carefully crafted to guide users through a seamless experience.
+            <strong style={{ color: '#111827' }}>{flowInfo.flow}:</strong> {flowInfo.purpose}
           </p>
         </div>
 
@@ -725,19 +879,19 @@ function FinalDesignSection({ study }) {
                 <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
                   {screen.deviceType === 'mobile' ? (
                     /* Mobile Device Mockup */
-                    <div style={{ backgroundColor: '#1a1a1a', padding: '0.75rem', borderRadius: '2.5rem', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)', width: '280px', position: 'relative' }}>
+                    <div style={{ backgroundColor: '#1a1a1a', padding: '8px', borderRadius: '30px', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)', width: '280px', position: 'relative' }}>
                       {/* Mobile Notch */}
-                      <div style={{ position: 'absolute', top: '0.75rem', left: '50%', transform: 'translateX(-50%)', width: '140px', height: '28px', backgroundColor: '#1a1a1a', borderRadius: '0 0 20px 20px', zIndex: 10 }}></div>
+                      <div style={{ position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', width: '140px', height: '28px', backgroundColor: '#1a1a1a', borderRadius: '0 0 20px 20px', zIndex: 10 }}></div>
                       {/* Screen Container */}
-                      <div style={{ backgroundColor: '#f3f4f6', borderRadius: '2rem', overflow: 'hidden' }}>
+                      <div style={{ backgroundColor: '#f3f4f6', borderRadius: '22px', overflow: 'hidden' }}>
                         <img 
                           src={screen.image}
                           alt={screen.title}
-                          style={{ width: '100%', height: 'auto', borderRadius: '1.4rem', display: 'block' }}
+                          style={{ width: '100%', height: 'auto', borderRadius: '22px', display: 'block' }}
                         />
                       </div>
                       {/* Home Indicator */}
-                      <div style={{ position: 'absolute', bottom: '1rem', left: '50%', transform: 'translateX(-50%)', width: '134px', height: '4px', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '9999px' }}></div>
+                      <div style={{ position: 'absolute', bottom: '12px', left: '50%', transform: 'translateX(-50%)', width: '134px', height: '4px', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '9999px' }}></div>
                     </div>
                   ) : (
                     /* Desktop/Browser Mockup */

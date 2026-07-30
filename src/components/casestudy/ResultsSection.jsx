@@ -1,4 +1,74 @@
 function ResultsSection({ study }) {
+  // Define featured metrics for each case study
+  const getFeaturedMetric = (studyId) => {
+    const metrics = {
+      'royal-times': {
+        label: 'ACTIVE DRIVERS',
+        value: '150+',
+        description: 'Drivers successfully onboarded and managed through the platform within the first 6 months of operation.'
+      },
+      'buy-sell': {
+        label: 'ACTIVE USERS',
+        value: '1,000+',
+        description: 'Buyers and sellers actively using the marketplace to trade items safely and efficiently.'
+      },
+      'mwalimu-finder': {
+        label: 'SUCCESSFUL MATCHES',
+        value: '300+',
+        description: 'Teachers successfully matched with schools through the platform in the first year.'
+      },
+      'nannies': {
+        label: 'VERIFIED NANNIES',
+        value: '500+',
+        description: 'Professional nannies verified and onboarded on the MVP platform within the first 6 months.'
+      },
+      'karibu-kazi': {
+        label: 'SKILLED WORKERS',
+        value: '2,500+',
+        description: 'Skilled service providers across 50+ categories empowered with professional profiles in the first year.'
+      },
+      'kra-pension-portal': {
+        label: 'TOTAL REACH',
+        value: '7,000+',
+        description: 'KRA employees successfully onboarded and served nationwide within the first 6 months.'
+      }
+    };
+    
+    return metrics[studyId] || metrics['kra-pension-portal'];
+  };
+
+  const featuredMetric = getFeaturedMetric(study.id);
+
+  // Define testimonials for specific case studies
+  const testimonials = {
+    'royal-times': {
+      quote: "The operations dashboard has completely transformed how we manage our fleet. Real-time visibility into driver locations and ride status has improved our response times significantly.",
+      attribution: "Operations Manager, Royal Times Cab Service"
+    },
+    'buy-sell': {
+      quote: "The streamlined listing process and trusted verification system have made it incredibly easy for our community to buy and sell items. User engagement exceeded our expectations.",
+      attribution: "Product Lead, Buy & Sell Platform"
+    },
+    'mwalimu-finder': {
+      quote: "This platform has revolutionized how we recruit teachers. The credential verification and direct application system save us weeks of hiring time while ensuring quality candidates.",
+      attribution: "School Administrator, Private School Network"
+    },
+    'nannies': {
+      quote: "The comprehensive verification system gives mothers peace of mind when hiring childcare. The platform has made finding qualified, trustworthy nannies so much easier and faster.",
+      attribution: "Platform Manager, Nannies"
+    },
+    'karibu-kazi': {
+      quote: "The dignity-focused design and portfolio showcasing features have empowered our skilled workers. The platform celebrates their craft and connects them with opportunities they deserve.",
+      attribution: "Community Liaison, KaribuKazi"
+    },
+    'kra-pension-portal': {
+      quote: "The design leadership as part of the contracted team completely transformed how our staff handles pension inquiries. The 75% drop in support tickets was a game-changer.",
+      attribution: "Head of HR Operations, KRA"
+    }
+  };
+
+  const hasTestimonial = testimonials[study.id];
+
   return (
     <section style={{ backgroundColor: '#ffffff', padding: '80px 0 96px 0' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
@@ -65,7 +135,7 @@ function ResultsSection({ study }) {
                   fontWeight: '600',
                   marginBottom: '8px'
                 }}>
-                  TOTAL REACH
+                  {featuredMetric.label}
                 </div>
                 <div style={{
                   fontSize: '4rem',
@@ -74,7 +144,7 @@ function ResultsSection({ study }) {
                   letterSpacing: '-0.025em',
                   lineHeight: '1'
                 }}>
-                  7,000+
+                  {featuredMetric.value}
                 </div>
                 <div style={{
                   fontSize: '1.125rem',
@@ -82,50 +152,53 @@ function ResultsSection({ study }) {
                   maxWidth: '336px',
                   lineHeight: '1.625'
                 }}>
-                  KRA employees successfully onboarded and served nationwide within the first 6 months.
+                  {featuredMetric.description}
                 </div>
               </div>
             </div>
 
-            {/* Stakeholder Quote */}
-            <div style={{
-              backgroundColor: 'white',
-              borderRadius: '16px',
-              border: '1px solid #e5e7eb',
-              padding: '40px',
-              boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center'
-            }}>
-              {/* Quote Icon */}
+            {/* Stakeholder Testimonial - Only show if testimonial exists */}
+            {hasTestimonial && (
               <div style={{
-                fontSize: '3rem',
-                color: '#fed7aa',
-                fontFamily: 'Manrope, serif',
-                lineHeight: '1',
-                marginBottom: '16px'
+                backgroundColor: 'white',
+                borderRadius: '16px',
+                border: '1px solid #e5e7eb',
+                padding: '40px',
+                boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center'
               }}>
-                "
+                {/* Quote Icon */}
+                <div style={{
+                  fontSize: '3rem',
+                  color: '#fed7aa',
+                  fontFamily: 'Manrope, serif',
+                  lineHeight: '1',
+                  marginBottom: '16px'
+                }}>
+                  "
+                </div>
+                
+                {/* Quote Text */}
+                <p style={{
+                  color: '#374151',
+                  fontSize: '1.125rem',
+                  fontStyle: 'italic',
+                  lineHeight: '1.625',
+                  marginBottom: '24px'
+                }}>
+                  {testimonials[study.id].quote}
+                </p>
+                
+                {/* Author - Title Only */}
+                <div>
+                  <div style={{ fontWeight: '600', color: '#111827', fontSize: '0.875rem' }}>
+                    {testimonials[study.id].attribution}
+                  </div>
+                </div>
               </div>
-              
-              {/* Quote Text */}
-              <p style={{
-                color: '#374151',
-                fontSize: '1.125rem',
-                fontStyle: 'italic',
-                lineHeight: '1.625',
-                marginBottom: '24px'
-              }}>
-                Richard's design leadership as part of the contracted team completely transformed how our staff handles pension inquiries. The 75% drop in support tickets was a game-changer.
-              </p>
-              
-              {/* Author */}
-              <div>
-                <div style={{ fontWeight: '600', color: '#111827' }}>Jane Doe</div>
-                <div style={{ fontSize: '0.875rem', color: '#6b7280' }}>Head of HR Operations, KRA</div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
 

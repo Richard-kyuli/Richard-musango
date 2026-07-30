@@ -8,7 +8,7 @@ export const caseStudies = [
     timeline: '4 months',
     image: '/RoyalTimes/Dashboard.png',
     description: 'A comprehensive ride-hailing operations dashboard for real-time monitoring and fleet management.',
-    overview: 'Royal Times Admin Dashboard is the operational command center for a new ride-hailing startup competing against Uber and Bolt. Built for rapid market entry, the platform provides enterprise-level capabilities from day one—managing drivers, rides, payments, and fleet operations with the efficiency needed to compete in an established market.',
+    overview: 'Operations dashboard for a ride-hailing startup competing against Uber and Bolt. Provides enterprise-level capabilities from day one—driver management, real-time ride monitoring, payments, fleet operations, and analytics to compete effectively in an established market.',
     problem: 'Royal Times launched as a new ride-hailing service facing established competitors with years of operational refinement. The startup needed to build credible operations from scratch—onboard drivers quickly, monitor rides in real-time, handle customer support efficiently, and make data-driven decisions—all while competing against well-funded platforms with limited resources and tight timelines.',
     solution: 'We delivered a comprehensive operations dashboard that gave Royal Times enterprise-level capabilities from launch. Real-time ride monitoring, streamlined driver onboarding, integrated customer support, and comprehensive analytics enabled the startup to compete effectively while scaling rapidly from day one.',
     competitiveAnalysis: 'We analyzed Uber, Bolt, and Lyft to understand what new entrants need to compete effectively. While established platforms had years to refine their operations, new entrants must launch with comparable capabilities from day one. We identified the key success factors: real-time visibility, efficient driver onboarding, responsive support, and data-driven optimization.',
@@ -127,15 +127,27 @@ export const caseStudies = [
     deviceType: 'mobile',
     role: 'UI/UX Designer',
     timeline: '5 months',
-    image: '/Buysell/3.png',
+    image: '/Buysell/1.png',
     description: 'Mobile-first marketplace connecting local buyers and sellers with verified profiles and secure messaging.',
     mobileScreens: [
-      { image: '/Buysell/Home.png', title: 'Home Screen' },
-      { image: '/Buysell/Category.png', title: 'Categories' },
-      { image: '/Buysell/Product Details.png', title: 'Product Details' },
-      { image: '/Buysell/POST PRO.png', title: 'Post Product' },
-      { image: '/Buysell/Chats.png', title: 'Messages' },
-      { image: '/Buysell/Profile.png', title: 'User Profile' }
+      { image: '/Buysell/1.png', title: 'Screen 1' },
+      { image: '/Buysell/2.png', title: 'Screen 2' },
+      { image: '/Buysell/3.png', title: 'Screen 3' },
+      { image: '/Buysell/4.png', title: 'Screen 4' },
+      { image: '/Buysell/5.png', title: 'Screen 5' },
+      { image: '/Buysell/6.png', title: 'Screen 6' },
+      { image: '/Buysell/7.png', title: 'Screen 7' }
+    ],
+    adminScreens: [
+      { image: '/Buysell/Admin/login.png', title: 'Admin login screen' },
+      { image: '/Buysell/Admin/Dashboard.png', title: 'Admin Dashboard' },
+      { image: '/Buysell/Admin/Category.png', title: 'Category management' },
+      { image: '/Buysell/Admin/Ad Package.png', title: 'Ad Package management' },
+      { image: '/Buysell/Admin/Product-Listing.png', title: 'Product Listing management' },
+      { image: '/Buysell/Admin/Product-Listing3.png', title: 'Product Listing details' },
+      { image: '/Buysell/Admin/Users.png', title: 'User management' },
+      { image: '/Buysell/Admin/Finances.png', title: 'Finances overview' },
+      { image: '/Buysell/Admin/profile.png', title: 'Admin profile' }
     ],
     userFlowScreens: [
       { image: '/Buysell/Splash.png', title: 'Splash Screen' },
@@ -151,7 +163,7 @@ export const caseStudies = [
       { image: '/Buysell/Profile.png', title: 'User Profile' },
       { image: '/Buysell/Edit Profile.png', title: 'Edit Profile' }
     ],
-    overview: 'Buy & Sell Online is a mobile-first marketplace connecting local buyers and sellers through an intuitive app and robust admin dashboard. The platform addresses the need for a trusted, user-friendly marketplace where individuals can safely buy and sell items within their community with verified profiles and secure messaging.',
+    overview: 'Mobile-first marketplace connecting local buyers and sellers with verified profiles and secure messaging. Provides intuitive buying/selling experience with trust features and admin dashboard for platform management.',
     problem: 'The local marketplace landscape was fragmented, with users struggling to find platforms that balanced ease of use with trust and safety. Existing solutions had overly complex listing processes or lacked proper verification systems, leading to user frustration and platform abandonment.',
     solution: 'We developed a mobile-first marketplace with streamlined three-step listing, smart search filters, integrated messaging, and comprehensive admin tools. The platform combines simplicity with robust trust features like verified badges and rating systems.',
     competitiveAnalysis: 'We analyzed OfferUp, Letgo, Facebook Marketplace, and Craigslist. While these platforms had large user bases, they suffered from complex listing processes, poor categorization, or outdated interfaces. We identified opportunities to differentiate by combining modern mobile design with comprehensive trust features.',
@@ -294,28 +306,26 @@ export const caseStudies = [
     deviceType: 'mobile',
     role: 'Lead UI/UX Designer',
     timeline: '6 months',
-    image: '/Mwalimu-finder/MF03Post a Job.png',
-    description: 'Teacher recruitment platform connecting schools with qualified educators through verified profiles.',
+    image: '/Mwalimu-finder/1.png',
+    description: 'Two-sided teacher recruitment platform where schools post jobs and teachers apply. Schools create accounts to post teaching positions, while teachers create accounts to showcase credentials and apply to opportunities.',
     mobileScreens: [
-      { image: '/Mwalimu-finder/MF03Post a Job.png', title: 'Post Job - Step 1' },
-      { image: '/Mwalimu-finder/MF04Post a Job.png', title: 'Post Job - Step 2' },
-      { image: '/Mwalimu-finder/MF05Post a Job.png', title: 'Post Job - Step 3' },
-      { image: '/Mwalimu-finder/MF06Post a Job.png', title: 'Post Job - Step 4' },
-      { image: '/Mwalimu-finder/MF07Post a Job.png', title: 'Post Job - Step 5' },
-      { image: '/Mwalimu-finder/MF08Post a Job.png', title: 'Post Job - Step 6' },
-      { image: '/Mwalimu-finder/MF09Post a Job.png', title: 'Job Posted Successfully' }
+      { image: '/Mwalimu-finder/1.png', title: 'Options - Post previous job, drafts, or new job post' },
+      { image: '/Mwalimu-finder/2.png', title: 'Job title input field' },
+      { image: '/Mwalimu-finder/3.png', title: 'Teacher qualifications required for the job' },
+      { image: '/Mwalimu-finder/4.png', title: 'Duties and responsibilities input fields' },
+      { image: '/Mwalimu-finder/5.png', title: 'Application requirements (minimum & additional requirements)' },
+      { image: '/Mwalimu-finder/6.png', title: 'Application instructions (Deadline & how to apply)' },
+      { image: '/Mwalimu-finder/7.png', title: 'Confirm contacts before posting the job' }
     ],
-    userFlowScreens: [
-      { image: '/Mwalimu-finder/MF03Post a Job.png', title: 'Job Details - Step 1' },
-      { image: '/Mwalimu-finder/MF04Post a Job.png', title: 'Requirements - Step 2' },
-      { image: '/Mwalimu-finder/MF05Post a Job.png', title: 'Qualifications - Step 3' },
-      { image: '/Mwalimu-finder/MF06Post a Job.png', title: 'Salary & Benefits - Step 4' },
-      { image: '/Mwalimu-finder/MF07Post a Job.png', title: 'School Info - Step 5' },
-      { image: '/Mwalimu-finder/MF08Post a Job.png', title: 'Review - Step 6' },
-      { image: '/Mwalimu-finder/MF09Post a Job.png', title: 'Job Posted Successfully' }
+    adminScreens: [
+      { image: '/Mwalimu-finder/Admin/A1.png', title: 'Login screen - Admin authentication' },
+      { image: '/Mwalimu-finder/Admin/A2.png', title: 'Schools screen - List of schools and their posted jobs' },
+      { image: '/Mwalimu-finder/Admin/A3.png', title: 'Teachers screen - List of teachers with experience and details' },
+      { image: '/Mwalimu-finder/Admin/A4.png', title: 'Manage posts screen - Job posts management' },
+      { image: '/Mwalimu-finder/Admin/A5.png', title: 'Finances screen - Revenue overview from payment packages' }
     ],
-    overview: 'Mwalimu Finder is a teacher recruitment platform connecting schools with qualified educators in Kenya. Schools browse detailed teacher profiles and post job openings, while teachers showcase credentials and receive personalized job recommendations, digitalizing the traditionally informal teacher hiring process.',
-    problem: 'Teacher recruitment in Kenya was fragmented and inefficient. Schools struggled to find qualified candidates through informal channels, taking 6-8 weeks on average. Teachers had no professional platform to showcase qualifications, with job opportunities scattered across multiple channels without feedback or transparency.',
+    overview: 'Two-sided teacher recruitment platform serving schools and teachers in Kenya. Schools create accounts to post jobs and search candidates. Teachers create accounts to build profiles and apply. Digitalizes informal teacher hiring with verified certifications and one-click applications.',
+    problem: 'Teacher recruitment in Kenya was fragmented and inefficient, affecting both sides of the marketplace. Schools struggled to find qualified candidates through informal channels, taking 6-8 weeks on average to fill positions. Teachers had no professional platform to showcase qualifications and discover opportunities, with job postings scattered across multiple channels without feedback or transparency. Both user types needed a dedicated platform to streamline the hiring process.',
     goals: [
       'Connect schools with qualified, verified teachers efficiently',
       'Enable teachers to showcase credentials professionally',
@@ -342,34 +352,39 @@ export const caseStudies = [
       uiExploration: 'Designed professional, trustworthy interface that balances accessibility with credibility. Created comprehensive design system with reusable components for teacher profiles, job listings, and application tracking. Developed trust indicators (verified credentials badges, certification displays, reference sections) prominently throughout the experience. Explored multiple visual treatments for teacher profiles, ultimately choosing a credential-focused design that highlights qualifications and experience. The school dashboard uses data visualization to show applicant pipelines and hiring metrics. Designed for both desktop (primary for schools) and mobile (primary for teachers) with responsive layouts that adapt to different screen sizes and use cases.'
     },
     personas: {
-      intro: 'Two primary user groups shaped our design approach: schools seeking qualified teachers and teachers looking for employment opportunities.',
+      intro: 'The platform serves two distinct user types, both creating accounts with different needs: schools seeking qualified teachers to hire, and teachers looking for employment opportunities to apply for.',
       items: [
         {
           name: 'Margaret',
-          role: 'School Principal',
+          role: 'School Principal - App User',
           goals: [
-            'Find qualified teachers quickly',
-            'Verify credentials easily',
+            'Create school account to post teaching jobs',
+            'Find qualified teachers quickly through the platform',
+            'Verify teacher credentials easily',
             'Fill positions within 2-3 weeks'
           ],
           painPoints: [
-            'Difficulty verifying qualifications',
-            'Limited candidate visibility',
-            'Time-consuming recruitment process'
+            'Difficulty verifying teacher qualifications',
+            'Limited candidate visibility outside network',
+            'Time-consuming recruitment process',
+            'Need efficient platform to manage applications'
           ]
         },
         {
           name: 'James',
-          role: 'Teacher',
+          role: 'Teacher - App User',
           goals: [
+            'Create teacher account to apply for jobs',
             'Find positions matching qualifications',
-            'Showcase credentials professionally',
-            'Access opportunities beyond local network'
+            'Showcase credentials professionally on platform',
+            'Access job opportunities beyond local network',
+            'Easily apply to multiple positions'
           ],
           painPoints: [
-            'Limited professional showcase platforms',
-            'Scattered job opportunities',
-            'Lack of application feedback'
+            'Limited professional platforms to create teacher profiles',
+            'Scattered job opportunities across multiple channels',
+            'Lack of application feedback from schools',
+            'No centralized place to manage job applications'
           ]
         }
       ]
@@ -432,7 +447,7 @@ export const caseStudies = [
         { name: 'Body', spec: 'Inter Regular 14px' }
       ]
     },
-    solution: 'Launched mobile app for teachers with personalized job recommendations, one-click applications, and credential showcase. Built web platform for schools with advanced teacher search, applicant tracking system, and job posting management. Implemented comprehensive admin dashboard for credential verification, content moderation, and platform analytics. Created automated workflows for application notifications, interview scheduling, and hiring status updates.',
+    solution: 'Built a two-sided platform serving both user types: Teachers create accounts to build professional profiles with personalized job recommendations, one-click applications, and credential showcase. Schools create accounts to access advanced teacher search, post job openings, use applicant tracking system, and manage hiring workflows. Implemented comprehensive admin dashboard for verifying both teacher credentials and school accounts, content moderation, and platform analytics. Created automated workflows for application notifications, interview scheduling, and hiring status updates for both sides.',
     competitiveAnalysis: 'Analyzed general job platforms (LinkedIn, Indeed, BrighterMonday) and recruitment agencies to understand market gaps. Identified opportunities in education-specific features, credential verification systems, and affordable pricing that existing solutions missed.',
     opportunity: 'Create a specialized teacher recruitment platform that serves Kenya\'s 30,000+ schools and 300,000+ teachers through education-focused features, credential verification, and efficient matching. Position for regional expansion across East Africa.',
     wireframes: 'Created detailed wireframes for teacher profiles, job postings, and application tracking. Tested multiple approaches to credential display and job matching, achieving 88% task completion rate in usability testing.',
@@ -468,25 +483,42 @@ export const caseStudies = [
   },
   {
     id: 'nannies',
-    title: 'NannyKe',
-    platform: 'Mobile & Web',
+    title: 'Nannies',
+    platform: 'Web (MVP)',
     deviceType: 'laptop',
     role: 'Lead UI/UX Designer',
     timeline: '5 months',
     image: '/Nannies/1.png',
-    description: 'AI-powered platform connecting mothers with verified nannies through comprehensive matching and verification.',
-    overview: 'NannyKe is a digital platform connecting mothers with verified nannies for instant matching and hiring. The platform enables quick discovery of qualified caregivers through AI-powered matching, comprehensive verification, and secure communication—making childcare hiring simple and trustworthy.',
-    problem: 'Finding trustworthy childcare in Kenya was fragmented and time-consuming. Traditional methods relied on word-of-mouth referrals, taking weeks to find suitable caregivers. Mothers couldn\'t verify credentials independently, while nannies had no professional platform to showcase qualifications.',
-    solution: 'We built a comprehensive platform with AI-powered matching, robust verification (ID, background checks, references), encrypted messaging, and 24/7 access. The platform includes scheduling tools, secure payments, and review systems for complete childcare hiring solution.',
+    description: 'Two-sided mobile-responsive MVP web platform where nannies create accounts to be discovered and mummies (mothers) create accounts to search and select nannies matching their preferences. Comprehensive verification and secure messaging for trustworthy childcare hiring.',
+    mobileScreens: [
+      { image: '/Nannies/1.png', title: 'Service selection - Childcare, elderly care, or special needs' },
+      { image: '/Nannies/2.png', title: 'Create personal profile with required data' },
+      { image: '/Nannies/3.png', title: 'Preferences - Religion and tribe' },
+      { image: '/Nannies/4.png', title: 'Residence description - Family members and kids age range' },
+      { image: '/Nannies/5.png', title: 'Set budget and add location' },
+      { image: '/Nannies/6.png', title: 'Sign up with Google after profile creation' }
+    ],
+    adminScreens: [
+      { image: '/Nannies/A1.png', title: 'Admin login screen' },
+      { image: '/Nannies/A2.png', title: 'Nannies list - Manage onboarded nannies' },
+      { image: '/Nannies/A3.png', title: 'Mummies list - Add or delete mummies' },
+      { image: '/Nannies/A4.png', title: 'Offers platform - Track mummy offers to nannies' },
+      { image: '/Nannies/A5.png', title: 'Finances - Commissions from paid offers' }
+    ],
+    overview: 'Two-sided mobile-responsive MVP web platform serving both nannies and mummies (mothers). Nannies create accounts to build profiles and be discovered. Mummies create accounts to set preferences, search, and select nannies who tick every box. Includes verification, encrypted messaging, and 24/7 access. Mobile app planned for future development.',
+    problem: 'Finding trustworthy childcare in Kenya was fragmented and time-consuming for both user types. Mummies relied on word-of-mouth referrals, taking weeks to find suitable caregivers, and couldn\'t verify credentials independently. Nannies had no professional platform to create profiles and be discovered by potential employers. Both sides needed a dedicated platform.',
+    solution: 'Launched two-sided MVP web platform serving both user types. Nannies create accounts to build profiles with credentials. Mummies create accounts to set preferences, search, filter, and select nannies. Includes robust verification (ID, background checks, references), encrypted messaging, scheduling tools, secure payments, and review systems. Mobile app planned for future development.',
     competitiveAnalysis: 'Traditional word-of-mouth methods offered trust but limited candidate pools. General job platforms lacked childcare-specific features and verification. International platforms like Care.com weren\'t localized for Kenya. We identified opportunities in Kenya-focused features, affordable pricing, and comprehensive verification.',
     personas: {
-      intro: 'Through extensive research involving 30+ interviews with working mothers and 40+ interviews with professional nannies, we identified two primary user groups with distinct needs, motivations, and pain points that shaped every aspect of the platform design.',
+      intro: 'The platform serves two distinct user types, both creating accounts with different needs: nannies who build profiles to be discovered, and mummies (mothers) who search and select nannies matching their preferences.',
       items: [
         {
           name: 'Grace Wanjiru',
-          role: 'Working Mother - Marketing Manager',
+          role: 'Mummy (Working Mother) - App User',
           goals: [
-            'Find a trustworthy, qualified nanny quickly (within 1-2 weeks)',
+            'Create account to search for trustworthy, qualified nannies',
+            'Set preferences for ideal nanny characteristics',
+            'Find nannies who tick every box in her requirements',
             'Verify caregiver credentials and background thoroughly',
             'Hire someone who matches her family\'s specific needs and values',
             'Establish clear communication and expectations from the start',
@@ -504,33 +536,34 @@ export const caseStudies = [
         },
         {
           name: 'Mary Akinyi',
-          role: 'Professional Nanny - 8 Years Experience',
+          role: 'Nanny (Professional Caregiver) - App User',
           goals: [
+            'Create account to build profile and be discovered by families',
+            'Showcase extensive experience and specialized skills professionally',
+            'Be selected by mummies whose preferences match her qualifications',
             'Find stable, long-term employment with reliable families',
-            'Showcase her extensive experience and specialized skills professionally',
-            'Access job opportunities beyond her immediate network',
             'Secure fair compensation reflecting her qualifications',
-            'Build a professional reputation through verified reviews',
+            'Build professional reputation through verified reviews',
             'Work with families whose values and expectations align with hers'
           ],
           painPoints: [
-            'Limited visibility to potential employers beyond word-of-mouth',
-            'No professional platform to display certifications and experience',
+            'Limited visibility to potential employers without a platform',
+            'No professional platform to create profile and be discovered',
             'Informal hiring processes without contracts or job security',
-            'Difficulty finding positions matching her skills (special needs experience)',
+            'Difficulty being selected by families matching her skills',
             'Concerns about working conditions and family expectations',
-            'Lack of feedback or professional growth opportunities',
-            'Time wasted on unsuitable job opportunities'
+            'No way to showcase certifications and build verifiable reputation',
+            'Time wasted on unsuitable opportunities'
           ]
         }
       ]
     },
-    opportunity: 'Create a trusted, efficient childcare hiring platform serving Kenya\'s 2+ million working mothers and 500,000+ professional nannies through smart matching, comprehensive verification, and 24/7 mobile access. Address critical social needs while building foundation for regional expansion across East Africa.',
+    opportunity: 'Create a trusted, efficient childcare hiring platform serving Kenya\'s 2+ million working mothers and 500,000+ professional nannies through comprehensive verification and 24/7 web access for the MVP, with mobile app and advanced matching features planned for future development.',
     wireframes: 'The wireframing process spanned 6 weeks of intensive design exploration and user testing, creating detailed layouts for over 35 unique screens across mobile and web platforms. We began with user journey mapping, identifying critical touchpoints in the hiring process from initial search through ongoing employment management. Low-fidelity wireframes explored multiple approaches to key interfaces: the nanny search and filtering system (tested 4 different layouts), profile presentation (comparing credential-first vs. photo-first designs), matching interface (exploring swipe-based vs. list-based interactions), and messaging system (balancing simplicity with necessary features). The verification flow required special attention, balancing thoroughness with user-friendliness—we designed a multi-step process that felt secure without being burdensome. For mothers, we prioritized quick access to verified nannies with clear trust indicators (verification badges, review scores, response rates). For nannies, we focused on profile completeness guidance and job match notifications. User testing with 25 participants (12 mothers, 13 nannies) across three rounds refined the information architecture and interaction patterns. Key insights led to significant changes: mothers wanted to see verification status immediately (moved badges to prominent positions), nannies needed clearer guidance on profile completion (added progress indicators and tips), both groups valued quick communication (implemented real-time messaging with push notifications). The final wireframes achieved 91% task completion rate for core flows (search, match, hire) with positive feedback on clarity and trustworthiness.',
     goals: [
       'Connect mothers with verified, qualified nannies in minutes, not weeks',
       'Build trust through comprehensive ID verification and background checks',
-      'Enable smart matching based on specific family needs and nanny skills',
+      'Enable efficient search and filtering based on specific family needs and nanny skills',
       'Provide 24/7 access from any device for maximum convenience',
       'Create secure, encrypted communication for safe interactions',
       'Empower nannies to showcase skills and build professional reputations'
@@ -573,7 +606,7 @@ export const caseStudies = [
         { name: 'Caption', spec: 'Inter Regular 12px' }
       ]
     },
-    solution: 'NannyKe launched as a comprehensive mobile-first platform with web companion, featuring AI-powered smart matching that connects mothers with nannies based on 15+ compatibility factors including location, experience, skills, availability, and preferences. The robust verification system includes government ID validation, background checks, reference verification, and certification validation, with clear trust badges displayed throughout profiles. Real-time matching sends instant notifications when compatible matches are found, enabling rapid connections. The encrypted messaging system ensures secure communication for interviews and coordination. Mothers access advanced search filters (location radius, years of experience, age range, special skills like first aid or special needs training, language requirements, availability schedule) and detailed nanny profiles with photos, experience timeline, certifications, verified reviews, and background check status. Nannies create comprehensive profiles showcasing their experience, upload certifications, set availability, specify preferred work arrangements, and receive personalized job recommendations. The platform includes in-app scheduling, secure payment processing, digital contracts, review and rating systems, and 24/7 customer support. Admin dashboard provides tools for verification management, content moderation, dispute resolution, and platform analytics.',
+    solution: 'Launched mobile-responsive MVP web platform where both nannies and mummies create accounts. Nannies build profiles with experience, certifications, and availability. Mummies set preferences and search with filters for location, skills, and experience. Includes verification (ID, background checks, references), encrypted messaging, scheduling tools, secure payments, and review systems.',
     competitiveAnalysis: 'Analyzed childcare hiring solutions including word-of-mouth networks, general job platforms, international childcare platforms, and informal social media groups. Identified opportunities in Kenya-specific localization, affordable pricing, mobile-first design, comprehensive verification, AI-powered matching, and 24/7 accessibility that existing solutions lacked.',
     opportunity: 'Create a trusted, efficient childcare hiring platform serving Kenya\'s 2+ million working mothers and 500,000+ professional nannies through smart matching, comprehensive verification, and 24/7 mobile access. Address critical social needs while building foundation for regional expansion across East Africa.',
     wireframes: 'Developed detailed wireframes for 35+ screens across mobile and web platforms. Focused on trust indicators, verification status, and intuitive matching. Conducted three rounds of user testing with 25 participants, achieving 91% task completion rate for core flows.',
@@ -612,55 +645,69 @@ export const caseStudies = [
     deviceType: 'mobile',
     role: 'Lead UI/UX Designer',
     timeline: '6 months',
-    image: '/KaribuKazi/Android Large - 320Post Job emp.png',
-    description: 'Dignity-focused platform connecting skilled service providers with clients across 50+ categories.',
-    overview: 'KaribuKazi is a dignity-focused platform connecting skilled service providers with clients across 50+ categories. The platform celebrates hands-on work by providing workers with professional profiles, project portfolios, and recognition systems—making skilled trades and service work visible and valued.',
-    problem: 'Skilled service providers faced systemic barriers to economic opportunity. Traditional job platforms prioritized white-collar positions while overlooking manual labor and skilled trades. Workers had no professional platform to showcase skills, while employers struggled to find reliable, verified service providers.',
+    image: '/KaribuKazi/p1.png',
+    description: 'Two-sided platform where skilled workers seek jobs and employers post opportunities. Workers create accounts to showcase skills and apply, while employers create accounts to post jobs and hire across 50+ service categories.',
+    mobileScreens: [
+      { image: '/KaribuKazi/p1.png', title: 'Job title and description input' },
+      { image: '/KaribuKazi/p2.png', title: 'Job location, start date, and estimated budget' },
+      { image: '/KaribuKazi/p3.png', title: 'Confirm job post details' },
+      { image: '/KaribuKazi/p4.png', title: 'Edit job details after review' },
+      { image: '/KaribuKazi/p5.png', title: 'Publish job - Post and invite or post without inviting' }
+    ],
+    adminScreens: [
+      { image: '/KaribuKazi/Admin/1.png', title: 'Dashboard - Subscriptions, jobs, employers, and workers overview' },
+      { image: '/KaribuKazi/Admin/2.png', title: 'Finances - Revenue from subscriptions and payment methods' },
+      { image: '/KaribuKazi/Admin/3.png', title: 'Workers - List of workers with professions and job details' },
+      { image: '/KaribuKazi/Admin/4.png', title: 'Employers - List of employers and their job posts' },
+      { image: '/KaribuKazi/Admin/5.png', title: 'Job Posts - Open, ongoing, completed, and canceled jobs' },
+      { image: '/KaribuKazi/Admin/6.png', title: 'Manage professions - Skills and workers per profession' },
+      { image: '/KaribuKazi/Admin/7.png', title: 'Subscriptions - Manage subscription plans' }
+    ],
+    overview: 'Two-sided platform connecting skilled workers and employers across 50+ service categories. Workers create accounts to build profiles and apply to jobs. Employers create accounts to post openings and hire. Celebrates skilled trades through recognition systems for both sides.',
+    problem: 'Skilled workers faced systemic barriers to economic opportunity while employers struggled to find reliable talent. Traditional job platforms prioritized white-collar positions while overlooking manual labor and skilled trades. Workers had no professional platform to showcase skills and find jobs, while employers had no efficient way to search for, verify, and hire qualified service providers. Both user types needed a dedicated platform.',
     solution: 'We built a comprehensive platform with worker-centric profiles, project portfolios, skill badges, and achievement recognition. The platform is completely free for workers and includes search tools, messaging, job management, and fair review systems that celebrate quality work.',
     competitiveAnalysis: 'Traditional job platforms focused on white-collar positions with limited skilled trades categories. Service marketplaces like TaskRabbit charged high fees (15-30%) and lacked dignity-focused messaging. We identified opportunities in celebrating hands-on work, free platform access, and comprehensive skill showcasing.',
     personas: {
-      intro: 'Through extensive research involving 50+ interviews with service providers and 40+ interviews with employers and service seekers, we identified two primary user groups whose needs and aspirations shaped every aspect of the platform design.',
+      intro: 'The platform serves two distinct user types, both creating accounts with different needs: skilled workers (job seekers) looking for opportunities, and employers seeking to hire the right skilled person for each job.',
       items: [
         {
           name: 'John Kamau',
-          role: 'Skilled Electrician - 12 Years Experience',
+          role: 'Skilled Electrician - App User (Worker/Job Seeker)',
           goals: [
-            'Find consistent, well-paying work that values his expertise',
-            'Build a professional reputation beyond word-of-mouth',
-            'Showcase his skills and completed projects to attract clients',
-            'Earn fair compensation that reflects his experience and quality',
-            'Be recognized and respected for his skilled trade work',
-            'Access opportunities beyond his immediate network'
+            'Create worker account to find consistent, well-paying work',
+            'Build professional profile to showcase skills and projects',
+            'Browse and apply to job opportunities on the platform',
+            'Earn fair compensation that reflects experience and quality',
+            'Be recognized and respected for skilled trade work',
+            'Access opportunities beyond immediate network'
           ],
           painPoints: [
-            'Limited visibility to potential clients beyond referrals',
-            'No professional platform to display certifications and project portfolio',
-            'Stigma and lack of respect for manual labor in society',
-            'Informal hiring processes with unclear expectations and payment terms',
-            'Difficulty competing with cheaper, less experienced workers',
+            'Limited visibility to potential employers without a platform',
+            'No professional way to display certifications and portfolio',
+            'Stigma and lack of respect for manual labor',
+            'Informal hiring processes with unclear expectations',
+            'Difficulty competing without verified credentials',
             'No way to build verifiable professional reputation',
-            'Time wasted on unsuitable jobs or unreliable clients',
-            'Feeling undervalued despite years of expertise and skill'
+            'Time wasted on unsuitable jobs or unreliable employers'
           ]
         },
         {
           name: 'Sarah Njeri',
-          role: 'Homeowner & Small Business Owner',
+          role: 'Small Business Owner - App User (Employer)',
           goals: [
+            'Create employer account to post job openings',
             'Find reliable, skilled workers quickly when needs arise',
             'Verify worker credentials and quality before hiring',
-            'Get fair pricing for services without overpaying',
-            'Communicate easily with service providers about job requirements',
-            'Build relationships with trustworthy workers for ongoing needs',
-            'Support skilled workers while ensuring quality service'
+            'Search and filter workers by skills, location, ratings',
+            'Communicate easily about job requirements',
+            'Build relationships with trustworthy workers for ongoing needs'
           ],
           painPoints: [
             'Difficulty finding reliable workers through informal networks',
-            'No way to verify worker skills, experience, or reliability',
+            'No efficient platform to search, verify, and hire workers',
             'Concerns about quality of work and fair pricing',
             'Time-consuming search through multiple channels',
             'Lack of accountability if work quality is poor',
-            'Uncertainty about worker availability and response times',
             'No structured way to compare workers or read reviews',
             'Risk of hiring unqualified or unreliable service providers'
           ]
@@ -716,7 +763,7 @@ export const caseStudies = [
         { name: 'Caption', spec: 'Manrope Regular 12px' }
       ]
     },
-    solution: 'KaribuKazi launched as a comprehensive mobile-first platform with web companion, featuring worker-centric profiles with visual project portfolios, skill badges, certifications, and client testimonials. The platform is completely free for workers to join and use, removing financial barriers to opportunity. Service seekers access intuitive search and filtering by 50+ service categories, location radius, experience level, availability, and ratings. Detailed worker profiles showcase completed projects with photo galleries, verified reviews and ratings, transparent pricing ranges, response time indicators, and completion statistics. The integrated messaging system enables direct communication for job coordination and negotiations. Job posting and management features allow service seekers to post detailed job requests, receive applications from interested workers, compare candidates, schedule services, and track job completion. Workers receive personalized job notifications based on their skills and location, can apply to opportunities with one tap, manage active jobs and applications, build portfolios by uploading project photos, and earn achievement badges for milestones. The fair review and rating system builds trust and accountability, with both parties reviewing each other after job completion. The platform celebrates worker achievements through featured worker spotlights, skill level badges, completion milestones, and community recognition. Admin dashboard provides tools for content moderation, dispute resolution, quality assurance, and platform analytics.',
+    solution: 'Built a two-sided platform serving both user types: Workers (job seekers) create free accounts to build profiles with visual portfolios, skill badges, and project galleries, then browse and apply to jobs. Employers create accounts to post jobs across 50+ categories, search and filter workers by location and ratings, and hire qualified candidates. Integrated messaging, one-tap applications, fair reviews, and achievement recognition for both sides.',
     competitiveAnalysis: 'Analyzed job platforms, service marketplaces, and informal networks. Identified opportunities in dignity-first approach, free platform for workers, comprehensive skill showcasing, fair review systems, and mobile-first design that existing solutions lacked.',
     opportunity: 'Create a worker-centric platform serving Kenya\'s 5+ million skilled service providers and millions of service seekers through dignity-focused design, free access for workers, and comprehensive portfolio showcasing. Address critical social needs while building foundation for regional expansion across East Africa.',
     wireframes: 'Developed detailed wireframes for 40+ screens across mobile and web platforms. Focused on visual portfolio presentation, skill showcasing, and dignity-focused design. Conducted four rounds of user testing with 30 participants, achieving 89% task completion rate for core flows.',
@@ -757,7 +804,16 @@ export const caseStudies = [
     timeline: '8 months',
     image: '/KRASSP/MacBook Pro 16_ - 21.png',
     description: 'Comprehensive digital platform modernizing pension management for 7,000+ KRA employees.',
-    overview: 'The Kenya Revenue Authority Pension Scheme Staff Portal is a comprehensive digital platform designed to modernize pension management for KRA employees. The portal provides a centralized dashboard where staff can access pension balances, contribution history, benefit projections, and submit claims online—transforming paper-based processes into efficient self-service digital experiences.',
+    finalScreens: [
+      { image: '/KRAPSS/1.png', title: 'Dashboard - Quick overview of cumulative savings, recent contributions, and total monthly contributions' },
+      { image: '/KRAPSS/2.png', title: 'Payouts - Total disbursements received from savings with recent payouts showing date, amount, period, reference number, and receiving account' },
+      { image: '/KRAPSS/3.png', title: 'Inbox - Conversations with the support team recorded in this screen' },
+      { image: '/KRAPSS/4.png', title: 'Beneficiaries - List of beneficiaries with their contacts and the percentages they are supposed to receive from the savings' },
+      { image: '/KRAPSS/5.png', title: 'Resources - Access resources like Investment Policy Statement Handbook documents and many others, downloadable for reading later' },
+      { image: '/KRAPSS/6.png', title: 'Help Center - FAQs and Knowledge Base for KRA, office locations, contacts to the organisation, and socials' },
+      { image: '/KRAPSS/7.png', title: 'User Profile - Information about the user, beneficiaries, and accounts' }
+    ],
+    overview: 'Digital pension portal for 7,000+ KRA employees. Centralized dashboard for accessing pension balances, contribution history, benefit projections, and online claim submissions—transforming paper-based processes into efficient self-service experiences.',
     problem: 'KRA employees faced significant barriers accessing pension information through manual, paper-based processes. Staff had to visit HR offices in person for basic requests like pension statements or claim submissions, creating bottlenecks, delays, and frustration for both employees and HR administrators managing 7,000+ staff members.',
     solution: 'We designed a comprehensive web portal featuring a personalized dashboard with real-time pension data, self-service claim submission, document management, and retirement planning tools. The platform includes secure authentication, role-based access, and integration with existing KRA systems for seamless data synchronization.',
     competitiveAnalysis: 'We analyzed NSSF Kenya, government portals, and international systems like Singapore\'s CPF portal. While NSSF offered basic balance inquiries and international systems had comprehensive features, none combined local regulatory compliance with excellent user experience. We identified opportunities in comprehensive self-service features and intuitive design.',
