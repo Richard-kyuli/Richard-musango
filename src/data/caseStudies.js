@@ -805,13 +805,13 @@ export const caseStudies = [
     image: '/KRASSP/MacBook Pro 16_ - 21.png',
     description: 'Comprehensive digital platform modernizing pension management for 7,000+ KRA employees.',
     finalScreens: [
-      { image: '/KRAPSS/1.png', title: 'Dashboard - Quick overview of cumulative savings, recent contributions, and total monthly contributions' },
-      { image: '/KRAPSS/2.png', title: 'Payouts - Total disbursements received from savings with recent payouts showing date, amount, period, reference number, and receiving account' },
-      { image: '/KRAPSS/3.png', title: 'Inbox - Conversations with the support team recorded in this screen' },
-      { image: '/KRAPSS/4.png', title: 'Beneficiaries - List of beneficiaries with their contacts and the percentages they are supposed to receive from the savings' },
-      { image: '/KRAPSS/5.png', title: 'Resources - Access resources like Investment Policy Statement Handbook documents and many others, downloadable for reading later' },
-      { image: '/KRAPSS/6.png', title: 'Help Center - FAQs and Knowledge Base for KRA, office locations, contacts to the organisation, and socials' },
-      { image: '/KRAPSS/7.png', title: 'User Profile - Information about the user, beneficiaries, and accounts' }
+      { image: '/KRASSP/1.png', title: 'Dashboard - Quick overview of cumulative savings, recent contributions, and total monthly contributions' },
+      { image: '/KRASSP/2.png', title: 'Payouts - Total disbursements received from savings with recent payouts showing date, amount, period, reference number, and receiving account' },
+      { image: '/KRASSP/3.png', title: 'Inbox - Conversations with the support team recorded in this screen' },
+      { image: '/KRASSP/4.png', title: 'Beneficiaries - List of beneficiaries with their contacts and the percentages they are supposed to receive from the savings' },
+      { image: '/KRASSP/5.png', title: 'Resources - Access resources like Investment Policy Statement Handbook documents and many others, downloadable for reading later' },
+      { image: '/KRASSP/6.png', title: 'Help Center - FAQs and Knowledge Base for KRA, office locations, contacts to the organisation, and socials' },
+      { image: '/KRASSP/7.png', title: 'User Profile - Information about the user, beneficiaries, and accounts' }
     ],
     overview: 'Digital pension portal for 7,000+ KRA employees. Centralized dashboard for accessing pension balances, contribution history, benefit projections, and online claim submissions—transforming paper-based processes into efficient self-service experiences.',
     problem: 'KRA employees faced significant barriers accessing pension information through manual, paper-based processes. Staff had to visit HR offices in person for basic requests like pension statements or claim submissions, creating bottlenecks, delays, and frustration for both employees and HR administrators managing 7,000+ staff members.',
