@@ -634,7 +634,7 @@ function FinalDesignSection({ study }) {
             title: "Dashboard",
             description: "Gives the user a quick overview of the cumulative savings, recent contributions, and total monthly contributions. The dashboard provides at-a-glance access to key pension information and account status.",
             features: ["Cumulative savings overview", "Recent contributions", "Monthly contributions total"],
-            image: "/KRASSP/1.png",
+            image: "/KRASSP/MacBook Pro 16_ - 21.png",
             alignment: "left",
             deviceType: "desktop"
           },
@@ -644,7 +644,7 @@ function FinalDesignSection({ study }) {
             title: "Payouts",
             description: "The user can see the total disbursements that he has received from the savings. Shows recent payouts with date, amount, for which period, reference number, and the receiving account.",
             features: ["Total disbursements", "Payout history with dates", "Reference numbers and account details"],
-            image: "/KRASSP/2.png",
+            image: "/KRASSP/MacBook Pro 16_ - 22.png",
             alignment: "right",
             deviceType: "desktop"
           },
@@ -654,7 +654,7 @@ function FinalDesignSection({ study }) {
             title: "Inbox",
             description: "Conversations with the support team are recorded in this screen. Provides a centralized communication hub for users to track their support interactions and receive assistance.",
             features: ["Support conversations", "Message history", "Communication tracking"],
-            image: "/KRASSP/3.png",
+            image: "/KRASSP/MacBook Pro 16_ - 23.png",
             alignment: "left",
             deviceType: "desktop"
           },
@@ -664,7 +664,7 @@ function FinalDesignSection({ study }) {
             title: "Beneficiaries",
             description: "Screen shows the list of beneficiaries with their contacts and the percentages they are supposed to receive from the savings. Allows users to manage and review their beneficiary information.",
             features: ["Beneficiary list", "Contact information", "Distribution percentages"],
-            image: "/KRASSP/4.png",
+            image: "/KRASSP/MacBook Pro 16_ - 24.png",
             alignment: "right",
             deviceType: "desktop"
           },
@@ -674,7 +674,7 @@ function FinalDesignSection({ study }) {
             title: "Resources",
             description: "Shows where users can access resources like Investment Policy Statement Handbook documents and many others. The resources can be downloaded for reading later, providing important pension information and guidelines.",
             features: ["Investment Policy Statement", "Handbook documents", "Downloadable resources"],
-            image: "/KRASSP/5.png",
+            image: "/KRASSP/MacBook Pro 16_ - 25.png",
             alignment: "left",
             deviceType: "desktop"
           },
@@ -684,7 +684,7 @@ function FinalDesignSection({ study }) {
             title: "Help Center",
             description: "Shows FAQs and Knowledge Base for KRA. It also shows office locations, contacts to the organisation, and socials. Provides comprehensive support resources for users.",
             features: ["FAQs and Knowledge Base", "Office locations", "Contact information and socials"],
-            image: "/KRASSP/6.png",
+            image: "/KRASSP/MacBook Pro 16_ - 26.png",
             alignment: "right",
             deviceType: "desktop"
           },
@@ -694,7 +694,7 @@ function FinalDesignSection({ study }) {
             title: "User Profile",
             description: "Shows information about the user, beneficiaries, and accounts. Centralized location for managing personal information and account settings within the pension portal.",
             features: ["User information", "Beneficiaries overview", "Account management"],
-            image: "/KRASSP/7.png",
+            image: "/KRASSP/MacBook Pro 16_ - 27.png",
             alignment: "left",
             deviceType: "desktop"
           }
